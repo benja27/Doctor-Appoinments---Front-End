@@ -1,9 +1,12 @@
 import React from 'react'
 
+
+
+
 function Side_menu() {
   return (
     <article className='d-flex flex-column justify-content-center gap-3 px-3' >
-      <section>
+      <section className='side-item'  >
         <h3>
           <a href="">option 1</a>
         </h3>
