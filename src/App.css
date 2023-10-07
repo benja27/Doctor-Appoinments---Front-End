@@ -1,4 +1,11 @@
-.check,
-.check * {
-  border: 1px solid #000;
-} 
+body {
+  background: #d69f20fe;
+}
+
+.side-menu {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
