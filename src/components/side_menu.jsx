@@ -3,41 +3,51 @@ import React from 'react'
 
 function Side_menu() {
   return (
-    <article className='d-flex flex-column justify-content-between gap-3 px-3' >
+    <article className='d-flex flex-column justify-content-between gap-3 ps-3 mb-4 px-3' >
       
-      <div className='mt-5' >
+      <div className='mt-5 ' >
 
         <div className='text-center' >
-          <img src="https://placehold.co/100x50?text=Brand" alt="" />
+          <img src="https://placehold.co/150x50?text=Brand" alt="" />
         </div>
 
-        <div className='mt-5 pt-5 d-flex flex-column gap-5 text-center' >
-          <section className='side-item'  >
-            <h3>
-              <a href="">option 1</a>
-            </h3>
+        <div className='mt-5 side_menu_cont pt-5 d-flex flex-column gap-4 text-center' style={{}} >
+
+          <section>
+            <a href="">
+              <h4>OPTION</h4> 
+            </a>            
           </section>
           <section>
-            <h3>
-              <a href="">option 1</a>
-            </h3>
+            <a href="">
+              <h4>OPTION</h4> 
+            </a>            
           </section>
           <section>
-            <h3>
-              <a href="">option 1</a>
-            </h3>
+            <a href="">
+              <h4>OPTION</h4> 
+            </a>            
           </section>
+          <section>
+            <a href="">
+              <h4>OPTION</h4> 
+            </a>            
+          </section>
+
+
+
+
         </div>
 
       </div>
 
       <div className='mb-5'>
-        <div className='d-flex gap-2' >
+        <div className='d-flex justify-content-between mb-3 social_media_cont' >
+          <i className='fab fa-twitter' ></i>
+          <i className='fab fa-facebook' ></i>
+          <i className='fas fa-envelope' ></i>
           <i className='fas fa-home' ></i>
-          <i className='fas fa-home' ></i>
-          <i className='fas fa-home' ></i>
-          <i className='fas fa-home' ></i>
-          <i className='fas fa-home' ></i>
+          <i className='fab fa-pinterest' ></i>
         </div>
         <h6>
           @2023 Brand sa de cv 

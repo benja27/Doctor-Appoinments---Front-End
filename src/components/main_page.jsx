@@ -5,7 +5,7 @@ import Corrousel from './corrousel'
 
 function Main_page() {
   return (
-    <div className='d-flex justify-content-between check vh-100' >
+    <div className='d-flex justify-content-between chec vh-100 chec' >
       <Side_menu />
       <Corrousel />
     </div>

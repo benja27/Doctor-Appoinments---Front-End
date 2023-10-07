@@ -2,3 +2,53 @@
 .check * {
   border: 1px solid #000;
 } 
+
+.b {
+  background-color: black;
+}
+/* ============================================= */
+/*===================================== SIDE MENU */
+/* ============================================= */
+
+.side_menu_cont > section {
+  /* background-color: #000000; */
+  color: #303030;
+  padding: 0;
+  margin: 0;
+}
+
+.side_menu_cont  a {
+  color: inherit;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+}
+
+.side_menu_cont h4 {  
+  margin: 0;  padding: 4px 0;  
+
+}
+
+.side_menu_cont h4:hover {  
+  background-color: #97BF0F;
+  border-radius: 4px;
+  color: #ffffff;  
+  transition: all 0.25s ease-in-out;
+}
+
+.social_media_cont i{
+  cursor: pointer;
+}
+
+.social_media_cont i:hover {
+  transform: scale(1.3);
+  transition: transform 0.1s ease-in-out;
+  opacity: 0.7;
+
+}
+
+
