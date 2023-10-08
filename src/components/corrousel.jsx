@@ -8,7 +8,12 @@ function Corrousel() {
         <h1 className='text-center' >LATEST MODELS</h1>
         <h4>Please select a Vespa Model</h4>
 
-        <Index_item />
+        <div className='d-flex' >
+          <Index_item />
+          <Index_item />          
+          <Index_item />          
+          <Index_item />          
+        </div>
 
 
       </div>

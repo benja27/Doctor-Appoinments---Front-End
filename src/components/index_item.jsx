@@ -1,13 +1,17 @@
 import React from 'react'
+import doctor from '../assets/pngegg.png'
+
 
 function Index_item() {
   return (
-    <div style={{width:"200px"}} >
+    <div style={{width:"300px"}} className='check'  >
       
-      <div>
-        <img className='index_item_img' src="https://previews.123rf.com/images/pandavector/pandavector1705/pandavector170502139/77686847-doctor-profesiones-%C3%BAnico-icono-en-estilo-de-dibujos-animados-s%C3%ADmbolo-de-vectores-stock-photography.jpg" alt="" />
+      <div className='item_index_cont' >
+        <div className='index_img_circle' ></div>
+        <img className='index_item_img position-absolute' src={doctor} alt="" />
       </div>
 
+    <div className='mt-3' >
       <h5>VESPA C20</h5>
       <h4 style={{color: 'gray' }}  >.......................</h4>
       <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quia quae rerum tempore odit laborum </h6>
@@ -16,6 +20,7 @@ function Index_item() {
         <i className='fab fa-twitter' ></i>
         <i className='fas fa-home' ></i>
       </div>
+    </div>
 
 
     </div>

@@ -74,6 +74,23 @@
   transition: all 0.25s ease-in-out;
 } 
 
+.item_index_cont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+  width: 300px;
+  aspect-ratio: 1/1;
+}
+
 .index_item_img {
+  width: 300px;  
+}
+
+.index_img_circle {
+  background-color: #D3EBE9;
+  border-radius: 50%;
   width: 200px;
+  height: 200px;
 }
