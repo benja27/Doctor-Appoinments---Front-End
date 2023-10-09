@@ -1,5 +1,10 @@
 /* Carousel.css */
 
+.c, 
+.c * {
+  border: 1px solid black;
+}
+
 .carousel {
   width: 100%;
   max-width: 1800px;
@@ -7,6 +12,7 @@
   position: relative;
   display: flex;  
   align-items: center;
+  /* background-color: red; */
 }
 
 .image-container {
@@ -34,9 +40,11 @@
 
 .arrow {  
   font-size: 32px;
+  color: white;
   padding: 0;  
   margin: 0;
-  width: 120px;
+  height: 5rem;
+  max-width: 100px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -50,22 +58,26 @@
 }
 
 .left-arrow {
-  left: 10px;
+  margin-right: 1rem;
+  justify-content: end;
+  padding-right: 1rem;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 
 .right-arrow {
-  right: 10px;
-  justify-content: end;
+  margin-left: 1rem;
+  justify-content: start;
+  padding-left: 1rem;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
 }
 
 .item_index_cont {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* background-color: green; */
-  /* width: 300px; */
-  /* aspect-ratio: 1/1; */
+  align-items: center;  
 }
 
 .index_item_im {
@@ -78,4 +90,15 @@
   border-radius: 50%;
   width: 200px;
   height: 200px;
+}
+
+.index_item_social_cont {
+  color: gray;  
+}
+.index_item_social_cont i {
+  font-size: 1.2rem;
+  border: 3px solid gray;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
 }

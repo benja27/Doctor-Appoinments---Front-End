@@ -23,23 +23,16 @@ const Carousel = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [current_index, setCurrent_index] = useState(0);
 
-  function calculateItemsToShow() {
-    // Lógica para determinar la cantidad de elementos a mostrar basados en el ancho de la pantalla
-    // Por ejemplo, en pantallas más pequeñas (modo celular), mostrar solo 1 elemento
-    // En pantallas más grandes, mostrar 3 o más elementos según tu preferencia
+  function calculateItemsToShow() {    
     const screenWidth = window.innerWidth;
     if (screenWidth < 1299) {
       return 1;
     } else {
       return 3;
-    }
-    // else {
-    //   return 5;
-    // }
+    }    
   }
 
-  useEffect(() => {
-    // Actualiza la cantidad de elementos a mostrar cuando cambia el tamaño de la ventana
+  useEffect(() => {    
     function handleResize() {
       setItemsToShow(calculateItemsToShow());
     }
@@ -54,75 +47,67 @@ const Carousel = () => {
 
   const goToPrevSlide = () => {
     if (startIndex > 0) {
-      setStartIndex(startIndex - 1);
-      // alert(startIndex)
+      setStartIndex(startIndex - 1);      
     }
   };
 
   const goToNextSlide = () => {
     if (endIndex < totalImages - 1) {
-      setStartIndex(startIndex + 1);
-      // alert(endIndex)
+      setStartIndex(startIndex + 1);      
     }
   };
 
   return (
-    <div className="carousel ">
-      {
-        <button onClick={goToPrevSlide} className="arrow left-arrow">
-          &#60;
-        </button>
-      }
-      {/* {startIndex > 0 && <button onClick={goToPrevSlide} className="arrow left-arrow">&#60;</button>} */}
-      <div className="image-container">
-        {images.slice(startIndex, endIndex + 1).map((image, index) => (
-          // <img key={index} src={image} alt={`Slide ${startIndex + index}`}
-          // className={index === 1 ? 'center' : ''}
+    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1">  
+      <div className="text-center d-flex flex-column align-items-center" >
+        <h1 className="h1 fw-bold mt-5" >LATEST MODELS</h1>    
+        <h4  className="h5 text-gray col-9" style={{color:"gray"}}  >Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque cumqu</h4>
+      </div>
+      <div className="carousel c">
+        {
+          <button onClick={goToPrevSlide} className="arrow left-arrow col-1">
+            &#60;
+          </button>
+        }      
+        <div className="image-container">
+          {images.slice(startIndex, endIndex + 1).map((image, index) => (          
+            <div
+              style={{ }}
+              className={`check item_slider ${index === 1 ? 'center' : ""} `}
+              key={index}
+            >
+              <a className="item_index_cont">
+                <div className="index_img_circle"></div>              
+                <img
+                  className="index_item_img position-absolute"
+                  src={`${image}`}
+                  alt=""
+                />
+              </a>
 
-          // className={index === Math.floor(itemsToShow / 2) ? 'center' : ''}
-          // />
-
-          // <Index_item key={index} className={index === 1 ? 'center' : ""} />
-          // <Index_item key={index} className={index === 1 ? 'center' : ""}
-          // big={index === 1 ? 'center' : ""}
-          // img = {`${images[index]}`}
-          // />
-          <div
-            style={{ }}
-            className={`check item_slider ${index === 1 ? 'center' : ""} `}
-            key={index}
-          >
-            <div className="item_index_cont">
-              <div className="index_img_circle"></div>              
-              <img
-                className="index_item_img position-absolute"
-                src={`${image}`}
-                alt=""
-              />
-            </div>
-
-            <div className="mt-3 text-center">
-              <h5 className="h1" >VESPA `{index}`</h5>
-              <h4 className="p-0 m-0 py-1 " style={{ color: "gray" }}>.......................</h4>
-              <h6>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Exercitationem, quia quae rerum tempore odit laborum{" "}
-              </h6>
-              <div className="index_item_social_cont d-flex justify-content-center gap-3 text-center">
-                <i className="fab fa-facebook"></i>
-                <i className="fab fa-twitter"></i>
-                <i className="fas fa-home"></i>
+              <div className="mt-3 text-center">
+                <h5 className="h2 fw-bold" >VESPA {index}</h5>
+                <h4 className="p-0 m-0 py-1 " style={{ color: "gray" }}>.......................</h4>
+                <h6 className="h5 fw-bold mb-4" style={{color:"gray"}} >
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Exercitationem, quia quae
+                </h6>
+                <div className="index_item_social_cont d-flex justify-content-center gap-3 text-center">
+                  <i className="fab fa-facebook"></i>
+                  <i className="fab fa-twitter"></i>
+                  <i className="fas fa-home"></i>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        {
+          <button onClick={goToNextSlide} className="arrow right-arrow col-1">
+            &#62;
+          </button>
+        }
+        {/* {endIndex < totalImages - 1 && <button onClick={goToNextSlide} className="arrow right-arrow">&#62;</button>} */}
       </div>
-      {
-        <button onClick={goToNextSlide} className="arrow right-arrow">
-          &#62;
-        </button>
-      }
-      {/* {endIndex < totalImages - 1 && <button onClick={goToNextSlide} className="arrow right-arrow">&#62;</button>} */}
     </div>
   );
 };
