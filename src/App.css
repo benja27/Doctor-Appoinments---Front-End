@@ -1,0 +1,147 @@
+.check,
+.check * {
+  border: 1px solid #000;
+} 
+
+.b {
+  background-color: black;
+}
+/* ============================================= */
+/*===================================== SIDE MENU */
+/* ============================================= */
+
+.side_menu {
+  border-right: 1px solid black ;
+  max-width: 250px;
+}
+
+
+.side_menu_cont > section {
+  /* background-color: #000000; */
+  color: #303030;
+  padding: 0;
+  margin: 0;
+}
+
+.side_menu_cont  a {
+  color: inherit;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+}
+
+.side_menu_cont h4 {  
+  margin: 0;  padding: 4px 0;  
+
+}
+
+.side_menu_cont h4:hover {  
+  background-color: #97BF0F;
+  border-radius: 4px;
+  color: #ffffff;  
+  transition: all 0.25s ease-in-out;
+}
+
+.social_media_cont i{
+  cursor: pointer;
+}
+
+.social_media_cont i:hover {
+  transform: scale(1.3);
+  transition: transform 0.1s ease-in-out;
+  opacity: 0.7;
+
+}
+
+
+/* ============================================= */
+/*===================================== INDEX PAGE */
+/* ============================================= */
+
+
+
+
+.index_item_social_cont i:hover {
+  color: #97BF0F;
+  border: 3px solid #97BF0F;
+  transition: all 0.25s ease-in-out;
+} 
+
+.item_index_cont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.item_index_cont:hover .index_item_img {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.index_item_img {
+  width: 80%;  
+  opacity: .2;
+}
+
+.index_img_circle {
+  background-color: #D3EBE9;
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+}
+
+/* ============================================= */
+/*===================================== SET APPOINTMENT */
+/* ============================================= */
+
+.set_appoin_bg {
+  background: url("https://picsum.photos/id/1/300/300");
+  height: 100vh;
+  background-size: cover;
+  opacity: 1;
+  filter: hue-rotate(220deg);
+}
+
+.set_appoin {
+  opacity: .3;
+}
+
+.imagen-con-filtro {
+  position: relative;
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* Estilo para la imagen */
+.imagen-con-filtro img {
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  height: auto;
+  display: block;
+}
+
+/* Estilo para el filtro verde */
+.imagen-con-filtro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 0, 0.832); /* Color verde semi-transparente */
+}
+
+.info {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: flex; */
+}
