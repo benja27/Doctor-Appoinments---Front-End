@@ -2,13 +2,13 @@ import React from 'react'
 import doctor from '../assets/pngegg.png'
 
 
-function Index_item() {
+function Index_item({big, img}) {
   return (
-    <div style={{width:"300px"}} className='check'  >
+    <div style={{width:"300px"}} className={`check item_slider ${big}`}   >
       
       <div className='item_index_cont' >
         <div className='index_img_circle' ></div>
-        <img className='index_item_img position-absolute' src={doctor} alt="" />
+        <img className='index_item_img position-absolute' src={`${img}`} alt="" />
       </div>
 
     <div className='mt-3' >
@@ -21,7 +21,6 @@ function Index_item() {
         <i className='fas fa-home' ></i>
       </div>
     </div>
-
 
     </div>
   )

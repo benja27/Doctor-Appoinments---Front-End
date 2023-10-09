@@ -1,0 +1,60 @@
+/* Carousel.css */
+
+.carousel {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;  
+  align-items: center;
+}
+
+.image-container {
+  /* display: flex;
+  overflow: hidden;
+  gap: 10px;0 */
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);    
+}
+
+.image-container .item_slider {
+  width: 100%;
+  max-width: 90%;
+  height: auto;
+  object-fit: cover;
+  transform: scale(0.8);
+  transition: all 0.3s ease;  
+  background-color: red;
+}
+
+.image-container .item_slider.center {
+  transform: scale(1); /* Escala más grande para la imagen en el centro */
+  transition: all 0.3s ease;
+}
+
+.arrow {  
+  font-size: 32px;
+  padding: 0;  
+  margin: 0;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(15, 192, 15);  
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: #d7e0d9;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+  justify-content: end;
+}
