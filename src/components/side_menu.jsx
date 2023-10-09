@@ -14,7 +14,7 @@ function Side_menu() {
         <div className='mt-5 side_menu_cont pt-5 d-flex flex-column gap-4 text-center' style={{}} >
 
           <section>
-            <a href="">
+            <a href="/set_appoinment">
               <h4 className='h4 fw-bold' >OPTION</h4> 
             </a>            
           </section>
@@ -44,13 +44,13 @@ function Side_menu() {
 
       <div className='mb-5'>
         <div className='d-flex justify-content-between mb-3 social_media_cont' >
-          <i className='fab fa-twitter' ></i>
-          <i className='fab fa-facebook' ></i>
-          <i className='fas fa-envelope' ></i>
-          <i className='fas fa-home' ></i>
-          <i className='fab fa-pinterest' ></i>
+          <i className='fab h5 fa-twitter' ></i>
+          <i className='fab h5 fa-facebook' ></i>
+          <i className='fas h5 fa-envelope' ></i>
+          <i className='fas h5 fa-home' ></i>
+          <i className='fab h5 fa-pinterest' ></i>
         </div>
-        <h6>
+        <h6 className='h6 text-center' >
           @2023 Brand sa de cv 
         </h6>
       </div>

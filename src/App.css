@@ -96,3 +96,52 @@
   width: 70%;
   height: 70%;
 }
+
+/* ============================================= */
+/*===================================== SET APPOINTMENT */
+/* ============================================= */
+
+.set_appoin_bg {
+  background: url("https://picsum.photos/id/1/300/300");
+  height: 100vh;
+  background-size: cover;
+  opacity: 1;
+  filter: hue-rotate(220deg);
+}
+
+.set_appoin {
+  opacity: .3;
+}
+
+.imagen-con-filtro {
+  position: relative;
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* Estilo para la imagen */
+.imagen-con-filtro img {
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  height: auto;
+  display: block;
+}
+
+/* Estilo para el filtro verde */
+.imagen-con-filtro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 0, 0.832); /* Color verde semi-transparente */
+}
+
+.info {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: flex; */
+}
