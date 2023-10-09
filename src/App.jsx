@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Main_page from './components/main_page'
 import Set_appoiment from './components/set_appoiment'
+import Show from './components/show'
 import './App.css'
 
 
@@ -12,7 +13,8 @@ function App() {
     <BrowserRouter> 
 
       <Routes>  
-        <Route path="/" element={<Main_page />} />        
+        <Route path="/" element={<Main_page />} />  
+        <Route path="/show" element={<Show />} />      
         <Route path="/doctor:id" element={<Main_page />} />        
         <Route path="/set_appoinment" element={<Set_appoiment  />} />   
         

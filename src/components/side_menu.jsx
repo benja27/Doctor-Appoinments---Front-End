@@ -19,12 +19,12 @@ function Side_menu() {
             </a>            
           </section>
           <section>
-            <a href="">
+            <a href="/show">
               <h4 className='h4 fw-bold' >OPTION</h4> 
             </a>            
           </section>
           <section>
-            <a href="">
+            <a href="/">
               <h4 className='h4 fw-bold' >OPTION</h4> 
             </a>            
           </section>
