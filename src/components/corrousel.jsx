@@ -76,8 +76,9 @@ const Carousel = () => {
               className={` item_slider ${index === 1 ? 'center' : ""} `}
               key={index}
             >
-              <a className="item_index_cont">
+              <a href="#" className="item_index_cont">
                 <div className="index_img_circle"></div>              
+                <div className="index_img_circle_2"></div>                
                 <img
                   className="index_item_img position-absolute"
                   src={`${image}`}

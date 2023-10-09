@@ -3,7 +3,7 @@ import React from 'react'
 
 function Side_menu() {
   return (
-    <article className='d-sm-flex  d-flex flex-column justify-content-between gap-3 ps-3 mb-4 px-3 d-sm-none d-md-flex side_menu' >
+    <article className='d-flex flex-column justify-content-between gap-4 ps-3 mb-4 px-3 d-sm-none d-md-flex side_menu col-3 col-lg-2' >
       
       <div className='mt-5 ' >
 
@@ -15,24 +15,25 @@ function Side_menu() {
 
           <section>
             <a href="">
-              <h4>OPTION</h4> 
+              <h4 className='h4 fw-bold' >OPTION</h4> 
             </a>            
           </section>
           <section>
             <a href="">
-              <h4>OPTION</h4> 
+              <h4 className='h4 fw-bold' >OPTION</h4> 
             </a>            
           </section>
           <section>
             <a href="">
-              <h4>OPTION</h4> 
+              <h4 className='h4 fw-bold' >OPTION</h4> 
             </a>            
           </section>
           <section>
             <a href="">
-              <h4>OPTION</h4> 
+              <h4 className='h4 fw-bold' >OPTION</h4> 
             </a>            
           </section>
+          
 
 
 

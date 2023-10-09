@@ -12,6 +12,7 @@
 
 .side_menu {
   border-right: 1px solid black ;
+  max-width: 250px;
 }
 
 
@@ -74,10 +75,14 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* background-color: green; */
-  /* width: 300px; */
+  align-items: center;  
   aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.item_index_cont:hover .index_item_img {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .index_item_img {
