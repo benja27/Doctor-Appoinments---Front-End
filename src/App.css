@@ -1,5 +1,10 @@
 body {
-  background: #d69f20fe;
+  overflow: hidden;
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  height: 100vh; /* Set height to 100% of viewport height */
+  width: 100vw; /* Set width to 100% of viewport width */
+  background: gold;
 }
 
 .side-menu {
@@ -8,4 +13,148 @@ body {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  width: fit-content;
+}
+
+.fa-times,
+.fa-bars {
+  width: 2rem;
+  color: #fff;
+}
+
+.fa-twitter {
+  color: #7a7575;
+}
+
+.nav {
+  width: fit-content;
+}
+
+h3 {
+  width: fit-content;
+}
+
+.topnav {
+  padding: 0;
+  width: max-content;
+}
+
+.scroll {
+  width: 100vh;
+  height: 100vh;
+}
+
+.background-image {
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+.carousel-control-next-icon {
+
+  background-color: rgb(230, 99, 11);
+  border-radius: solid 1rem;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  width: 0;
+}
+
+
+.slide-show-dots {
+  text-align: center;
+  margin-top: 10px;
+  gap: 2rem;
+}
+
+.slide-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #32c41c; /* Change the background color as needed */
+  border: 2px solid #5dc8ec; /* Add a border for better visibility */
+  border-radius: 50%; /* Make it round */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 5px; /* Adjust the margin as needed */
+  cursor: pointer;
+}
+
+.slide-dot.active {
+  background-color: #5dc8ec; /* Change the active dot's color as needed */
+  border-color: #32c41c; /* Change the active dot's border color as needed */
+}
+
+.corrousel {
+  position: relative;
+  background-color: transparent; /* Set a transparent background */
+
+  .background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the background images behind other content */
+  }
+
+  .slide-show-dots {
+    position: absolute;
+    bottom: 20px; /* Adjust the bottom position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Place the dots above the background images */
+
+    button.slide-dot {
+      background-color: #fff; /* Set dot background color */
+      border: none;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px; /* Adjust the margin between dots as needed */
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        background-color: #0dcaf0; /* Set active dot background color */
+      }
+    }
+  }
+}
+
+.slideDot {
+  margin-top: 7rem;
+}
+
+
+<!-- -->
+.sign-up-btn {
+  background-color: #7bcd00;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    margin: 12px;
+    width: 150px;
+    font-size: large;
+}
+
+.login-up-btn {
+  border: 2px solid #7bcd00;
+  border-radius: 5px;
+  color: #7bcd00;
+  cursor: pointer;
+  font-weight: 700;
+  height: 50px;
+  margin: 12px;
+  padding: 0 20px;
+  width: 150px;
+}
+
+.login-container {
+  margin-top: 10rem;
 }
