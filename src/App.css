@@ -80,17 +80,18 @@
   justify-content: center;
   align-items: center;
   /* background-color: green; */
-  width: 300px;
+  /* width: 300px; */
   aspect-ratio: 1/1;
 }
 
 .index_item_img {
-  width: 300px;  
+  width: 80%;  
+  opacity: .2;
 }
 
 .index_img_circle {
   background-color: #D3EBE9;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 70%;
+  height: 70%;
 }

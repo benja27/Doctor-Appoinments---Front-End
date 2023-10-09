@@ -28,7 +28,7 @@ const Carousel = () => {
     // Por ejemplo, en pantallas más pequeñas (modo celular), mostrar solo 1 elemento
     // En pantallas más grandes, mostrar 3 o más elementos según tu preferencia
     const screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
+    if (screenWidth < 1299) {
       return 1;
     } else {
       return 3;
@@ -88,12 +88,12 @@ const Carousel = () => {
           // img = {`${images[index]}`}
           // />
           <div
-            style={{ width: "300px" }}
+            style={{ }}
             className={`check item_slider ${index === 1 ? 'center' : ""} `}
             key={index}
           >
             <div className="item_index_cont">
-              <div className="index_img_circle"></div>
+              <div className="index_img_circle"></div>              
               <img
                 className="index_item_img position-absolute"
                 src={`${image}`}
@@ -101,9 +101,9 @@ const Carousel = () => {
               />
             </div>
 
-            <div className="mt-3">
-              <h5>VESPA `{index}`</h5>
-              <h4 style={{ color: "gray" }}>.......................</h4>
+            <div className="mt-3 text-center">
+              <h5 className="h1" >VESPA `{index}`</h5>
+              <h4 className="p-0 m-0 py-1 " style={{ color: "gray" }}>.......................</h4>
               <h6>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Exercitationem, quia quae rerum tempore odit laborum{" "}
