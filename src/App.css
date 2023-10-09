@@ -10,6 +10,11 @@
 /*===================================== SIDE MENU */
 /* ============================================= */
 
+.side_menu {
+  border-right: 1px solid black ;
+}
+
+
 .side_menu_cont > section {
   /* background-color: #000000; */
   color: #303030;

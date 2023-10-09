@@ -25,7 +25,7 @@ const Carousel = () => {
 
   function calculateItemsToShow() {    
     const screenWidth = window.innerWidth;
-    if (screenWidth < 1299) {
+    if (screenWidth < 999) {
       return 1;
     } else {
       return 3;
@@ -63,7 +63,7 @@ const Carousel = () => {
         <h1 className="h1 fw-bold mt-5" >LATEST MODELS</h1>    
         <h4  className="h5 text-gray col-9" style={{color:"gray"}}  >Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque cumqu</h4>
       </div>
-      <div className="carousel c">
+      <div className="carousel ">
         {
           <button onClick={goToPrevSlide} className="arrow left-arrow col-1">
             &#60;
@@ -73,7 +73,7 @@ const Carousel = () => {
           {images.slice(startIndex, endIndex + 1).map((image, index) => (          
             <div
               style={{ }}
-              className={`check item_slider ${index === 1 ? 'center' : ""} `}
+              className={` item_slider ${index === 1 ? 'center' : ""} `}
               key={index}
             >
               <a className="item_index_cont">
