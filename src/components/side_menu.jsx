@@ -3,7 +3,7 @@ import React from 'react'
 
 function Side_menu() {
   return (
-    <article className='d-flex flex-column justify-content-between gap-4 ps-3 mb-4 px-3 d-sm-none d-md-flex side_menu col-3 col-lg-2' >
+    <article className='d-flex flex-column justify-content-between gap-4 ps-3 mb-4 px-3 d-none d-md-flex side_menu col-3 col-lg-2' >
       
       <div className='mt-5 ' >
 

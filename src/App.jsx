@@ -13,7 +13,10 @@ function App() {
 
       <Routes>  
         <Route path="/" element={<Main_page />} />        
-        <Route path="/set_appoinment" element={<Set_appoiment  />} />        
+        <Route path="/doctor:id" element={<Main_page />} />        
+        <Route path="/set_appoinment" element={<Set_appoiment  />} />   
+        
+
       </Routes>    
 
     </BrowserRouter>
