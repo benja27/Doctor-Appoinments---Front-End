@@ -106,7 +106,7 @@ h3 {
 .slide-dot {
   width: 20px;
   height: 20px;
-  background-color: #32c41c;
+  background-color: #7bcd00;
   border: 2px solid #5dc8ec;
   border-radius: 50%;
   flex-direction: column;
@@ -115,8 +115,8 @@ h3 {
 }
 
 .slide-dot.active {
-  background-color: #5dc8ec;
-  border-color: #32c41c;
+  background-color: #fff;
+  border-color: #7bcd00;
 }
 
 .corrousel {
