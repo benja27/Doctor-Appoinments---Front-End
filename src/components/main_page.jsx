@@ -36,7 +36,7 @@ function Main_page() {
           <input
             type='text'
             placeholder='Search'
-            className='search rounded none'
+            className='search rounded-pill none'
             value={searchItem}
             onChange={handleSearchInputChange}
           />
@@ -60,7 +60,10 @@ function Main_page() {
         </div>
         <div className='d-flex row login-container align-items-center justify-content-evenly'>
           <button className='btn sign-up-btn' type='button'>Signup</button>
-          <button className='btn login-up-btn' type='button'>Login</button>
+          <button className='btn login-up-btn' type='button' onClick={() => {
+              console.log('Login button clicked');
+              // Add your login logic here if needed
+            }}>Login</button>
         </div>
       </main>
 
