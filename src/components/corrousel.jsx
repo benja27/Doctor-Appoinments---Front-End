@@ -18,10 +18,6 @@ const images = [
 ];
 
 const Carousel = () => {
-  const [itemsToShow, setItemsToShow] = useState(calculateItemsToShow());
-  const [startIndex, setStartIndex] = useState(0);
-  //  const [current_index, setCurrent_index] = useState(0);
-
   function calculateItemsToShow() {
     const screenWidth = window.innerWidth;
     if (screenWidth < 999) {
@@ -29,6 +25,10 @@ const Carousel = () => {
     }
     return 3;
   }
+
+  const [itemsToShow, setItemsToShow] = useState(calculateItemsToShow());
+  const [startIndex, setStartIndex] = useState(0);
+  //  const [current_index, setCurrent_index] = useState(0);
 
   useEffect(() => {
     function handleResize() {
@@ -62,7 +62,11 @@ const Carousel = () => {
         <h4 className="h5 text-gray col-9" style={{ color: 'gray' }}>Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque cumqu</h4>
       </div>
       <div className="carousel ">
-        <button onClick={goToPrevSlide} className="arrow left-arrow col-1">
+        <button
+          onClick={goToPrevSlide}
+          className="arrow left-arrow col-1"
+          type="button"
+        >
           &#60;
         </button>
         <div className="image-container">
@@ -101,10 +105,15 @@ const Carousel = () => {
             </div>
           ))}
         </div>
-        <button onClick={goToNextSlide} className="arrow right-arrow col-1">
+        <button
+          onClick={goToNextSlide}
+          className="arrow right-arrow col-1"
+          type="button"
+        >
           &#62;
         </button>
-        {/* {endIndex < totalImages - 1 && <button onClick={goToNextSlide} className="arrow right-arrow">&#62;</button>} */}
+        {/* {endIndex < totalImages - 1 &&
+          <button onClick={goToNextSlide} className="arrow right-arrow">&#62;</button>} */}
       </div>
     </div>
   );
