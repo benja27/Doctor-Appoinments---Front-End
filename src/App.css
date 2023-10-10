@@ -1,20 +1,22 @@
 .check,
 .check * {
   border: 1px solid #000;
-} 
+}
 
 .b {
   background-color: black;
 }
+
 /* ============================================= */
-/*===================================== SIDE MENU */
+
+/* ===================================== SIDE MENU */
+
 /* ============================================= */
 
 .side_menu {
-  border-right: 1px solid black ;
+  border-right: 1px solid black;
   max-width: 250px;
 }
-
 
 .side_menu_cont > section {
   /* background-color: #000000; */
@@ -23,7 +25,7 @@
   margin: 0;
 }
 
-.side_menu_cont  a {
+.side_menu_cont a {
   color: inherit;
   background-color: inherit;
   width: 100%;
@@ -34,19 +36,19 @@
   text-decoration: none;
 }
 
-.side_menu_cont h4 {  
-  margin: 0;  padding: 4px 0;  
-
+.side_menu_cont h4 {
+  margin: 0;
+  padding: 4px 0;
 }
 
-.side_menu_cont h4:hover {  
-  background-color: #97BF0F;
+.side_menu_cont h4:hover {
+  background-color: #97bf0f;
   border-radius: 4px;
-  color: #ffffff;  
+  color: #fff;
   transition: all 0.25s ease-in-out;
 }
 
-.social_media_cont i{
+.social_media_cont i {
   cursor: pointer;
 }
 
@@ -54,30 +56,32 @@
   transform: scale(1.3);
   transition: transform 0.1s ease-in-out;
   opacity: 0.7;
-
 }
 
-
-/* ============================================= */
-/*===================================== INDEX PAGE */
 /* ============================================= */
 
+/* ===================================== INDEX PAGE */
 
-
+/* ============================================= */
 
 .index_item_social_cont i:hover {
-  color: #97BF0F;
-  border: 3px solid #97BF0F;
+  color: #97bf0f;
+  border: 3px solid #97bf0f;
   transition: all 0.25s ease-in-out;
-} 
+}
 
 .item_index_cont {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   aspect-ratio: 1/1;
   cursor: pointer;
+}
+
+.index_item_img {
+  width: 80%;
+  opacity: 0.2;
 }
 
 .item_index_cont:hover .index_item_img {
@@ -85,20 +89,17 @@
   transition: opacity 0.25s ease-in-out;
 }
 
-.index_item_img {
-  width: 80%;  
-  opacity: .2;
-}
-
 .index_img_circle {
-  background-color: #D3EBE9;
+  background-color: #d3ebe9;
   border-radius: 50%;
   width: 70%;
   height: 70%;
 }
 
 /* ============================================= */
-/*===================================== SET APPOINTMENT */
+
+/* ===================================== SET APPOINTMENT */
+
 /* ============================================= */
 
 .set_appoin_bg {
@@ -110,7 +111,7 @@
 }
 
 .set_appoin {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .imagen-con-filtro {
@@ -138,10 +139,11 @@
   background-color: rgba(0, 255, 0, 0.832); /* Color verde semi-transparente */
 }
 
-.info {  
+.info {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   /* display: flex; */
 }
