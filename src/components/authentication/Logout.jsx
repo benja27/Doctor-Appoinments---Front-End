@@ -23,6 +23,7 @@ const Logout = ({setCurrUser}) => {
     const handleClick = e => {
         e.preventDefault();
         logout(setCurrUser)
+        localStorage.removeItem("user")
     }
     return (
         <input type="submit" value="Logout" onClick={handleClick} />
