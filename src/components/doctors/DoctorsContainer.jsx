@@ -49,8 +49,18 @@ export default function DoctorsContainer() {
           />
         ))}
       </div>
-      <button onClick={handlePrevDoctors}>Previous</button>
-      <button onClick={handleNextDoctors}>Next</button>
+      <button
+        onClick={handlePrevDoctors}
+        type="button"
+      >
+        Previous
+      </button>
+      <button
+        onClick={handleNextDoctors}
+        type="button"
+      >
+        Next
+      </button>
     </>
   );
 }

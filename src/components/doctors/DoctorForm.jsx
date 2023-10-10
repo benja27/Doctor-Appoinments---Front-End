@@ -6,16 +6,16 @@ export default function BookForm() {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [specialization, setSpecialization] = useState('');
-  const [consultation_fee, setConsultationFee] = useState('');
-  const [prescription_fee, setPrescriptionFee] = useState('');
+  const [consultationFee, setConsultationFee] = useState('');
+  const [prescriptionFee, setPrescriptionFee] = useState('');
   const [photo, setPhoto] = useState('');
 
   const handleAddDoctor = () => {
     const newDoctor = {
       name,
       specialization,
-      consultation_fee,
-      prescription_fee,
+      consultation_fee: consultationFee,
+      prescription_fee: prescriptionFee,
       photo,
     };
     dispatch(addDoctor(newDoctor));
@@ -47,13 +47,13 @@ export default function BookForm() {
         <input
           type="number"
           placeholder="Doctor Consultation Fee"
-          value={consultation_fee}
+          value={consultationFee}
           onChange={(e) => setConsultationFee(e.target.value)}
         />
         <input
           type="number"
           placeholder="Doctor Prescription Fee"
-          value={prescription_fee}
+          value={prescriptionFee}
           onChange={(e) => setPrescriptionFee(e.target.value)}
         />
         <input
