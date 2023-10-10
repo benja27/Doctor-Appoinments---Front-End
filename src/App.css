@@ -97,9 +97,10 @@ h3 {
 
 
 .slide-show-dots {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  margin-top: 10px;
-  gap: 2rem;
+  gap: 0.2rem;
 }
 
 .slide-dot {
@@ -108,10 +109,8 @@ h3 {
   background-color: #32c41c;
   border: 2px solid #5dc8ec;
   border-radius: 50%;
-  display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0 5px;
   cursor: pointer;
 }
 
@@ -136,8 +135,8 @@ h3 {
 
   .slide-show-dots {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
+    top: 20px;
+    right: 5%;
     transform: translateX(-50%);
     z-index: 1;
 
@@ -161,7 +160,6 @@ h3 {
 .slideDot {
   margin-top: 7rem;
 }
-
 
 <!-- -->
 .sign-up-btn {
