@@ -29,9 +29,7 @@ export default function DoctorsContainer() {
   };
 
   const handlePrevDoctors = () => {
-    setStartIndex((prevIndex) =>
-      prevIndex === 0 ? doctors.length - 3 : prevIndex - 3
-    );
+    setStartIndex((prevIndex) => (prevIndex === 0 ? doctors.length - 3 : prevIndex - 3));
   };
 
   return (

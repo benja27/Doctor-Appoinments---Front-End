@@ -8,15 +8,26 @@ export default function Doctors({
   consultationFee,
   prescriptionFee,
 }) {
-
   return (
     <>
       <Link to={`/doctors/${doctorId}`}>
         <ul id={doctorId}>
-          <li>Name: {doctorName}</li>
-          <li>Specialization: {specialization}</li>
-          <li>Consultation Fee: {consultationFee}</li>
-          <li>Prescription Fee: {prescriptionFee}</li>
+          <li>
+            Name:
+            {doctorName}
+          </li>
+          <li>
+            Specialization:
+            {specialization}
+          </li>
+          <li>
+            Consultation Fee:
+            {consultationFee}
+          </li>
+          <li>
+            Prescription Fee:
+            {prescriptionFee}
+          </li>
         </ul>
       </Link>
     </>

@@ -21,7 +21,7 @@ export default function ShowDoctor() {
   const handleDeleteDoctor = async () => {
     try {
       await dispatch(deleteDoctor(doctor.id));
-      
+
       dispatch(fetchDoctors());
     } catch (error) {
       throw new Error('Failed to delete doctor');
@@ -30,20 +30,32 @@ export default function ShowDoctor() {
 
   return (
     <>
-        {doctor && (
-          <ul>
-            <li>Name: {doctor.name}</li>
-            <li>Specialization: {doctor.specialization}</li>
-            <li>Consultation Fee: {doctor.consultation_fee}</li>
-            <li>Prescription Fee: {doctor.prescription_fee}</li>
-            <button
-              type="button"
-              onClick={handleDeleteDoctor}
-            >
-              Delete Doctor
-            </button>
-          </ul>
-        )}
+      {doctor && (
+      <ul>
+        <li>
+          Name:
+          {doctor.name}
+        </li>
+        <li>
+          Specialization:
+          {doctor.specialization}
+        </li>
+        <li>
+          Consultation Fee:
+          {doctor.consultation_fee}
+        </li>
+        <li>
+          Prescription Fee:
+          {doctor.prescription_fee}
+        </li>
+        <button
+          type="button"
+          onClick={handleDeleteDoctor}
+        >
+          Delete Doctor
+        </button>
+      </ul>
+      )}
     </>
   );
 }

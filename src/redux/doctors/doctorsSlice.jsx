@@ -4,10 +4,10 @@ import axios from 'axios';
 const initialState = {
   doctors: [],
   isLoading: false,
-  error: undefined
+  error: undefined,
 };
 
-const url = "https://rails-j4lh.onrender.com/doctors";
+const url = 'https://rails-j4lh.onrender.com/doctors';
 
 export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
   try {
@@ -104,7 +104,7 @@ const doctorSlice = createSlice({
         ...state,
         isLoading: false,
         showDoctor: action.payload,
-      }))
+      }));
   },
 });
 

@@ -1,23 +1,23 @@
-import Side_menu from './side_menu'
+import Side_menu from './side_menu';
 
 function Show() {
   return (
-    <div className='d-flex vh-100' >
+    <div className="d-flex vh-100">
       <Side_menu> </Side_menu>
 
-      <div className='d-flex justify-content-strech bg-dark w-100' >
+      <div className="d-flex justify-content-strech bg-dark w-100">
 
-        <div className='bg-primary w-50 vh-100' >
-          <div className='d-flex align-items-center justify-content-center vh-100' >
+        <div className="bg-primary w-50 vh-100">
+          <div className="d-flex align-items-center justify-content-center vh-100">
             <img src="https://picsum.photos/id/1/300/300" alt="" />
           </div>
         </div>
 
-        <div className='bg-succes w-50' >
-          <div className='d-flex bg-success align-items-center justify-content-center flex-column vh-100' >
+        <div className="bg-succes w-50">
+          <div className="d-flex bg-success align-items-center justify-content-center flex-column vh-100">
             <h2>Vespa 946</h2>
-            <div className ="table-responsive">
-              <table className = "table table-primary">
+            <div className="table-responsive">
+              <table className="table table-primary">
                 <thead>
                   <tr>
                     <th scope="col">  </th>
@@ -39,14 +39,14 @@ function Show() {
                 </tbody>
               </table>
             </div>
-            
+
           </div>
         </div>
 
       </div>
 
     </div>
-  )
+  );
 }
 
-export default Show
+export default Show;
