@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { fetchDoctors, deleteDoctor, showDoctor } from '../../redux/doctors/doctorsSlice';
+import { showDoctor } from '../../redux/doctors/doctorsSlice';
 
 export default function ShowDoctor() {
   const { doctorId } = useParams();
@@ -17,16 +17,6 @@ export default function ShowDoctor() {
   if (isLoading) {
     return <p>Loading...</p>;
   }
-
-  const handleDeleteDoctor = async () => {
-    try {
-      await dispatch(deleteDoctor(doctor.id));
-
-      dispatch(fetchDoctors());
-    } catch (error) {
-      throw new Error('Failed to delete doctor');
-    }
-  };
 
   return (
     <>
@@ -48,11 +38,16 @@ export default function ShowDoctor() {
           Prescription Fee:
           {doctor.prescription_fee}
         </li>
+        <li>
+          Total: $
+          {
+            doctor.consultation_fee + doctor.prescription_fee
+          }
+        </li>
         <button
           type="button"
-          onClick={handleDeleteDoctor}
         >
-          Delete Doctor
+          Book Appointment
         </button>
       </ul>
       )}
