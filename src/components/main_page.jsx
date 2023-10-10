@@ -29,7 +29,7 @@ function Main_page() {
   return (
     <div className='d-flex flex-column'>
       <nav className='d-flex justify-content-between align-items-center mr-3 p-2 m-0 w-auto'>
-        <a className="icon bg-black gap-12 mt-12" onClick={toggleMenu}>
+        <a className="icon bg-black gap-6" onClick={toggleMenu}>
           <i className={`fa ${isMenuOpen ? 'fa-times fa-2x' : 'fa-bars fa-2x'}`}></i>
         </a>
         <section className='search mr-3 d-none d-md-block'>
@@ -44,11 +44,12 @@ function Main_page() {
       </nav>
       {isMenuOpen && (
         <div className='d-flex p-0 m-0 flex-grow-1'>
-          <SideMenu isMenuOpen={isMenuOpen} className='w-100' />
+          <SideMenu isMenuOpen={isMenuOpen}  />
         </div>
       )}
 
       <main className='d-flex row text-light justify-content-evenly'>
+     
         <div className='slideDot mt-5'>
           add the slide-dot component here from the coarruel
         </div>
@@ -61,7 +62,7 @@ function Main_page() {
            <button className='rounded-pill w-75 p-3'>Start medication here</button>
           </div>
         </div>
-        <div className='d-flex row login-container d-flex row align-items-center justify-content-evenly'>
+        <div className='d-flex row login-container align-items-center justify-content-evenly'>
           <button className='btn sign-up-btn' type='button'>Signup</button>
           <button className='btn login-up-btn' type='button'>Login</button>
         </div>

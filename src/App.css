@@ -1,9 +1,9 @@
 body {
   overflow: hidden;
-  margin: 0; /* Remove default body margin */
-  padding: 0; /* Remove default body padding */
-  height: 100vh; /* Set height to 100% of viewport height */
-  width: 100vw; /* Set width to 100% of viewport width */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
   background: gold;
 }
 
@@ -13,8 +13,19 @@ body {
 
 ul {
   list-style-type: none;
-  padding: 0;
-  width: fit-content;
+  text-decoration: none;
+}
+
+ul.list-unstyled li:hover i {
+  color: #fff;
+}
+
+ul.list-unstyled:hover + p {
+  color: #fff;
+}
+
+li {
+  text-decoration: none;
 }
 
 .fa-times,
@@ -23,22 +34,39 @@ ul {
   color: #fff;
 }
 
-.fa-twitter {
+
+.fa-twitter,
+.fa-facebook,
+.fa-linkedin,
+.fa-pinterest-square {
   color: #7a7575;
 }
 
-.nav {
-  width: fit-content;
-}
 
 h3 {
   width: fit-content;
 }
 
-.topnav {
-  padding: 0;
-  width: max-content;
+.logo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
 }
+
+.side-item {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.side-item:hover {
+  background-color: #fff;
+}
+
+.side-item:active {
+  background-color: #0d6efd;
+}
+
 
 .scroll {
   width: 100vh;
@@ -51,7 +79,7 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 100vh; /* Set the height to 100% of the viewport height */
+  height: 100vh;
 }
 
 .carousel-control-next-icon {
@@ -74,24 +102,24 @@ h3 {
 .slide-dot {
   width: 20px;
   height: 20px;
-  background-color: #32c41c; /* Change the background color as needed */
-  border: 2px solid #5dc8ec; /* Add a border for better visibility */
-  border-radius: 50%; /* Make it round */
+  background-color: #32c41c;
+  border: 2px solid #5dc8ec;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0 5px; /* Adjust the margin as needed */
+  margin: 0 5px;
   cursor: pointer;
 }
 
 .slide-dot.active {
-  background-color: #5dc8ec; /* Change the active dot's color as needed */
-  border-color: #32c41c; /* Change the active dot's border color as needed */
+  background-color: #5dc8ec;
+  border-color: #32c41c;
 }
 
 .corrousel {
   position: relative;
-  background-color: transparent; /* Set a transparent background */
+  background-color: transparent;
 
   .background-images {
     position: absolute;
@@ -99,28 +127,28 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Place the background images behind other content */
+    z-index: -1;
   }
 
   .slide-show-dots {
     position: absolute;
-    bottom: 20px; /* Adjust the bottom position as needed */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1; /* Place the dots above the background images */
+    z-index: 1;
 
     button.slide-dot {
-      background-color: #fff; /* Set dot background color */
+      background-color: #fff;
       border: none;
       width: 12px;
       height: 12px;
-      margin: 0 5px; /* Adjust the margin between dots as needed */
+      margin: 0 5px;
       border-radius: 50%;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
       &.active {
-        background-color: #0dcaf0; /* Set active dot background color */
+        background-color: #0dcaf0;
       }
     }
   }
