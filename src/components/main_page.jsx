@@ -44,22 +44,18 @@ function Main_page() {
       </nav>
       {isMenuOpen && (
         <div className='d-flex p-0 m-0 flex-grow-1'>
-          <SideMenu isMenuOpen={isMenuOpen}  />
+          <SideMenu isMenuOpen={isMenuOpen} />
         </div>
       )}
 
       <main className='d-flex row text-light justify-content-evenly'>
-     
-        <div className='slideDot mt-5'>
-          add the slide-dot component here from the coarruel
-        </div>
         <div className='greetings d-flex flex-column justify-content-center align-items-center mt-5'>
           <h1 className='display-3 fw-bold text-center'>Your health is our concern!</h1>
           <p className='tetx-x-large fw-semi-bold text-center'>How are you feeling today</p>
         </div>
         <div className='d-flex justify-content-center align-items-center mt-5'>
           <div className='d-flex col justify-content-evenly align-items-center'>
-           <button className='rounded-pill w-75 p-3'>Start medication here</button>
+            <button className='rounded-pill w-75 p-3'>Start medication here</button>
           </div>
         </div>
         <div className='d-flex row login-container align-items-center justify-content-evenly'>
@@ -68,7 +64,8 @@ function Main_page() {
         </div>
       </main>
 
-
+      {/* Place the Corrousel component below the main content */}
+      <Corrousel />
     </div>
   );
 }

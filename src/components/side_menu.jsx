@@ -20,7 +20,7 @@ function SideMenu({ isMenuOpen }) {
         <img src={doc} alt="" className='logo' />
       </div>
       <nav className='d-flex justify-content-center p-3'>
-        <div className={`topnav d-flex flex-column align-items-center vh-100 w-100 ${isMenuOpen ? 'show' : ''}`}>
+        <div className={`topnav d-flex flex-column align-items-center vh-100 w-lg-75 ${isMenuOpen ? 'show' : ''}`}>
           {isMenuOpen && (
             <ul className='menu justify-content-center mt-3 gap-6 m-0 p-0'>
               {sideItems.map((item, index) => (

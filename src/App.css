@@ -74,12 +74,12 @@ h3 {
 }
 
 .background-image {
-  display: flex;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   height: 100vh;
+  z-index: -1000;
 }
 
 .carousel-control-next-icon {
@@ -122,12 +122,13 @@ h3 {
   background-color: transparent;
 
   .background-images {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1000;
+    opacity: 1000;
   }
 
   .slide-show-dots {
@@ -185,4 +186,15 @@ h3 {
 
 .login-container {
   margin-top: 10rem;
+}
+
+/* carousel.css */
+.corrousel {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
 }
