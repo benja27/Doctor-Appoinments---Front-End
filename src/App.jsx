@@ -16,7 +16,7 @@ import Logout from './components/authentication/Logout';
 import './App.css';
 
 function App() {
-  const [currUser, setCurrUser] = useState(null);
+  const [currUser, setCurrUser] = useState(JSON.parse(localStorage.getItem("user")));
   if(currUser)
   return (
   // <Routes>
@@ -26,7 +26,8 @@ function App() {
   //   <Route path="/set_appoinment" element={<Set_appoiment  />} />
   // </Routes>
     <>
-            <h1>Hello {currUser.status.data.user.name}</h1>
+            <h1>Hello {currUser.name}</h1>
+            {console.log(currUser)}
             <Header />
             <Logout setCurrUser={setCurrUser} />
       <Routes>
