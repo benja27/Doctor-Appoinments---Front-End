@@ -1,5 +1,4 @@
-import Index_item from "./index_item";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../css/Carousel.css";
 
 const images = [
@@ -21,7 +20,7 @@ const images = [
 const Carousel = () => {
   const [itemsToShow, setItemsToShow] = useState(calculateItemsToShow());
   const [startIndex, setStartIndex] = useState(0);
-  const [current_index, setCurrent_index] = useState(0);
+//  const [current_index, setCurrent_index] = useState(0);
 
   function calculateItemsToShow() {    
     const screenWidth = window.innerWidth;

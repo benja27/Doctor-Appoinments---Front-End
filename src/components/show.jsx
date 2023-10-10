@@ -1,4 +1,3 @@
-import React from 'react'
 import Side_menu from './side_menu'
 
 function Show() {

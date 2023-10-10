@@ -1,7 +1,3 @@
-import React from 'react'
-
-
-
 function Set_appoiment() {
   return (
     <div className='position-relative ' >

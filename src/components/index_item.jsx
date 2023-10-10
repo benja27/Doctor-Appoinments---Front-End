@@ -1,5 +1,6 @@
-import React from 'react'
-import doctor from '../assets/pngegg.png'
+// import React from 'react'
+// import doctor from '../assets/pngegg.png'
+import PropTypes from 'prop-types';
 
 
 function Index_item({big, img}) {
@@ -24,6 +25,11 @@ function Index_item({big, img}) {
 
     </div>
   )
+}
+
+Index_item.propTypes = {
+  big: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
 }
 
 export default Index_item
