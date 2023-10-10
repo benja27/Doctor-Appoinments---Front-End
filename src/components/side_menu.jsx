@@ -26,7 +26,7 @@ function SideMenu({ isMenuOpen }) {
               {sideItems.map((item, index) => (
                 <li
                   key={index}
-                  className={`side-item mt-3 m-3 ${index === clickedItem ? 'active' : ''}`}
+                  className={`side-item mt-3 m-4 text-center ${index === clickedItem ? 'active' : ''}`}
                   onClick={() => handleItemClick(index)}
                 >
                   <a href={item.link} className='text-decoration-none'>
