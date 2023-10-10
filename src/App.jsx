@@ -4,9 +4,10 @@ import User from './components/authentication/User';
 import { Route, Routes } from 'react-router-dom';
 import DoctorsContainer from './components/doctors/DoctorsContainer';
 import DoctorForm from './components/doctors/DoctorForm';
-import Header from './components/doctors/Header';
 import ShowDoctor from './components/doctors/ShowDoctor';
 import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
+import Header from './components/doctors/Header';
+import Logout from './components/authentication/Logout';
 
 // import Main_page from './components/main_page'
 // import Set_appoiment from './components/set_appoiment'
@@ -16,6 +17,7 @@ import './App.css';
 
 function App() {
   const [currUser, setCurrUser] = useState(null);
+  if(currUser)
   return (
   // <Routes>
   //   <Route path="/" element={<Main_page />} />
@@ -24,8 +26,9 @@ function App() {
   //   <Route path="/set_appoinment" element={<Set_appoiment  />} />
   // </Routes>
     <>
-      <User currUser={currUser} setCurrUser={setCurrUser} />
-      <Header />
+            <h1>Hello {currUser.status.data.user.name}</h1>
+            <Header />
+            <Logout setCurrUser={setCurrUser} />
       <Routes>
         <Route path="/" element={<DoctorsContainer />} />
         <Route path="/add-doctor" element={<DoctorForm />} />
@@ -34,6 +37,9 @@ function App() {
       </Routes>
     </>
   );
+  return(
+    <User setCurrUser={setCurrUser} />
+  )
 }
 
 export default App;
