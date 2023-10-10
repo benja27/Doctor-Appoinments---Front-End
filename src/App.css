@@ -4,7 +4,6 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background: gold;
 }
 
 .side-menu {
@@ -28,7 +27,11 @@ li {
   text-decoration: none;
 }
 
-.fa-times,
+.fa-times {
+  width: 2rem;
+  height: 1rem;
+  padding-bottom: 0;
+}
 .fa-bars {
   width: 2rem;
   color: #fff;

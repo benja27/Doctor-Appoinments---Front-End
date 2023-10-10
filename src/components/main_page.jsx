@@ -29,16 +29,16 @@ function Main_page() {
   return (
     <div className='d-flex flex-column nav-bg'>
       {isMenuOpen && (
-        <div className='d-flex p-0 m-0 flex-grow-1 bg-light'>
-          <a className="icon bg-black gap-6" onClick={toggleMenu}>
-            <i className="fa fa-times fa-2x"></i>
+        <div className='p-0 m-0 w-0 h-0 bg-light'>
+          <a className="icon m-3 mt-3 p-0" onClick={toggleMenu}>
+            <i className="fa fa-times fa-2x mt-3 m-0 p-0 mb-0"></i>
           </a>
           <SideMenu isMenuOpen={isMenuOpen} />
         </div>
       )}
       <nav className='d-flex justify-content-between align-items-center mr-3 p-2 m-0 w-auto'>
-        <a className="icon bg-black gap-6" onClick={toggleMenu}>
-          <i className={`fa ${isMenuOpen ? 'fa-times fa-2x' : 'fa-bars fa-2x'}`}></i>
+        <a className="icon bg-black gap-6 m-2" onClick={toggleMenu}>
+          <i className="fa fa-bars fa-2x mt-2"></i>
         </a>
         <section className='search mr-3 d-none d-md-block'>
           <input
