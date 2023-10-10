@@ -17,7 +17,7 @@ function SideMenu({ isMenuOpen }) {
   return (
     <div className={`d-flex nav col justify-content-center align-items-center ${isMenuOpen ? 'open' : ''}`}>
       <div>
-        <img src={doc} alt="" className='logo' />
+        <img src={doc} alt="" className='logo mt-5' />
       </div>
       <nav className='d-flex justify-content-center p-3'>
         <div className={`topnav d-flex flex-column align-items-center vh-100 w-lg-75 ${isMenuOpen ? 'show' : ''}`}>
