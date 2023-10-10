@@ -96,7 +96,6 @@ h3 {
 }
 
 .carousel-control-next-icon {
-
   background-color: rgb(230, 99, 11);
   border-radius: solid 1rem;
   padding: 0;
@@ -212,33 +211,17 @@ h3 {
 
 
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) {
   .slide-show-dots {
-    position: absolute;
-    bottom: 20px;
-    right: 5%;
+    margin-top: 30rem;
+    position: relative;
+    right: 15%;
     transform: translateX(-50%);
     z-index: 1;
   }
-}
 
-@media only screen and (min-width: 1025px) and (max-width: 1200px) {
-  .slide-show-dots {
-    position: absolute;
-    bottom: 20px;
-    right: 5%;
-    transform: translateX(-50%);
-    z-index: 1;
+  .start {
+    width: 22rem;
   }
+  
 }
-
-@media only screen and (min-width: 1201px) {
-  .slide-show-dots {
-    position: absolute;
-    bottom: 20px;
-    right: 5%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-}
-
