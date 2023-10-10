@@ -27,7 +27,15 @@ function Main_page() {
   ));
 
   return (
-    <div className='d-flex flex-column'>
+    <div className='d-flex flex-column nav-bg'>
+      {isMenuOpen && (
+        <div className='d-flex p-0 m-0 flex-grow-1 bg-light'>
+          <a className="icon bg-black gap-6" onClick={toggleMenu}>
+            <i className="fa fa-times fa-2x"></i>
+          </a>
+          <SideMenu isMenuOpen={isMenuOpen} />
+        </div>
+      )}
       <nav className='d-flex justify-content-between align-items-center mr-3 p-2 m-0 w-auto'>
         <a className="icon bg-black gap-6" onClick={toggleMenu}>
           <i className={`fa ${isMenuOpen ? 'fa-times fa-2x' : 'fa-bars fa-2x'}`}></i>
@@ -42,11 +50,6 @@ function Main_page() {
           />
         </section>
       </nav>
-      {isMenuOpen && (
-        <div className='d-flex p-0 m-0 flex-grow-1'>
-          <SideMenu isMenuOpen={isMenuOpen} />
-        </div>
-      )}
 
       <main className='d-flex row text-light justify-content-evenly'>
         <div className='greetings d-flex flex-column justify-content-center align-items-center mt-5'>
@@ -66,8 +69,6 @@ function Main_page() {
             }}>Login</button>
         </div>
       </main>
-
-      {/* Place the Corrousel component below the main content */}
       <Corrousel />
     </div>
   );

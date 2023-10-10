@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import react from '../assets/react.svg';
+import doc5 from '../assets/image/doc5.jpeg';
+import doc4 from '../assets/image/doc4.jpeg';
+import doctor from '../assets/image/doctor.jpeg';
 import nurse from '../assets/image/nurese.avif'; // Import your images
 
 function Corrousel() {
@@ -19,23 +21,22 @@ function Corrousel() {
         indicators={false}
         fade={false}
         className="w-100 h-100"
-        style={{ backgroundColor: 'transparent' }} // Set the background to transparent
+        style={{ backgroundColor: 'transparent' }}
       >
-        <Carousel.Item style={{ backgroundColor: 'transparent' }}> {/* Set the background to transparent */}
-          <div className="background-image" style={{ backgroundImage: `url(${nurse})` }}>
-            {/* No need for the img tag */}
+        <Carousel.Item style={{ backgroundColor: 'transparent' }}> 
+          <div className="background-image" style={{ backgroundImage: `url(${doc5})` }}>
           </div>
         </Carousel.Item>
-        <Carousel.Item style={{ backgroundColor: 'transparent' }}> {/* Set the background to transparent */}
-          <div className="background-image" style={{ backgroundImage: `url(${nurse})` }}>
-          </div>
-        </Carousel.Item>
-        <Carousel.Item style={{ backgroundColor: 'transparent' }}> {/* Set the background to transparent */}
+        <Carousel.Item style={{ backgroundColor: 'transparent' }}>
           <div className="background-image" style={{ backgroundImage: `url(${nurse})` }}>
           </div>
         </Carousel.Item>
-        <Carousel.Item style={{ backgroundColor: 'transparent' }}> {/* Set the background to transparent */}
-          <div className="background-image" style={{ backgroundImage: `url(${nurse})` }}>
+        <Carousel.Item style={{ backgroundColor: 'transparent' }}>
+          <div className="background-image" style={{ backgroundImage: `url(${doc4})` }}>
+          </div>
+        </Carousel.Item>
+        <Carousel.Item style={{ backgroundColor: 'transparent' }}>
+          <div className="background-image" style={{ backgroundImage: `url(${doctor})` }}>
           </div>
         </Carousel.Item>
       </Carousel>
