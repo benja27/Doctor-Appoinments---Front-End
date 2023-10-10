@@ -16,6 +16,7 @@ const Signup = ({setCurrUser, setShow}) => {
             if(!res.ok) throw data.error
             localStorage.setItem("token", res.headers.get("Authorization"))
             setCurrUser(data)
+            console.log(data)
         } catch (error) {
             alert(error)
             console.log("error", error)
@@ -24,7 +25,7 @@ const Signup = ({setCurrUser, setShow}) => {
 
         const handleSubmit = (e) => {
             e.preventDefault();
-            const formData = new FormData(formref.current);
+            const formData = new FormData(formRef.current);
             const data = Object.fromEntries(formData);
             const userInfo = {
                 "user": {
