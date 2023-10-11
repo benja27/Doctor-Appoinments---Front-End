@@ -5,6 +5,7 @@ const initialState = {
   doctors: [],
   isLoading: false,
   error: undefined,
+  showDoctor: {},
 };
 
 const url = 'https://rails-j4lh.onrender.com/doctors';
@@ -62,6 +63,7 @@ const doctorSlice = createSlice({
         ...state,
         isLoading: false,
         doctors: action.payload,
+        showDoctor: {},
       }))
       .addCase(fetchDoctors.rejected, (state) => ({
         ...state,
