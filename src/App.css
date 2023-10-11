@@ -96,6 +96,7 @@ h3 {
 }
 
 .carousel-control-next-icon {
+  display: none;
   background-color: rgb(230, 99, 11);
   border-radius: solid 1rem;
   padding: 0;
@@ -104,6 +105,9 @@ h3 {
   width: 0;
 }
 
+.carousel-control-prev-icon {
+  display: none;
+}
 
 .slide-show-dots {
   display: flex;
@@ -113,8 +117,8 @@ h3 {
 }
 
 .slide-dot {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-color: #7bcd00;
   border: 2px solid #5dc8ec;
   border-radius: 50%;
@@ -198,19 +202,6 @@ h3 {
   margin-top: 10rem;
 }
 
-
-@media screen and (min-width: 475px) {
-  .fa-twitter,
-.fa-facebook,
-.fa-linkedin,
-.fa-pinterest-square {
-  color: #331bbf;
-}
-
-}
-
-
-
 @media only screen and (min-width: 769px) {
   .slide-show-dots {
     margin-top: 30rem;
@@ -220,8 +211,33 @@ h3 {
     z-index: 1;
   }
 
-  .start {
+  .container_starter,
+  .start_cont,
+  .start_container {
+    display: none;
     width: 22rem;
+  }
+
+  .login-container {
+    flex-direction: row;
+    position: relative;
+    width: 20rem;
+    left: 2rem;
+    bottom: 24.9rem;
+  }
+
+  .login-up-btn,
+  .sign-up-btn {
+    width: 100px;
+    height: 35px;
+  }
+
+  .nav {
+    justify-content: space-evenly;
+    width: 15rem;
+    height: 100%;
+    border: #7a7575 solid;
+    margin-bottom: 5rem;
   }
   
 }

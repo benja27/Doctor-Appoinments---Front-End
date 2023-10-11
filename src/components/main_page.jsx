@@ -56,8 +56,8 @@ function Main_page() {
           <h1 className='display-3 fw-bold text-center'>Your health is our concern!</h1>
           <p className='tetx-x-large fw-semi-bold text-center'>How are you feeling today</p>
         </div>
-        <div className='start w-md-25 d-flex justify-content-center align-items-center mt-5'>
-          <div className='container d-flex col w-lg-25 justify-content-evenly align-items-center'>
+        <div className='start_cont w-md-25 d-flex justify-content-center align-items-center mt-5 lg-none'>
+          <div className='container_starter d-flex col w-lg-25 justify-content-evenly align-items-center'>
             <button className=' start_container rounded-pill w-75 p-3'>Start medication here</button>
           </div>
         </div>
