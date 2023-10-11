@@ -75,7 +75,8 @@ function Show() {
               </div>
 
               <div className='col-10 text-end me-5 mt-5' >
-                <button type="button" class="btn btn-large btn-success rounded">Book an appoinment</button>
+                {/* <button type="button" class="btn btn-large btn-success rounded">Book an appoinment</button> */}
+                <Link className="btn btn-large btn-success rounded" to={'/set_appoinment'} > <span className='h5' >Book appoinment</span> </Link>
               </div>
 
             </div>
