@@ -11,23 +11,23 @@ function Side_menu() {
         <div className="mt-5 side_menu_cont pt-5 d-flex flex-column gap-4 text-center" style={{}}>
 
           <section>
-            <a href="/set_appoinment">
-              <h4 className="h4 fw-bold">OPTION</h4>
-            </a>
-          </section>
-          <section>
-            <a href="/show">
-              <h4 className="h4 fw-bold">OPTION</h4>
-            </a>
-          </section>
-          <section>
             <a href="/">
-              <h4 className="h4 fw-bold">OPTION</h4>
+              <h4 className="h4 fw-bold">Home</h4>
+            </a>
+          </section>
+          <section>
+            <a href="/add-doctor">
+              <h4 className="h4 fw-bold">Add Doctor</h4>
+            </a>
+          </section>
+          <section>
+            <a href="/delete-doctor">
+              <h4 className="h4 fw-bold">Delete Doctor</h4>
             </a>
           </section>
           <section>
             <a href="">
-              <h4 className="h4 fw-bold">OPTION</h4>
+              <h4 className="h4 fw-bold">My appnmts</h4>
             </a>
           </section>
 
