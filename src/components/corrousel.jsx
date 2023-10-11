@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import '../css/Carousel.css';
 import { fetchDoctors } from '../redux/doctors/doctorsSlice';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Doctors from './doctors/Doctors';
 
 
@@ -97,7 +98,7 @@ const Carousel = () => {
               className={` item_slider ${index === 1 ? 'center' : ''} `}
               key={index}
             >
-              <a href={`doctors/`+doctor.id} className="item_index_cont">
+              <Link to={`doctors/`+doctor.id} className="item_index_cont">
                 <div className="index_img_circle" />
                 <div className="index_img_circle_2" />
                 <img
@@ -105,7 +106,7 @@ const Carousel = () => {
                   src={`${doctor.photo}`}
                   alt=""
                 />
-              </a>
+              </Link>
 
               <div className="mt-3 text-center">
                 <h5 className="h2 fw-bold">

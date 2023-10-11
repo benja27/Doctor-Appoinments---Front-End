@@ -6,7 +6,7 @@ import ShowDoctor from './components/doctors/ShowDoctor';
 import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
 import Main_page from './components/main_page'
 // import Set_appoiment from './components/set_appoiment'
-// import Show from './components/show'
+import Show from './components/show'
 // import './App.css'
 import './App.css';
 
@@ -19,12 +19,13 @@ function App() {
   //   <Route path="/set_appoinment" element={<Set_appoiment  />} />
   // </Routes>
     <>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         {/* <Route path="/" element={<DoctorsContainer />} /> */}
         <Route path="/" element={<Main_page />} />
         <Route path="/add-doctor" element={<DoctorForm />} />
-        <Route path="/doctors/:doctorId" element={<ShowDoctor />} />
+        {/* <Route path="/doctors/:doctorId" element={<ShowDoctor />} /> */}
+        <Route path="/doctors/:doctorId" element={<Show />} />
         <Route path="/delete-doctor" element={<DeleteDoctorContainer />} />
       </Routes>
     </>
