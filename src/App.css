@@ -4,10 +4,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-}
-
-.side-menu {
-  display: none;
+  background-color: white;
 }
 
 ul {
@@ -56,10 +53,18 @@ h3 {
   border-radius: 50%;
 }
 
-.side-item {
+.sid-item {
   background-color: transparent;
   transition: background-color 0.3s ease;
   cursor: pointer;
+}
+
+.login-container {
+  margin-top: 2rem;
+}
+
+.main-body {
+  margin-top: 8rem;
 }
 
 .side-item:hover {
@@ -198,9 +203,7 @@ h3 {
   width: 150px;
 }
 
-.login-container {
-  margin-top: 10rem;
-}
+
 
 @media only screen and (min-width: 769px) {
   .slide-show-dots {
