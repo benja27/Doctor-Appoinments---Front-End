@@ -37,9 +37,6 @@ const Carousel = () => {
   const dispatch = useDispatch();
 
 
-
-  //  const [current_index, setCurrent_index] = useState(0);
-
   useEffect(() => {
     function handleResize() {
       setItemsToShow(calculateItemsToShow());
@@ -74,12 +71,18 @@ const Carousel = () => {
     }
   };
 
+  if (isLoading) {
+    return <h2>Loading...</h2>;
+  }
+
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 c " style={{verflowY:"hidde"}} >
+
       <div className="text-center d-flex flex-column align-items-center">
-        <h1 className="h1 fw-bold mt-5">LATEST MODELS</h1>
+        <h1 className="h1 fw-bold ">LATEST MODELS</h1>
         <h4 className="h5 text-gray col-9" style={{ color: 'gray' }}>Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque cumqu</h4>
       </div>
+
       <div className="carousel ">
         <button
           onClick={goToPrevSlide}
@@ -88,14 +91,14 @@ const Carousel = () => {
         >
           &#60;
         </button>
-        <div className="image-container">
 
-          {/* {images.slice(startIndex, endIndex + 1).map((image, index) => ( */}
+        <div className="image-container">
+          
           {doctors.slice(startIndex, endIndex + 1).map((doctor, index) => (
             
             <div
               style={{ }}
-              className={` item_slider ${index === 1 ? 'center' : ''} `}
+              className={` item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
               key={index}
             >
               <Link to={`doctors/`+doctor.id} className="item_index_cont">

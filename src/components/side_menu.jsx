@@ -1,6 +1,6 @@
 function Side_menu() {
   return (
-    <article className="d-flex flex-column justify-content-between gap-4 ps-3 mb-4 px-3 d-none d-md-flex side_menu col-3 col-lg-2">
+    <article className="d-flex flex-column justify-content-between gap-4 ps-3 mb- px-3 d-none d-md-flex side_menu col-3 col-lg-2">
 
       <div className="mt-5 ">
 
@@ -35,7 +35,7 @@ function Side_menu() {
 
       </div>
 
-      <div className="mb-5">
+      <div className="mb-">
         <div className="d-flex justify-content-between mb-3 social_media_cont">
           <i className="fab h5 fa-twitter" />
           <i className="fab h5 fa-facebook" />
