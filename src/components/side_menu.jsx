@@ -40,6 +40,18 @@ function Side_menu({ isMenuOpen, toggleMenu }) {
                </a>
              </section>
            </div>
+            <div className="mb-5">
+              <div className="d-flex justify-content-between mb-3 social_media_cont">
+                <i className="fab h5 fa-twitter" />
+                <i className="fab h5 fa-facebook" />
+                <i className="fas h5 fa-envelope" />
+                <i className="fas h5 fa-home" />
+                <i className="fab h5 fa-pinterest" />
+              </div>
+              <h6 className="h6 text-center">
+                @2023 Brand sa de cv
+              </h6>
+            </div>
          </div>
         }
       </div>
