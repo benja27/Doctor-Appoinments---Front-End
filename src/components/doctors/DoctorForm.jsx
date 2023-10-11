@@ -30,7 +30,7 @@ export default function BookForm() {
 
   return (
     <div>
-      <h1 className="add-new-book">ADD NEW DOCTOR</h1>
+      <h1>ADD NEW DOCTOR</h1>
       <div>
         <input
           type="text"
