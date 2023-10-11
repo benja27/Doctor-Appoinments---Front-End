@@ -206,7 +206,7 @@ h3 {
   .slide-show-dots {
     margin-top: 30rem;
     position: relative;
-    right: 15%;
+    right: 18%;
     transform: translateX(-50%);
     z-index: 1;
   }
@@ -215,7 +215,7 @@ h3 {
   .start_cont,
   .start_container {
     display: none;
-    width: 22rem;
+    width: 20rem;
   }
 
   .login-container {
@@ -230,6 +230,7 @@ h3 {
   .sign-up-btn {
     width: 100px;
     height: 35px;
+    text-align: center;
   }
 
   .nav {
