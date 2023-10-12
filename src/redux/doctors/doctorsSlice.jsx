@@ -12,16 +12,15 @@ const initialState = {
 const url = 'http://127.0.0.1:3001/doctors';
 
 export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
-  
   try {
-    const token = localStorage.getItem("token")
+    const token = localStorage.getItem('token');
     const response = await fetch(url, {
-      method: "GET",
+      method: 'GET',
       headers: {
-          "content-type": "application/json",
-          "authorization": `${token}`
-      }
-  });
+        'content-type': 'application/json',
+        authorization: `${token}`,
+      },
+    });
     const doctors = await response.json();
     return doctors;
   } catch (error) {
@@ -30,60 +29,54 @@ export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () =>
 });
 
 export const addDoctor = createAsyncThunk('doctors/addDoctor', async (doctor) => {
-  
   try {
-    const token = localStorage.getItem("token")
-    
+    const token = localStorage.getItem('token');
+
     const response = await fetch(url, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify(doctor),
       headers: {
-          "Content-Type": "application/json",
-          "authorization": `${token}`
+        'Content-Type': 'application/json',
+        authorization: `${token}`,
 
-      }
-  }
-  );
-  console.log(response.data)
+      },
+    });
+    console.log(response.data);
     return response.data;
-    
   } catch (error) {
     throw new Error('Failed to add doctor');
   }
 });
 
 export const deleteDoctor = createAsyncThunk('doctors/deleteDoctor', async (doctorId) => {
-
   const deleteUrl = `${url}/${doctorId}`;
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem('token');
   try {
     const response = await axios.delete(
-      deleteUrl, { 
-        method: "DELETE",
+      deleteUrl, {
+        method: 'DELETE',
         headers: {
-            "content-type": "application/json",
-            "authorization": token
-        }
-    });
+          'content-type': 'application/json',
+          authorization: token,
+        },
+      },
+    );
     return response.data;
   } catch (error) {
     throw new Error('Failed to delete doctor');
   }
-}
-
-    )
-
+});
 
 export const showDoctor = createAsyncThunk('doctors/showDoctor', async (doctorId) => {
   const showUrl = `${url}/${doctorId}`;
   try {
     const response = await axios.get(showUrl, {
-      method: "GET",
+      method: 'GET',
       headers: {
-          "content-type": "application/json",
-          "authorization": localStorage.getItem("token")
-      }
-  });
+        'content-type': 'application/json',
+        authorization: localStorage.getItem('token'),
+      },
+    });
     return response.data;
   } catch (error) {
     throw new Error('Failed to show doctor');
