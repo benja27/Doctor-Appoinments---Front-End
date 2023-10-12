@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Side_menu from './side_menu'; // Replace with the correct import path
-import Corrousel from './corrousel'; // Import the correct component
-import data from './doctor'; // Import the data source
+import Side_menu from './side_menu';
+import Corrousel from './corrousel';
+import data from './doctor';
 
 function Main_page() {
   const [searchItem, setSearchItem] = useState('');
@@ -20,14 +20,14 @@ function Main_page() {
   );
 
   return (
-    <div className="grid d-flex justify-content-evenly flex-column nav-bg">
+    <div className="main-page-layout grid d-flex justify-content-evenly flex-column nav-bg">
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-3 page_container">
           <Side_menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </div>
         <div className="col-md-9 mt-3">
           <nav className="navbar d-flex justify-content-between align-items-center m-0 p-2">
-            <section className="search mr-3" style={{ display: 'none' }}>
+            <section className="search mr-3 d-none">
               <input
                 type="text"
                 placeholder="Search"
@@ -37,7 +37,7 @@ function Main_page() {
               />
             </section>
           </nav>
-          <main className=" main-body d-flex row text-light justify-contents-between bg-black mt-6 h-100">
+          <main className="main-body d-flex row text-light justify-content-between bg-black mt-6 h-100">
             <div className="greetings text-center">
               <h1 className="display-3 fw-bold">Your health is our concern!</h1>
               <p className="text-x-large fw-semi-bold">How are you feeling today</p>
