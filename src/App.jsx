@@ -35,12 +35,12 @@ function App() {
             <Header />
             <Logout  />
       <Routes>
-        {/* <Route path="/" element={<DoctorsContainer />} /> */}
-        <Route path="/" element={<Main_page />} />
+        { <Route path="/" element={<DoctorsContainer />} /> }
+      
         <Route path="/add-doctor" element={<DoctorForm />} />
-        <Route path="/set_appoinment" element={<Set_appoiment  />} />
-        {/* <Route path="/doctors/:doctorId" element={<ShowDoctor />} /> */}
-        <Route path="/doctors/:doctorId" element={<Show />} />
+        
+        { <Route path="/doctors/:doctorId" element={<ShowDoctor />} /> }
+      
         <Route path="/delete-doctor" element={<DeleteDoctorContainer />} />
       </Routes>
     </>
