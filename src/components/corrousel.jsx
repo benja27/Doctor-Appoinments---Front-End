@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import doc5 from '../assets/image/doc5.jpeg';
 import doc4 from '../assets/image/doc4.jpeg';
 import doctor from '../assets/image/doctor.jpeg';
-import nurse from '../assets/image/nurese.avif'; // Import your images
+import nurse from '../assets/image/nurese.avif';
 
 function Corrousel() {
   const [index, setIndex] = useState(0);
