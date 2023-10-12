@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import User from './components/authentication/User';
 
 import { Route, Routes } from 'react-router-dom';
@@ -20,13 +20,25 @@ function App() {
   const token = localStorage.getItem("token")
   const user = JSON.parse(localStorage.getItem("user"))
   
+  
   if(token && user){
     dispatch(authSuccess({token, user}))
   }
   }
   ,[dispatch])
 
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+    const user = JSON.parse(localStorage.getItem("user"))
+    if(token && user){
+      dispatch(authSuccess({token, user}))
+    }
+    }
+    ,[dispatch])
+
   const {isAuth, currentUser} = useSelector(state => state.currentUser)
+
+  
   if(isAuth)
   return (
     <>

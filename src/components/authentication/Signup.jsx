@@ -21,8 +21,11 @@ const Signup = ({setShow}) => {
                 }
 
             }
-            dispatch(signupUser(userInfo))
+            dispatch(signupUser(userInfo)).then(() => {
+                window.location.reload()
+              })
             e.target.reset()
+           
            
         }
         const handleClick = e => {

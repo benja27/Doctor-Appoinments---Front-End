@@ -19,8 +19,11 @@ const Login = ({setShow}) => {
                 }
 
             }
-            dispatch(loginUser(userInfo))
+            dispatch(loginUser(userInfo)).then(() => {
+                window.location.reload()
+              })
             e.target.reset()
+            
           
         }
         const handleClick = e => {
