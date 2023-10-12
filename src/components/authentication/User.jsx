@@ -4,7 +4,7 @@ import Login from './Login'
 import { useState } from 'react'
 
 
-const User = ({ setCurrUser }) => {
+const User = () => {
   const [show, setShow] = useState(true)
 
 
@@ -12,9 +12,9 @@ const User = ({ setCurrUser }) => {
         <>
         {
             show ?
-            <Login setCurrUser={setCurrUser} setShow={setShow}/>
+            <Login setShow={setShow}/>
             :          
-                <Signup setCurrUser={setCurrUser} setShow={setShow}/>
+                <Signup  setShow={setShow}/>
                 
 
           
