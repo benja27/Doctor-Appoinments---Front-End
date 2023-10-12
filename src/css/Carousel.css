@@ -75,25 +75,6 @@
   border-bottom-left-radius: 50%;
 }
 
-.item_index_cont {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.index_item_img {
-  width: 300px;
-  opacity: 1;
-}
-
-.index_img_circle {
-  background-color: #d3ebe9;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-}
-
 .index_item_social_cont {
   color: gray;
 }
@@ -104,4 +85,36 @@
   border-radius: 50%;
   padding: 8px;
   cursor: pointer;
+}
+
+.index_item_social_cont i:hover {
+  color: #97bf0f;
+  border: 3px solid #97bf0f;
+  transition: all 0.25s ease-in-out;
+}
+
+.item_index_cont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.index_item_img {
+  width: 80%;
+  opacity: 0.2;
+}
+
+.item_index_cont:hover .index_item_img {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.index_img_circle {
+  background-color: #d3ebe9;
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
 }
