@@ -6,6 +6,7 @@ import DoctorsContainer from './components/doctors/DoctorsContainer';
 import DoctorForm from './components/doctors/DoctorForm';
 import ShowDoctor from './components/doctors/ShowDoctor';
 import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
+
 import Header from './components/doctors/Header';
 import Logout from './components/authentication/Logout';
 
@@ -34,9 +35,12 @@ function App() {
             <Header />
             <Logout  />
       <Routes>
-        <Route path="/" element={<DoctorsContainer />} />
+        {/* <Route path="/" element={<DoctorsContainer />} /> */}
+        <Route path="/" element={<Main_page />} />
         <Route path="/add-doctor" element={<DoctorForm />} />
-        <Route path="/doctors/:doctorId" element={<ShowDoctor />} />
+        <Route path="/set_appoinment" element={<Set_appoiment  />} />
+        {/* <Route path="/doctors/:doctorId" element={<ShowDoctor />} /> */}
+        <Route path="/doctors/:doctorId" element={<Show />} />
         <Route path="/delete-doctor" element={<DeleteDoctorContainer />} />
       </Routes>
     </>
