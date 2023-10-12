@@ -5,6 +5,7 @@ const initialState = {
   doctors: [],
   isLoading: false,
   error: undefined,
+  showDoctor: {},
 };
 
 const url = 'http://127.0.0.1:3001/doctors';
@@ -80,6 +81,7 @@ const doctorSlice = createSlice({
         ...state,
         isLoading: false,
         doctors: action.payload,
+        showDoctor: {},
       }))
       .addCase(fetchDoctors.rejected, (state) => ({
         ...state,

@@ -10,7 +10,13 @@ const Header = () => (
         <Link to="/add-doctor">Add Doctor</Link>
       </li>
       <li>
-        <Link to="/delete-doctor">Delete Doctor</Link>
+        <Link to="/delete-doctor">Remove Doctor</Link>
+      </li>
+      <li>
+        <Link to="/appointments">My Appointments</Link>
+      </li>
+      <li>
+        <Link to="/add-appointment">Add Appointment</Link>
       </li>
     </ul>
   </header>
