@@ -40,7 +40,7 @@ function Side_menu({ isMenuOpen, toggleMenu }) {
               </section>
             </div>
 
-            <div className="d-flex flex-column mb-2 mt-4 gap-2">
+            <div className="social d-flex flex-column mb-2 mt-5 gap-2">
               <div className="d-flex justify-content-center gap-4 mb-3 social_media_cont">
                 <i className="fab h5 fa-twitter" />
                 <i className="fab h5 fa-facebook" />
