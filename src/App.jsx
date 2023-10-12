@@ -13,7 +13,7 @@ import AppointmentsContainer from './components/appointments/AppointmentsContain
 import AppointmentForm from './components/appointments/AppointmentForm';
 import FullAppointmentForm from './components/appointments/FullAppointmentForm';
 
-import Header from './components/doctors/Header';
+// import Header from './components/doctors/Header';
 import Logout from './components/authentication/Logout';
 
 // import Main_page from './components/main_page'
@@ -29,8 +29,8 @@ import Show from './components/show'
 import './App.css';
 
 function App() {
-  const [currUser, setCurrUser] = useState(null);
-  if(currUser)
+  // const [currUser, setCurrUser] = useState(null);
+  // if(currUser)
   return (
   // <Routes>
   //   <Route path="/" element={<Main_page />} />
@@ -40,9 +40,9 @@ function App() {
   // </Routes>
     <>
 
-            <h1>Hello {currUser.status.data.user.name}</h1>
+            {/* <h1>Hello {currUser.status.data.user.name}</h1>
             <Header />
-            <Logout setCurrUser={setCurrUser} />
+            <Logout setCurrUser={setCurrUser} /> */}
 
       {/* <Header /> */}
 
@@ -60,9 +60,9 @@ function App() {
       </Routes>
     </>
   );
-  return(
-    <User setCurrUser={setCurrUser} />
-  )
+  // return(
+  //   <User setCurrUser={setCurrUser} />
+  // )
 }
 
 export default App;
