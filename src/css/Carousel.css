@@ -105,3 +105,36 @@
   padding: 8px;
   cursor: pointer;
 }
+
+
+.index_item_social_cont i:hover {
+  color: #97BF0F;
+  border: 3px solid #97BF0F;
+  transition: all 0.25s ease-in-out;
+} 
+
+.item_index_cont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.item_index_cont:hover .index_item_img {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.index_item_img {
+  width: 80%;  
+  opacity: .2;
+}
+
+.index_img_circle {
+  background-color: #D3EBE9;
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+}
