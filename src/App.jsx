@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import User from './components/authentication/User';
-//import PrivateText from './components/authentication/PrivateText';
+
 import { Route, Routes } from 'react-router-dom';
 import DoctorsContainer from './components/doctors/DoctorsContainer';
 import DoctorForm from './components/doctors/DoctorForm';
@@ -9,27 +9,30 @@ import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
 import Header from './components/doctors/Header';
 import Logout from './components/authentication/Logout';
 
-// import Main_page from './components/main_page'
-// import Set_appoiment from './components/set_appoiment'
-// import Show from './components/show'
-// import './App.css'
 import './App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { authSuccess } from './redux/currentUser/currentUserSlice';
 
 function App() {
-  const [currUser, setCurrUser] = useState(JSON.parse(localStorage.getItem("user")));
-  if(currUser)
+  const dispatch = useDispatch()
+  useEffect(() => {
+  const token = localStorage.getItem("token")
+  const user = JSON.parse(localStorage.getItem("user"))
+  
+  if(token && user){
+    dispatch(authSuccess({token, user}))
+  }
+  }
+  ,[dispatch])
+
+  const {isAuth, currentUser} = useSelector(state => state.currentUser)
+  if(isAuth)
   return (
-  // <Routes>
-  //   <Route path="/" element={<Main_page />} />
-  //   <Route path="/show" element={<Show />} />
-  //   <Route path="/doctor:id" element={<Main_page />} />
-  //   <Route path="/set_appoinment" element={<Set_appoiment  />} />
-  // </Routes>
     <>
-            <h1>Hello {currUser.name}</h1>
-            {console.log(currUser)}
+            <h1>Hello {currentUser.name}</h1>
+           
             <Header />
-            <Logout setCurrUser={setCurrUser} />
+            <Logout  />
       <Routes>
         <Route path="/" element={<DoctorsContainer />} />
         <Route path="/add-doctor" element={<DoctorForm />} />
@@ -39,7 +42,7 @@ function App() {
     </>
   );
   return(
-    <User setCurrUser={setCurrUser} />
+    <User />
   )
 }
 
