@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { showDoctor } from '../../redux/doctors/doctorsSlice';
 
 export default function ShowDoctor() {
@@ -44,11 +44,13 @@ export default function ShowDoctor() {
             doctor.consultation_fee + doctor.prescription_fee
           }
         </li>
-        <button
-          type="button"
-        >
-          Book Appointment
-        </button>
+        <Link to={`/add-appointment/${doctor.id}`}>
+          <button
+            type="button"
+          >
+            Book Appointment
+          </button>
+        </Link>
       </ul>
       )}
     </>

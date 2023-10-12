@@ -34,9 +34,11 @@ export default function BookForm() {
   };
 
   return (
+
     <div className='d-flex vh-100 p-0 m-0'  >
       <Side_menu />
       <h1 className="add-new-book">ADD NEW DOCTOR</h1>
+
       <div>
         <input
           type="text"

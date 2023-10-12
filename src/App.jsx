@@ -4,11 +4,24 @@ import User from './components/authentication/User';
 import { Route, Routes } from 'react-router-dom';
 import DoctorsContainer from './components/doctors/DoctorsContainer';
 import DoctorForm from './components/doctors/DoctorForm';
+
 import ShowDoctor from './components/doctors/ShowDoctor';
 import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
 
 import Header from './components/doctors/Header';
 import Logout from './components/authentication/Logout';
+
+
+
+
+
+import AppointmentsContainer from './components/appointments/AppointmentsContainer';
+import AppointmentForm from './components/appointments/AppointmentForm';
+import FullAppointmentForm from './components/appointments/FullAppointmentForm';
+// import Main_page from './components/main_page'
+// import Set_appoiment from './components/set_appoiment'
+// import Show from './components/show'
+// import './App.css'
 
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -54,6 +67,9 @@ function App() {
         { <Route path="/doctors/:doctorId" element={<ShowDoctor />} /> }
       
         <Route path="/delete-doctor" element={<DeleteDoctorContainer />} />
+        <Route path="/appointments" element={<AppointmentsContainer />} />
+        <Route path="/add-appointment" element={<FullAppointmentForm />} />
+        <Route path="/add-appointment/:doctorId" element={<AppointmentForm />} />
       </Routes>
     </>
   );
