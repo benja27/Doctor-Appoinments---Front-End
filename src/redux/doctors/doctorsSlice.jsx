@@ -7,11 +7,17 @@ const initialState = {
   error: undefined,
 };
 
-const url = 'https://rails-j4lh.onrender.com/doctors';
+const url = 'http://127.0.0.1:3001/doctors';
 
 export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+          "content-type": "application/json",
+          "authorization": localStorage.getItem("token")
+      }
+  });
     const doctors = await response.json();
     return doctors;
   } catch (error) {
@@ -21,7 +27,13 @@ export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () =>
 
 export const addDoctor = createAsyncThunk('doctors/addDoctor', async (doctor) => {
   try {
-    const response = await axios.post(url, doctor);
+    const response = await axios.post(url, {
+      method: "POST",
+      headers: {
+          "content-type": "application/json",
+          "authorization": localStorage.getItem("token")
+      }
+  }, doctor);
     return response.data;
   } catch (error) {
     throw new Error('Failed to add doctor');
@@ -41,7 +53,13 @@ export const deleteDoctor = createAsyncThunk('doctors/deleteDoctor', async (doct
 export const showDoctor = createAsyncThunk('doctors/showDoctor', async (doctorId) => {
   const showUrl = `${url}/${doctorId}`;
   try {
-    const response = await axios.get(showUrl);
+    const response = await axios.get(showUrl, {
+      method: "GET",
+      headers: {
+          "content-type": "application/json",
+          "authorization": localStorage.getItem("token")
+      }
+  });
     return response.data;
   } catch (error) {
     throw new Error('Failed to show doctor');
