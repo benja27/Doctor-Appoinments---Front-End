@@ -17,10 +17,11 @@ export const signupUser = createAsyncThunk('currentUser/signup', async (userInfo
                 "Content-Type": "application/json"
             }
         })
-        const data = await res.json();
+       
         if(res.ok){
+            const data = await res.json();
             const token = res.headers.get("Authorization")
-            const user = data.data.data
+            const user = data.data
             localStorage.setItem('token', token);
             localStorage.setItem('user', JSON.stringify(user));
             return { token, user };
@@ -46,10 +47,14 @@ export const loginUser = createAsyncThunk('currentUser/login', async (userInfo) 
                 "Content-Type": "application/json"
             }
         })
-        const data = await res.json();
+        
+ 
         if(res.ok){
+            const data = await res.json();
             const token = res.headers.get("Authorization")
-            const user = data.data.data
+            const user = data.status.data.user
+            console.log(data) 
+            console.log(user)          
             localStorage.setItem('token', token);
             localStorage.setItem('user', JSON.stringify(user));
             return { token, user };
@@ -65,9 +70,10 @@ export const loginUser = createAsyncThunk('currentUser/login', async (userInfo) 
 }
 )
 
-export const logoutUser = createAsyncThunk('currentUser/logout', async ({dispatch}) => {
+export const logoutUser = createAsyncThunk('currentUser/logout', async (_, {dispatch}) => {
     try{
         const url = "http://localhost:3001/logout"
+        dispatch(logout())
         const res = await fetch(url, {
             method: "DELETE",
             headers: {
@@ -77,7 +83,7 @@ export const logoutUser = createAsyncThunk('currentUser/logout', async ({dispatc
         })
         const data = await res.json();
         if(res.ok){
-            dispatch(logout())
+           
             localStorage.removeItem("token")
             localStorage.removeItem("user")
             return data;
@@ -127,6 +133,7 @@ export const { authRequest, authSuccess, authFailure, logout } = currentUserSlic
 
 export const selectCurrentUser = (state) => state.currentUser.currentUser;
 export const selectToken = (state) => state.currentUser.token;
+export const selectUserId = (state) => state.currentUser.currentUser?.id;
 
 export default currentUserSlice.reducer;
 
