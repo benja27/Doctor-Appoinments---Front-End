@@ -1,28 +1,13 @@
 import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { signupUser } from "../../redux/currentUser/currentUserSlice";
 
-const Signup = ({setCurrUser, setShow}) => {
+
+const Signup = ({setShow}) => {
     const formRef = useRef();
-    const signup = async (userInfo, setCurrUser) => {
-        const url = "http://localhost:3001/signup"
-        try {
-            const res = await fetch(url, {
-                method: "POST",
-                body: JSON.stringify(userInfo),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            const data = await res.json();
-            if(!res.ok) throw data.error
-            localStorage.setItem("token", res.headers.get("Authorization"))
-            setCurrUser(data.data)
-            localStorage.setItem("user", JSON.stringify(data.data))
-            
-        } catch (error) {
-            alert(error)
-            console.log("error", error)
-        }
-    }
+    const dispatch = useDispatch()
+  
+    
 
         const handleSubmit = (e) => {
             e.preventDefault();
@@ -36,8 +21,9 @@ const Signup = ({setCurrUser, setShow}) => {
                 }
 
             }
-            signup(userInfo, setCurrUser)
-            e.target.reset();
+            dispatch(signupUser(userInfo))
+            e.target.reset()
+           
         }
         const handleClick = e => {
             e.preventDefault();
