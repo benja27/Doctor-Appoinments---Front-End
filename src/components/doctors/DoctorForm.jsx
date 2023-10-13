@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addDoctor } from '../../redux/doctors/doctorsSlice';
 import Side_menu from '../side_menu';
 
@@ -10,6 +10,7 @@ export default function BookForm() {
   const [consultationFee, setConsultationFee] = useState('');
   const [prescriptionFee, setPrescriptionFee] = useState('');
   const [photo, setPhoto] = useState('');
+  const userId = useSelector((state) => state.currentUser.currentUser.id);
 
   const handleAddDoctor = () => {
     const newDoctor = {
@@ -18,8 +19,11 @@ export default function BookForm() {
       consultation_fee: consultationFee,
       prescription_fee: prescriptionFee,
       photo,
+      user_id: userId,
     };
     dispatch(addDoctor(newDoctor));
+
+    console.log(newDoctor);
 
     // Reset input fields after adding the doctor
     setName('');
@@ -30,9 +34,11 @@ export default function BookForm() {
   };
 
   return (
-    <div className='d-flex vh-100 p-0 m-0'  >
+
+    <div className="d-flex vh-100 p-0 m-0">
       <Side_menu />
       <h1 className="add-new-book">ADD NEW DOCTOR</h1>
+
       <div>
         <input
           type="text"

@@ -10,6 +10,7 @@ export default function Appointments({
   const dispatch = useDispatch();
 
   return (
+
     <div className='d-flex mb-3 bg-primar w-100 px-3 py-4 shadow' >
       <div key={appointmentId} className='bg-warnin d-flex flex-column gap-3 col-12' >
 
@@ -40,6 +41,7 @@ export default function Appointments({
 
       </div>
     </div>
+
   );
 }
 

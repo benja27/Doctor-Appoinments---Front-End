@@ -1,27 +1,20 @@
-import Signup from './Signup'
-import Login from './Login'
+import { useState } from 'react';
+import Signup from './Signup';
+import Login from './Login';
 
-import { useState } from 'react'
+const User = () => {
+  const [show, setShow] = useState(true);
 
+  return (
+    <>
+      {
+            show
+              ? <Login setShow={setShow} />
+              : <Signup setShow={setShow} />
 
-const User = ({ setCurrUser }) => {
-  const [show, setShow] = useState(true)
-
-
-    return (
-        <>
-        {
-            show ?
-            <Login setCurrUser={setCurrUser} setShow={setShow}/>
-            :          
-                <Signup setCurrUser={setCurrUser} setShow={setShow}/>
-                
-
-          
-           
         }
-        </>
-    )
-}
+    </>
+  );
+};
 
-export default User
+export default User;
