@@ -23,6 +23,7 @@ export default function BookForm() {
   };
 
   return (
+
     <div className=' vh-100 d-flex flex-column align-items-center justify-content-center gap-5 bg-success position-relative imagen-con-filtro' >
 
       <div className="imagen-con-filtro position-absolut">
@@ -84,6 +85,7 @@ export default function BookForm() {
         </div>
 
       </div>
+
 
 
     </div>

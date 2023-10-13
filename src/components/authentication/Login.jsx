@@ -1,61 +1,55 @@
-import { useRef } from "react";
+import { useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../../redux/currentUser/currentUserSlice';
 
-const Login = ({setCurrUser, setShow}) => {
-    const formRef = useRef();
-    const login = async (userInfo, setCurrUser) => {
-        const url = "http://localhost:3001/login"
-        try {
-            const res = await fetch(url, {
-                method: "POST",
-                body: JSON.stringify(userInfo),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            const data = await res.json();
-            if(!res.ok) throw data.error
-            localStorage.setItem("token", res.headers.get("Authorization"))
-            setCurrUser(data)
-        } catch (error) {
-            alert(error)
-            console.log("error", error)
-        }
-    }
+const Login = ({ setShow }) => {
+  const formRef = useRef();
+  const dispatch = useDispatch();
 
-        const handleSubmit = (e) => {
-            e.preventDefault();
-            const formData = new FormData(formRef.current);
-            const data = Object.fromEntries(formData);
-            const userInfo = {
-                "user": {
-                    "email": data.email,
-                    "password": data.password
-                }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(formRef.current);
+    const data = Object.fromEntries(formData);
+    const userInfo = {
+      user: {
+        email: data.email,
+        password: data.password,
+      },
 
-            }
-            login(userInfo, setCurrUser)
-            e.target.reset();
-        }
-        const handleClick = e => {
-            e.preventDefault();
-            setShow(false)
-        }
+    };
+    dispatch(loginUser(userInfo)).then(() => {
+      window.location.reload();
+    });
+    e.target.reset();
+  };
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShow(false);
+  };
 
-        return (
-            <>
-                <form ref={formRef} onSubmit={handleSubmit}>
-                    Email: <input type="email" name="email" placeholder="email" />
-                    <br />
-                      Password: <input type="password" name="password" placeholder="password" />
-                      <br />    
-                      <input type="submit" value="Login" />
-                </form>
-                <br />
-                <div> 
-                    Not registered, <a href="#signup" onClick={handleClick}>Signup</a> here.
-                </div>
-            </>
-        )
-}
+  return (
+    <>
+      <form ref={formRef} onSubmit={handleSubmit}>
+        Email:
+        {' '}
+        <input type="email" name="email" placeholder="email" />
+        <br />
+        Password:
+        {' '}
+        <input type="password" name="password" placeholder="password" />
+        <br />
+        <input type="submit" value="Login" />
+      </form>
+      <br />
+      <div>
+        Not registered,
+        {' '}
+        <a href="#signup" onClick={handleClick}>Signup</a>
+        {' '}
+        here.
+      </div>
+    </>
+  );
+};
 
 export default Login;

@@ -2,7 +2,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchAppointments } from '../../redux/appointments/appointmentsSlice';
 import Appointments from './Appointments';
+
 import Side_menu from '../side_menu';
+
 
 export default function DoctorsContainer() {
   const { appointments, isLoading, error } = useSelector((state) => state.appointments);
@@ -23,6 +25,7 @@ export default function DoctorsContainer() {
   }
 
   return (
+
     <div className='d-flex vh-100 bg-dar' >
       <Side_menu />
       <div className='d-flex flex-column align-items-center justify-content-center w-100' >
@@ -45,5 +48,6 @@ export default function DoctorsContainer() {
       </div>
 
     </div>
+
   );
 }
