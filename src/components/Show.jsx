@@ -1,25 +1,32 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
-import { useEffect } from 'react';
-import { showDoctor } from '../redux/doctors/doctorsSlice';
+
 import SideMenu from './SideMenu';
 
 function Show() {
+ 
   const { doctorId } = useParams();
-  const dispatch = useDispatch();
 
-  const doctor = useSelector((state) => state.doctors.showDoctor);
-  const isLoading = useSelector((state) => state.doctors.isLoading);
+  
+  const {doctors, isLoading} = useSelector((state) => state.doctors);
+  
 
-  useEffect(() => {
-    dispatch(showDoctor(doctorId));
-  }, [dispatch, doctor, doctorId]);
+  const doctor = doctors.find((doc) => doc.id === parseInt(doctorId, 10));
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100">
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
-  if (doctor !== undefined) {
+
+ 
+
+  if (doctor) {
     return (
       <div className="d-flex" style={{ overflowY: 'hidden', height: '100vh' }}>
         <SideMenu />
@@ -35,7 +42,7 @@ function Show() {
 
               <div className="w-100 mt-5">
                 <div className="mt-5">
-                  {/* <a className='bg-success d-block col-2 py-2 px-2' > Back </a> */}
+                  
                   <Link className="bg-success d-block col-2 py-2 arrow left-arrow px-2" to="/">
                     {' '}
                     <span className="h5">back</span>
