@@ -15,7 +15,13 @@ export default function DoctorsContainer() {
   }, [dispatch, doctors.length]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100">
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   if (error !== undefined) {
