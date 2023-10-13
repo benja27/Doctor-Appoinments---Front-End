@@ -16,11 +16,6 @@ import FullAppointmentForm from './components/appointments/FullAppointmentForm';
 // import Header from './components/doctors/Header';
 import Logout from './components/authentication/Logout';
 
-// import Main_page from './components/main_page'
-// import Set_appoiment from './components/set_appoiment'
-// import Show from './components/show'
-
-
 import Main_page from './components/main_page'
 import Set_appoiment from './components/set_appoiment'
 import Show from './components/show'

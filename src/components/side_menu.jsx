@@ -26,8 +26,13 @@ function Side_menu() {
             </a>
           </section>
           <section>
-            <a href="">
+            <a href="/appointments">
               <h4 className="h4 fw-bold">My appnmts</h4>
+            </a>
+          </section>
+          <section>
+            <a href="/set_appoinment">
+              <h4 className="h4 fw-bold">Add appnmts</h4>
             </a>
           </section>
 
