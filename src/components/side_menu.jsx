@@ -1,72 +1,62 @@
-import React, { useState } from 'react';
-import doc from '../assets/image/doc1.jpg';
+import React from 'react';
 
-function SideMenu({ isMenuOpen }) {
-  const [clickedItem, setClickedItem] = useState(null);
-
-  const handleItemClick = (index) => {
-    setClickedItem(index === clickedItem ? null : index);
-  };
-
-  const sideItems = [
-    { text: 'Model', link: 'http://example.com' },
-    { text: 'Specialization', link: 'http://example.com' },
-    { text: 'Model', link: 'http://example.com' },
-  ];
-
+function Side_menu({ isMenuOpen, toggleMenu }) {
   return (
-    <div className={`d-flex nav col justify-content-center align-items-center ${isMenuOpen ? 'open' : ''}`}>
-      <div>
-        <img src={doc} alt="" className='logo mt-5' />
+    <main className={`main_toggle d-flex flex-column justify-content-between gap-4 p-0 mb-4 p d-md-flex side_menu col-3 col-lg-2 ${isMenuOpen ? 'open' : ''}`}>
+      <div onClick={toggleMenu} className={`toggle d-flex p-0 justify-content-start ml-6 align-items-center d-md-flex ${isMenuOpen ? 'text-white' : ''}`}>
+        <i className={`d-flex fa fa-${isMenuOpen ? 'times' : 'bars'} fa-2x mt-3 mr-3`}></i>
       </div>
-      <nav className='d-flex justify-content-center p-3'>
-        <div className={`topnav d-flex flex-column align-items-center vh-100 w-lg-75 ${isMenuOpen ? 'show' : ''}`}>
-          {isMenuOpen && (
-            <ul className='menu justify-content-center mt-3 gap-6 m-0 p-0'>
-              {sideItems.map((item, index) => (
-                <li
-                  key={index}
-                  className={`side-item mt-3 m-4 text-center ${index === clickedItem ? 'active' : ''}`}
-                  onClick={() => handleItemClick(index)}
-                >
-                  <a href={item.link} className='text-decoration-none'>
-                    <h4 className='m-3 px-3'>{item.text}</h4>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )}
-          {isMenuOpen && (
-            <div className='d-flex row justify-content-center align-items-center mt-5 m-0 no-wrap'>
-              <ul className='d-flex col justify-content-center align-content-center list-unstyled gap-3 m-0 p-0'>
-                <li className='p-1'>
-                  <i className='fa fa-twitter'>
-                    <a href="http://twitter.com"></a>
-                  </i>
-                </li>
-                <li className='p-1'>
-                  <i className='fa fa-facebook'>
-                    <a href="http://facebook.com.com"></a>
-                  </i>
-                </li>
-                <li className='p-1'>
-                  <i className='fa fa-linkedin'>
-                    <a href="http://linkedin.com"></a>
-                  </i>
-                </li>
-                <li className='p-1'>
-                  <i className='fa fa-pinterest-square'>
-                    <a href="http://pinterest.com"></a>
-                  </i>
-                </li>
-              </ul>
-              <p className='m-0 mt-2 text-center fs-5'>We care, but God Heals</p>
+
+      {isMenuOpen && (
+        <div className="mobile-menu with-background">
+          <div onClick={toggleMenu} className={`toggle d-flex p-0 justify-content-start ml-6 align-items-center d-md-flex ${isMenuOpen ? 'text-white' : ''}`}>
+        <i className={`d-flex fa fa-${isMenuOpen ? 'times': ''} fa-2x mt-3 mr-3`}></i>
+      </div>
+          <div className="mobile-menu-content text-center mt-5">
+            <div>
+              <img src="https://placehold.co/150x50?text=Brand" alt="" />
             </div>
-          )}
+
+            <div className="mt-2 m-0 side_menu_cont pt-1 d-flex flex-column gap-1 text-center">
+              <section>
+                <a href="/">
+                  <h4 className="h4 fw-bold">Home</h4>
+                </a>
+              </section>
+              <section>
+                <a href="/add-doctor">
+                  <h4 className="h4 fw-bold">Add Doctor</h4>
+                </a>
+              </section>
+              <section>
+                <a href="/delete-doctor">
+                  <h4 className="h4 fw-bold">Delete Doctor</h4>
+                </a>
+              </section>
+              <section>
+                <a href="">
+                  <h4 className="h4 fw-bold">My appnmts</h4>
+                </a>
+              </section>
+            </div>
+
+            <div className="social d-flex flex-column mb-2 mt-5 gap-2">
+              <div className="d-flex justify-content-center gap-4 mb-3 social_media_cont">
+                <i className="fab h5 fa-twitter" />
+                <i className="fab h5 fa-facebook" />
+                <i className="fas h5 fa-envelope" />
+                <i className="fas h5 fa-home" />
+                <i className="fab h5 fa-pinterest" />
+              </div>
+              <h6 className="h6 text-center">
+                @2023 Brand sa de cv
+              </h6>
+            </div>
+          </div>
         </div>
-      </nav>
-    </div>
+      )}
+    </main>
   );
 }
 
-export default SideMenu;
+export default Side_menu;
