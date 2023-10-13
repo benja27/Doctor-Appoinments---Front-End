@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDoctors, deleteDoctor } from '../../redux/doctors/doctorsSlice';
+import { deleteDoctor } from '../../redux/doctors/doctorsSlice';
 import { fetchAppointments, deleteAppointment } from '../../redux/appointments/appointmentsSlice';
 
 export default function DeleteDoctorsContainer() {
@@ -9,7 +9,7 @@ export default function DeleteDoctorsContainer() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchDoctors());
+   
     dispatch(fetchAppointments());
   },
   [dispatch]);

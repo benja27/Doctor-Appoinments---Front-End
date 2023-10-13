@@ -57,7 +57,7 @@ export const deleteDoctor = createAsyncThunk('doctors/deleteDoctor', async (doct
         method: 'DELETE',
         headers: {
           'content-type': 'application/json',
-          authorization: token,
+          authorization: `${token}`,
         },
       },
     );
