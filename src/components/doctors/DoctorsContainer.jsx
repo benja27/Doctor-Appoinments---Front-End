@@ -8,12 +8,7 @@ export default function DoctorsContainer() {
   const dispatch = useDispatch();
   const [startIndex, setStartIndex] = useState(0);
 
-  useEffect(() => {
-    if (doctors.length === 0) {
-      dispatch(fetchDoctors());
-    }
-  }, [dispatch, doctors.length]);
-
+ 
   if (isLoading) {
     return (
       <div className="d-flex justify-content-center align-items-center vh-100">
