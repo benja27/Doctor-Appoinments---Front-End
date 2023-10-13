@@ -3,7 +3,6 @@ import '../css/Carousel.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchDoctors } from '../redux/doctors/doctorsSlice';
-import Doctors from './doctors/Doctors';
 
 const images = [
   'https://picsum.photos/id/1/300/300',
@@ -32,7 +31,7 @@ const Carousel = () => {
 
   const [itemsToShow, setItemsToShow] = useState(calculateItemsToShow());
   const [startIndex, setStartIndex] = useState(0);
-  const { doctors, isLoading, error } = useSelector((state) => state.doctors);
+  const { doctors, isLoading } = useSelector((state) => state.doctors);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -49,8 +48,7 @@ const Carousel = () => {
     if (doctors.length === 0) {
       dispatch(fetchDoctors());
     }
-    console.log(doctors);
-  }, [dispatch, doctors.length]);
+  }, [dispatch, doctors]);
 
   const totalImages = images.length;
   const endIndex = startIndex + itemsToShow - 1;
@@ -73,8 +71,7 @@ const Carousel = () => {
 
   return (
 
-    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 " style={{verflowY:"hidde"}} >
-
+    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 " style={{ verflowY: 'hidde' }}>
 
       <div className="text-center d-flex flex-column align-items-center">
         <h1 className="h1 fw-bold ">LATEST MODELS</h1>
@@ -97,7 +94,7 @@ const Carousel = () => {
             <div
               style={{ }}
               className={` item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
-              key={index}
+              key={doctor.id}
             >
               <Link to={`doctors/${doctor.id}`} className="item_index_cont">
                 <div className="index_img_circle" />

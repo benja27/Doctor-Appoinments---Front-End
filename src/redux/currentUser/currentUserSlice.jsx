@@ -17,9 +17,8 @@ export const signupUser = createAsyncThunk('currentUser/signup', async (userInfo
         'Content-Type': 'application/json',
       },
     });
-
+    const data = await res.json();
     if (res.ok) {
-      const data = await res.json();
       const token = res.headers.get('Authorization');
       const user = data.data;
       localStorage.setItem('token', token);
@@ -28,7 +27,6 @@ export const signupUser = createAsyncThunk('currentUser/signup', async (userInfo
     }
     throw data.error;
   } catch (error) {
-    console.log(error);
     return error;
   }
 });
@@ -43,44 +41,17 @@ export const loginUser = createAsyncThunk('currentUser/login', async (userInfo) 
         'Content-Type': 'application/json',
       },
     });
-
+    const data = await res.json();
     if (res.ok) {
-      const data = await res.json();
       const token = res.headers.get('Authorization');
       const { user } = data.status.data;
-      console.log(data);
-      console.log(user);
+
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
       return { token, user };
     }
     throw data.error;
   } catch (error) {
-    console.log(error);
-    return error;
-  }
-});
-
-export const logoutUser = createAsyncThunk('currentUser/logout', async (_, { dispatch }) => {
-  try {
-    const url = 'http://localhost:3001/logout';
-    dispatch(logout());
-    const res = await fetch(url, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: localStorage.getItem('token'),
-      },
-    });
-    const data = await res.json();
-    if (res.ok) {
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      return data;
-    }
-    throw data.error;
-  } catch (error) {
-    console.log(error);
     return error;
   }
 });
@@ -117,6 +88,29 @@ export const currentUserSlice = createSlice({
 export const {
   authRequest, authSuccess, authFailure, logout,
 } = currentUserSlice.actions;
+
+export const logoutUser = createAsyncThunk('currentUser/logout', async (_, { dispatch }) => {
+  try {
+    const url = 'http://localhost:3001/logout';
+    dispatch(logout());
+    const res = await fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token'),
+      },
+    });
+    const data = await res.json();
+    if (res.ok) {
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      return data;
+    }
+    throw data.error;
+  } catch (error) {
+    return error;
+  }
+});
 
 export const selectCurrentUser = (state) => state.currentUser.currentUser;
 export const selectToken = (state) => state.currentUser.token;

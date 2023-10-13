@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { showDoctor } from '../redux/doctors/doctorsSlice';
-import Side_menu from './side_menu';
+import SideMenu from './SideMenu';
 
 function Show() {
   const { doctorId } = useParams();
@@ -13,8 +13,7 @@ function Show() {
 
   useEffect(() => {
     dispatch(showDoctor(doctorId));
-    console.log(doctor);
-  }, [dispatch, doctorId]);
+  }, [dispatch, doctor, doctorId]);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -23,7 +22,7 @@ function Show() {
   if (doctor !== undefined) {
     return (
       <div className="d-flex" style={{ overflowY: 'hidden', height: '100vh' }}>
-        <Side_menu> </Side_menu>
+        <SideMenu />
 
         <div className="d-flex justify-content-strech w-100 bg-light">
 
@@ -132,7 +131,7 @@ function Show() {
               </div>
 
               <div className="col-10 text-end me-5 mt-5">
-                {/* <button type="button" class="btn btn-large btn-success rounded">Book an appoinment</button> */}
+
                 <Link className="btn btn-large btn-success rounded" to="/set_appoinment">
                   {' '}
                   <span className="h5">Book appoinment</span>

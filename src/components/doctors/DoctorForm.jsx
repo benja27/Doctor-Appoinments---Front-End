@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addDoctor } from '../../redux/doctors/doctorsSlice';
-import Side_menu from '../side_menu';
+import SideMenu from '../SideMenu';
 
 export default function BookForm() {
   const dispatch = useDispatch();
@@ -23,8 +23,6 @@ export default function BookForm() {
     };
     dispatch(addDoctor(newDoctor));
 
-    console.log(newDoctor);
-
     // Reset input fields after adding the doctor
     setName('');
     setSpecialization('');
@@ -36,7 +34,7 @@ export default function BookForm() {
   return (
 
     <div className="d-flex vh-100 p-0 m-0">
-      <Side_menu />
+      <SideMenu />
       <h1 className="add-new-book">ADD NEW DOCTOR</h1>
 
       <div>

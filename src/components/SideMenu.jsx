@@ -1,4 +1,4 @@
-function Side_menu() {
+function SideMenu() {
   return (
     <article className="d-flex flex-column justify-content-between gap-4 ps-3 mb- px-3 d-none d-md-flex side_menu col-3 col-lg-2">
 
@@ -57,4 +57,4 @@ function Side_menu() {
   );
 }
 
-export default Side_menu;
+export default SideMenu;

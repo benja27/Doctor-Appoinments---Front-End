@@ -3,8 +3,7 @@ import { useEffect } from 'react';
 import { fetchAppointments } from '../../redux/appointments/appointmentsSlice';
 import Appointments from './Appointments';
 
-import Side_menu from '../side_menu';
-
+import SideMenu from '../SideMenu';
 
 export default function DoctorsContainer() {
   const { appointments, isLoading, error } = useSelector((state) => state.appointments);
@@ -26,15 +25,15 @@ export default function DoctorsContainer() {
 
   return (
 
-    <div className='d-flex vh-100 bg-dar' >
-      <Side_menu />
-      <div className='d-flex flex-column align-items-center justify-content-center w-100' >
+    <div className="d-flex vh-100 bg-dar">
+      <SideMenu />
+      <div className="d-flex flex-column align-items-center justify-content-center w-100">
 
         <ul className="doctors-container text-center">
           <h2 className="doctor h1">Doctor</h2>
         </ul>
 
-        <div className='col-10 col-md-8 col-lg-6 col-xl-4 ' >
+        <div className="col-10 col-md-8 col-lg-6 col-xl-4 ">
           {appointments.map((appointment) => (
             <Appointments
               key={appointment.id}
