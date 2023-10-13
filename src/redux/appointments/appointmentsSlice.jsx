@@ -7,7 +7,7 @@ const initialState = {
   error: undefined,
 };
 
-const url = 'https://rails-j4lh.onrender.com/appointments';
+const url = 'http://127.0.0.1:3001/appointments';
 
 export const fetchAppointments = createAsyncThunk('appointments/fetchAppointments', async () => {
   try {

@@ -5,14 +5,15 @@ const initialState = {
   doctors: [],
   isLoading: false,
   error: undefined,
-  showDoctor: {},
+ 
 };
 
-const url = 'https://rails-j4lh.onrender.com/doctors';
+const url = 'http://127.0.0.1:3001/doctors';
 
 export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
   try {
     const token = localStorage.getItem('token');
+    console.log(token);
     const response = await fetch(url, {
       method: 'GET',
       headers: {
@@ -66,22 +67,6 @@ export const deleteDoctor = createAsyncThunk('doctors/deleteDoctor', async (doct
   }
 });
 
-export const showDoctor = createAsyncThunk('doctors/showDoctor', async (doctorId) => {
-  const showUrl = `${url}/${doctorId}`;
-  try {
-    const response = await axios.get(showUrl, {
-      method: 'GET',
-      headers: {
-        'content-type': 'application/json',
-        authorization: localStorage.getItem('token'),
-      },
-    });
-    return response.data;
-  } catch (error) {
-    throw new Error('Failed to show doctor');
-  }
-});
-
 const doctorSlice = createSlice({
   name: 'doctorsSlice',
   initialState,
@@ -96,7 +81,7 @@ const doctorSlice = createSlice({
         ...state,
         isLoading: false,
         doctors: action.payload,
-        showDoctor: {},
+       
       }))
       .addCase(fetchDoctors.rejected, (state) => ({
         ...state,
@@ -131,15 +116,7 @@ const doctorSlice = createSlice({
         isLoading: false,
         error: true,
       }))
-      .addCase(showDoctor.pending, (state) => ({
-        ...state,
-        isLoading: true,
-      }))
-      .addCase(showDoctor.fulfilled, (state, action) => ({
-        ...state,
-        isLoading: false,
-        showDoctor: action.payload,
-      }));
+
   },
 });
 
