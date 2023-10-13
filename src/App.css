@@ -231,12 +231,14 @@ h3 {
   .start_container {
     display: none;
     width: 20rem;
+    left: 2rem;
   }
 
   .login-container {
     flex-direction: row;
     position: relative;
     width: 20rem;
+    height: 15rem;
     left: 2rem;
     bottom: 24.9rem;
   }
@@ -253,6 +255,10 @@ h3 {
     height: 100%;
     border: #7a7575 solid;
     margin-bottom: 5rem;
+  }
+
+  .search {
+    display: flex;
   }
   
 }
