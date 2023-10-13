@@ -19,10 +19,15 @@ import Show from './components/Show';
 
 import './App.css';
 import { authSuccess } from './redux/currentUser/currentUserSlice';
+import { fetchDoctors } from './redux/doctors/doctorsSlice';
 
 function App() {
+
   const dispatch = useDispatch();
   useEffect(() => {
+    
+      dispatch(fetchDoctors());
+    
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user'));
 
@@ -31,15 +36,8 @@ function App() {
     }
   },
   [dispatch]);
+ 
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    const user = JSON.parse(localStorage.getItem('user'));
-    if (token && user) {
-      dispatch(authSuccess({ token, user }));
-    }
-  },
-  [dispatch]);
 
   const { isAuth, currentUser } = useSelector((state) => state.currentUser);
 
