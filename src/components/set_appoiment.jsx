@@ -1,6 +1,11 @@
+import BookForm from "./appointments/AppointmentForm";
+import Appointments from "./appointments/Appointments";
+import DoctorsContainer from "./appointments/AppointmentsContainer";
+// import BookForm from "./appointments/FullAppointmentForm";
+
 function Set_appoiment() {
   return (
-    <div className="position-relative ">
+    <div className="position-relative c">
       <div className="imagen-con-filtro position-absolut">
         <img src="https://picsum.photos/id/1/300/300" alt="Descripción de la imagen" />
       </div>
@@ -13,6 +18,12 @@ function Set_appoiment() {
           <button className="btn btn-primary">Set Appoinment</button>
         </div>
       </div>
+
+      <BookForm />
+      {/* <Appointments /> */}
+      {/* <DoctorsContainer /> */}
+
+
     </div>
 
   );

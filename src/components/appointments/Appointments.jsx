@@ -10,28 +10,38 @@ export default function Appointments({
   const dispatch = useDispatch();
 
   return (
-    <>
-      <ul key={appointmentId}>
-        <li>
-          Appointment #:
-          {appointmentId}
-        </li>
-        <li>
-          Location:
+
+    <div className='d-flex mb-3 bg-primar w-100 px-3 py-4 shadow' >
+      <div key={appointmentId} className='bg-warnin d-flex flex-column gap-3 col-12' >
+
+        <div className='d-flex justify-content-around -w-100 bg-succes ' >
+          <h6>Appointment #:</h6>
+          <h6>{appointmentId}</h6>                
+        </div>
+
+        <div className='d-flex justify-content-around -w-100 bg-succes '    >
+          <h6>
+            Location:
+          </h6>
           {location}
-        </li>
-        <li>
-          Date:
+        </div>
+        <div className='d-flex justify-content-around -w-100 bg-succes ' >
+          <h6>Date:</h6>          
           {date}
-        </li>
-        <button
-          onClick={() => dispatch(deleteAppointment(appointmentId))}
-          type="button"
-        >
-          Delete Appointment
-        </button>
-      </ul>
-    </>
+        </div>
+        <div className='d-flex justify-content-center' >
+          <button
+            onClick={() => dispatch(deleteAppointment(appointmentId))}
+            type="button"
+            className='d-flex justify-content-around -w-100 bg-succes btn btn-danger'
+          >
+            Delete Appointment
+          </button>
+        </div>
+
+      </div>
+    </div>
+
   );
 }
 
