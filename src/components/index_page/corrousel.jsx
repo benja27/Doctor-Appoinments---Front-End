@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import '../../css/carousel.css';
+// import '../../css/carousel.css';
+// import '../../css'
+
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchDoctors } from '../../redux/doctors/doctorsSlice';
