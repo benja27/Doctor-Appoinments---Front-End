@@ -4,7 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchDoctors } from '../../redux/doctors/doctorsSlice';
 import Doctors from '../doctors/Doctors';
-import img from '../../../src/assets/pngegg.png'
+import doctor_img from '../../../src/assets/pngegg.png'
+import Loader from './Loader';
+
 
 const Carousel = () => {
   function calculateItemsToShow() {
@@ -53,7 +55,9 @@ const Carousel = () => {
   };
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return (    
+    <Loader />
+    )
   }
 
   return (
@@ -62,7 +66,7 @@ const Carousel = () => {
 
 
       <div className="text-center d-flex flex-column align-items-center">
-        <h1 className="h1 fw-bold ">LATEST MODELS</h1>
+        <h1 className="h1 fw-bold ">LATEST DOCTORS</h1>
         <h4 className="h5 text-gray col-9" style={{ color: 'gray' }}>Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque cumqu</h4>
       </div>
 
@@ -90,7 +94,7 @@ const Carousel = () => {
                 <div className="index_img_circle_2" />
                 <img
                   className="index_item_img position-absolute"
-                  src={`${doctor.photo}`}
+                  src={`${doctor_img}`}
                   alt=""
                 />
               </Link>

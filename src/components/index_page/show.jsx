@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { showDoctor } from '../../redux/doctors/doctorsSlice';
 import Side_menu from './side_menu';
+import Loader from './Loader';
 
 function Show() {
   const { doctorId } = useParams();
@@ -17,7 +18,9 @@ function Show() {
   }, [dispatch, doctorId]);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return (
+      <Loader />
+    )
   }
 
   if (doctor !== undefined) {

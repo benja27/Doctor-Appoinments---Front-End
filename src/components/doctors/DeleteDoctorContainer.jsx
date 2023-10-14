@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchDoctors, deleteDoctor } from '../../redux/doctors/doctorsSlice';
 import { fetchAppointments, deleteAppointment } from '../../redux/appointments/appointmentsSlice';
 import Side_menu from '../index_page/side_menu';
+import Loader from '../index_page/Loader';
 
 export default function DeleteDoctorsContainer() {
   const { doctors, isLoading, error } = useSelector((state) => state.doctors);
@@ -16,7 +17,9 @@ export default function DeleteDoctorsContainer() {
   [dispatch]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <Loader />
+    )
   }
 
   if (error !== undefined) {
