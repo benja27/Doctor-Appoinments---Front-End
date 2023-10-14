@@ -8,13 +8,14 @@ export default function BookForm() {
   const navigate = useNavigate();
   const [location, setLocation] = useState('');
   const [date, setDate] = useState('');
-  const doctor = useSelector((state) => state.doctors.showDoctor);
+  const doctor = useSelector((state) => state.doctors);
+  const {selectUserId} = useSelector((state) => state.currentUser);
 
   const handleAddAppointment = () => {
     const newAppointment = {
       location,
       date,
-      user_id: 13,
+      user_id: selectUserId,
       doctor_id: doctor.id,
     };
     dispatch(addAppointment(newAppointment));
