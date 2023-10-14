@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { fetchAppointments } from '../../redux/appointments/appointmentsSlice';
 import Appointments from './Appointments';
 
-import Side_menu from '../side_menu';
+import Side_menu from '../index_page/side_menu';
 
 
 export default function DoctorsContainer() {

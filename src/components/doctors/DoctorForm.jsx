@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addDoctor } from '../../redux/doctors/doctorsSlice';
-import Side_menu from '../side_menu';
+import Side_menu from '../index_page/side_menu';
 
 export default function BookForm() {
   const dispatch = useDispatch();

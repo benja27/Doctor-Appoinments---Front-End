@@ -1,11 +1,12 @@
 import Side_menu from './side_menu';
-import Corrousel from './corrousel';
+import Carousel from './corrousel';
 
 function Main_page() {
   return (
     <div className="d-flex justify-content-between chec vh-100 chec">
       <Side_menu />
-      <Corrousel />
+      {/* <Corrousel /> */}
+      <Carousel />
     </div>
   );
 }

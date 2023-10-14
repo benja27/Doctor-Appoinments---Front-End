@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import { showDoctor } from '../redux/doctors/doctorsSlice';
+import { showDoctor } from '../../redux/doctors/doctorsSlice';
 import Side_menu from './side_menu';
 
 function Show() {

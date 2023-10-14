@@ -1,3 +1,6 @@
+import Logout from "../authentication/Logout";
+
+
 function Side_menu() {
   return (
     <article className="d-flex flex-column justify-content-between gap-4 ps-3 mb- px-3 d-none d-md-flex side_menu col-3 col-lg-2">
@@ -33,6 +36,13 @@ function Side_menu() {
           <section>
             <a href="/add-appointment">
               <h4 className="h4 fw-bold">Add appnmts</h4>
+            </a>
+          </section>
+
+
+          <section>
+            <a href="/add-appointment">
+              <h4 className="h4 fw-bold bg-transparent"> <Logout></Logout> </h4>
             </a>
           </section>
 

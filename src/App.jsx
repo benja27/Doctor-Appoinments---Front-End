@@ -18,15 +18,14 @@ import FullAppointmentForm from './components/appointments/FullAppointmentForm';
 
 // import Header from './components/doctors/Header';
 import Logout from './components/authentication/Logout';
-
-import Main_page from './components/main_page'
+import Main_page from './components/index_page/main_page';
 import Set_appoiment from './components/set_appoiment'
-import Show from './components/show'
+import Show from './components/index_page/show';
 
 
-import AppointmentsContainer from './components/appointments/AppointmentsContainer';
-import AppointmentForm from './components/appointments/AppointmentForm';
-import FullAppointmentForm from './components/appointments/FullAppointmentForm';
+// import AppointmentsContainer from './components/appointments/AppointmentsContainer';
+// import AppointmentForm from './components/appointments/AppointmentForm';
+// import FullAppointmentForm from './components/appointments/FullAppointmentForm';
 // import Main_page from './components/main_page'
 // import Set_appoiment from './components/set_appoiment'
 // import Show from './components/show'
@@ -60,16 +59,16 @@ function App() {
 
   const { isAuth, currentUser } = useSelector((state) => state.currentUser);
 
-  if (isAuth) {
+  if (true) {
     return (
       <>
-        <h1>
-          Hello
+        <h1 className='p-0 m-0' >
+          {/* Hello */}
           {currentUser.name}
         </h1>
 
-        <Header />
-        <Logout />
+        {/* <Header /> */}
+        {/* <Logout /> */}
         <Routes>
           
 <Route path="/" element={<Main_page />} />

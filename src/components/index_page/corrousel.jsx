@@ -1,30 +1,15 @@
 import { useState, useEffect } from 'react';
-import '../css/Carousel.css';
+import '../../css/carousel.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchDoctors } from '../redux/doctors/doctorsSlice';
-import Doctors from './doctors/Doctors';
-
-const images = [
-  'https://picsum.photos/id/1/300/300',
-  'https://picsum.photos/id/2/300/300',
-  'https://picsum.photos/id/3/300/300',
-  'https://picsum.photos/id/4/300/300',
-  'https://picsum.photos/id/5/300/300',
-  'https://picsum.photos/id/6/300/300',
-  'https://picsum.photos/id/7/300/300',
-  'https://picsum.photos/id/8/300/300',
-  'https://picsum.photos/id/9/300/300',
-  'https://picsum.photos/id/10/300/300',
-  'https://picsum.photos/id/11/300/300',
-  'https://picsum.photos/id/12/300/300',
-  'https://picsum.photos/id/13/300/300',
-];
+import { fetchDoctors } from '../../redux/doctors/doctorsSlice';
+import Doctors from '../doctors/Doctors';
+import img from '../../../src/assets/pngegg.png'
 
 const Carousel = () => {
   function calculateItemsToShow() {
     const screenWidth = window.innerWidth;
-    if (screenWidth < 999) {
+    if (screenWidth < 764) {
       return 1;
     }
     return 3;
@@ -52,7 +37,7 @@ const Carousel = () => {
     console.log(doctors);
   }, [dispatch, doctors.length]);
 
-  const totalImages = images.length;
+  const totalImages = doctors.length;
   const endIndex = startIndex + itemsToShow - 1;
 
   const goToPrevSlide = () => {
@@ -73,7 +58,7 @@ const Carousel = () => {
 
   return (
 
-    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 " style={{verflowY:"hidde"}} >
+    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1" style={{verflowY:"hidde"}} >
 
 
       <div className="text-center d-flex flex-column align-items-center">
@@ -81,7 +66,7 @@ const Carousel = () => {
         <h4 className="h5 text-gray col-9" style={{ color: 'gray' }}>Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque cumqu</h4>
       </div>
 
-      <div className="carousel ">
+      <div className="carousel">
         <button
           onClick={goToPrevSlide}
           className="arrow left-arrow col-1"
@@ -95,9 +80,10 @@ const Carousel = () => {
           {doctors.slice(startIndex, endIndex + 1).map((doctor, index) => (
 
             <div
-              style={{ }}
-              className={` item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
+              style={{ maxWidth: '500px', margin: '0 auto'     }}
+              className={`shadow pb-3 col-12 item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
               key={index}
+
             >
               <Link to={`doctors/${doctor.id}`} className="item_index_cont">
                 <div className="index_img_circle" />
@@ -121,7 +107,7 @@ const Carousel = () => {
                   consultatio fee:
                   {doctor.consultation_fee }
                 </h6>
-                <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
+                {/* <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
                   {' '}
                   id:
                   {doctor.id}
@@ -145,7 +131,7 @@ const Carousel = () => {
                   {' '}
                   especialization:
                   {doctor.specialization}
-                </h6>
+                </h6> */}
 
                 <div className="index_item_social_cont d-flex justify-content-center gap-3 text-center">
                   <i className="fab fa-facebook" />
