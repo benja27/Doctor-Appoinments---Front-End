@@ -5,7 +5,7 @@ const initialState = {
   doctors: [],
   isLoading: false,
   error: undefined,
- 
+  selectedDoctor: null
 };
 
 const url = 'http://127.0.0.1:3001/doctors';
@@ -70,7 +70,14 @@ export const deleteDoctor = createAsyncThunk('doctors/deleteDoctor', async (doct
 const doctorSlice = createSlice({
   name: 'doctorsSlice',
   initialState,
-  reducers: {},
+  reducers: {
+    showDoctor: (state, action) =>({
+      ...state,
+      selectedDoctor:  action.payload
+      
+    })
+    
+  },
   extraReducers(builder) {
     builder
       .addCase(fetchDoctors.pending, (state) => ({
@@ -119,5 +126,7 @@ const doctorSlice = createSlice({
 
   },
 });
+
+export const {showDoctor} = doctorSlice.actions
 
 export default doctorSlice.reducer;
