@@ -54,7 +54,7 @@ export default function DeleteDoctorsContainer() {
       <div className='d-flex vh-100 align-items-center justify-content-center flex-column  w-100' >
       
       <div className="doctors-container mb-3">
-        <span className="doctor h2">Doctor</span>
+        <span className="doctor h2">Choosse a Doctor to delete:</span>
       </div>
 
       <div className='d-flex flex-column gap-4 p-3 ' >

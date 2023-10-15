@@ -135,7 +135,7 @@ body {
 
 .index_item_img {
   width: 80%;
-  opacity: 0.2;
+  /* opacity: 0.2; */
 }
 
 .item_index_cont:hover .index_item_img {
@@ -233,7 +233,7 @@ body {
 
 .index_item_img {
   width: 80%;
-  opacity: 0.2;
+  /* opacity: 0.2; */
 }
 
 .item_index_cont:hover .index_item_img {
