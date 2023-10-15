@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import '../css/Carousel.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 
 import Doctors from './doctors/Doctors';
+import Logout from './authentication/Logout';
 
-const Carousel = () => {
+
+const Carousel = ({user}) => {
   function calculateItemsToShow() {
     const screenWidth = window.innerWidth;
     if (screenWidth < 999) {
@@ -17,11 +19,6 @@ const Carousel = () => {
   const [itemsToShow, setItemsToShow] = useState(calculateItemsToShow());
   const [startIndex, setStartIndex] = useState(0);
 
-  
-  
-  const { doctors, isLoading } = useSelector((state) => state.doctors);
-  const dispatch = useDispatch();
-
   useEffect(() => {
     function handleResize() {
       setItemsToShow(calculateItemsToShow());
@@ -29,8 +26,15 @@ const Carousel = () => {
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
-    };
+    }
   }, []);
+    
+  
+  
+  const { doctors, isLoading } = useSelector((state) => state.doctors);
+ 
+
+  console.log(doctors);
 
 
   const totalDoctors = doctors.length;
@@ -69,7 +73,8 @@ const Carousel = () => {
         <h1 className="h1 fw-bold ">LATEST MODELS</h1>
         <h4 className="h5 text-gray col-9" style={{ color: 'gray' }}>Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque cumqu</h4>
       </div>
-
+      <span>Hello {user.name}</span>
+<Logout/>
       <div className="carousel ">
         <button
          onClick={goToPrevSlide}
@@ -81,10 +86,10 @@ const Carousel = () => {
 
         <div className="image-container">
 
-        {doctors.slice(startIndex, endIndex + 1).map((doctor) => (
+        {doctors.slice(startIndex, endIndex + 1).map((doctor, index) => (
    
            
-  <Doctors  key={doctor.id} doctor={doctor}/>
+  <Doctors  key={doctor.id} doctor={doctor} index={index}/>
 
  
 
@@ -98,8 +103,7 @@ const Carousel = () => {
         >
           &#62;
         </button>
-        {/* {endIndex < totalDoctors - 1 &&
-          <button onClick={goToNextSlide} className="arrow right-arrow">&#62;</button>} */}
+        
       </div>
     </div>
   );

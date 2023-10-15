@@ -44,15 +44,11 @@ function App() {
   if (isAuth) {
     return (
       <>
-        <h1>
-          Hello
-          {currentUser.name}
-        </h1>
-
-        <Logout />
+  
+       
         <Routes>
 
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<MainPage user={currentUser}/>} />
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/set_appoinment" element={<SetAppoiment />} />
 

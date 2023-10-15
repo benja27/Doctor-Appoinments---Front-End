@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addDoctor } from '../../redux/doctors/doctorsSlice';
 import SideMenu from '../SideMenu';
+import { useNavigate } from 'react-router-dom';
 
 export default function BookForm() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const [name, setName] = useState('');
   const [specialization, setSpecialization] = useState('');
   const [consultationFee, setConsultationFee] = useState('');
@@ -29,6 +31,7 @@ export default function BookForm() {
     setConsultationFee('');
     setPrescriptionFee('');
     setPhoto('');
+    navigate('/')
   };
 
   return (

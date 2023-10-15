@@ -12,6 +12,8 @@
   position: relative;
   display: flex;
   align-items: center;
+  max-height: 100vh;
+  
 
   /* background-color: red; */
 }
@@ -104,17 +106,17 @@
 
 .index_item_img {
   width: 80%;
-  opacity: 0.2;
+ height: auto;
+ border-radius: 50%;
+
+
 }
 
-.item_index_cont:hover .index_item_img {
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
+
 
 .index_img_circle {
   background-color: #d3ebe9;
   border-radius: 50%;
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
 }

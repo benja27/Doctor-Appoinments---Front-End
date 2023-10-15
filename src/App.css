@@ -1,3 +1,13 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+
 .check,
 .check * {
   border: 1px solid #000;
@@ -7,13 +17,8 @@
   background-color: black;
 }
 
-body {
-  /* background-color: red; */
-  max-height: 100vh;
-  max-height: 100%;
 
-  /* overflow-y: hidden; */
-}
+
 
 /* ============================================= */
 
@@ -24,6 +29,7 @@ body {
 .side_menu {
   border-right: 1px solid black;
   max-width: 250px;
+  height: 100%;
 }
 
 .side_menu_cont > section {
@@ -87,22 +93,11 @@ body {
   cursor: pointer;
 }
 
-.index_item_img {
-  width: 80%;
-  opacity: 0.2;
-}
 
-.item_index_cont:hover .index_item_img {
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
 
-.index_img_circle {
-  background-color: #d3ebe9;
-  border-radius: 50%;
-  width: 70%;
-  height: 70%;
-}
+
+
+
 
 /* ============================================= */
 

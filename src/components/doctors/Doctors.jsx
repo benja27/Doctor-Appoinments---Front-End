@@ -6,32 +6,33 @@ import { showDoctor } from '../../redux/doctors/doctorsSlice';
 
 
 
-export default function Doctors({doctor}) {
+export default function Doctors({doctor, index}) {
   const dispatch = useDispatch()
 
  
   return (
-    <Link to={`doctors/${doctor.id}`} className="item_index_cont" onClick={()=>dispatch(showDoctor(doctor.id))} >
-     
-     
-     <div
-              
-              className={` item_slider 'center' } `}
-            
-            >
-              
-                <div className="index_img_circle" />
-                <div className="index_img_circle_2" />
-                <img
+    <div
+    style={{ }}
+    className={` item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
+    key={doctor.id}
+  >
+    <Link to={`doctors/${doctor.id}`}  onClick={()=>dispatch(showDoctor(doctor.id))} >
+      <div className="item_index_cont">
+     {doctor.photo ?  (<img
                   className="index_item_img position-absolute"
                   src={`${doctor.photo}`}
-                  alt=""
-                />
-              
+                  alt="Image of doctor"
+                />) : (   
+                <div className="index_img_circle" ></div>
+                
+                )
+                } 
+      </div>            
 
               <div className="mt-3 text-center">
                 <h5 className="h2 fw-bold">
                   {doctor.name}
+                  {index}
                
                 </h5>
                 <h4 className="p-0 m-0 py-1 " style={{ color: 'gray' }}>.......................</h4>
@@ -73,11 +74,12 @@ export default function Doctors({doctor}) {
                   <i className="fas fa-home" />
                 </div>
               </div>
-              </div>
+             
               
           
      
     </Link>
+  </div>
   );
 }
 
