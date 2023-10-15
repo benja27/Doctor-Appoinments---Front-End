@@ -9,11 +9,11 @@ function Show() {
 
   
   const {doctors, isLoading, selectedDoctor} = useSelector((state) => state.doctors);
-  console.log(selectedDoctor)
+  
 
   const doctor = doctors.find((doctor) => doctor.id === selectedDoctor);
 
-  console.log(doctor)
+  
 
   if (isLoading) {
     return (
