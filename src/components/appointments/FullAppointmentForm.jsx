@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addAppointment } from '../../redux/appointments/appointmentsSlice';
+import {useNavigate } from 'react-router-dom';
 
 export default function BookForm() {
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const [location, setLocation] = useState('');
   const [date, setDate] = useState('');
@@ -10,16 +12,20 @@ export default function BookForm() {
   const doctors = useSelector((state) => state.doctors.doctors);
 
   const handleAddAppointment = () => {
+    const userId =JSON.parse(localStorage.getItem('user')).id;
+   
     const newAppointment = {
       location,
       date,
-      user_id: 13,
+      user_id: userId,
       doctor_id: doctorId,
     };
     dispatch(addAppointment(newAppointment));
+    console.log(newAppointment);
 
     setDate('');
     setLocation('');
+    navigate('/appointments')
   };
 
   return (
