@@ -30,9 +30,9 @@ export default function DoctorsContainer() {
       <Side_menu />
       <div className='d-flex flex-column align-items-center justify-content-center w-100' >
 
-        <ul className="doctors-container text-center">
-          <h2 className="doctor h1">Doctor</h2>
-        </ul>
+        <div className="doctors-container bg-dark px-3 py-2 round d-flex mb-4 justify-content-center text-center" style={{color:"gold"}} >
+          <h2 className="doctor h1 text-center">Appointments</h2>
+        </div>
 
         <div className='col-10 col-md-8 col-lg-6 col-xl-4 ' >
           {appointments.map((appointment) => (
