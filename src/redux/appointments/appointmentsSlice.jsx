@@ -43,8 +43,14 @@ export const addAppointment = createAsyncThunk('appointments/addAppointment', as
 
 export const deleteAppointment = createAsyncThunk('appointments/deleteAppointment', async (appointmentId) => {
   const deleteUrl = `${url}/${appointmentId}`;
+  const token = localStorage.getItem('token');
   try {
-    const response = await axios.delete(deleteUrl);
+    const response = await axios.delete(deleteUrl, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `${token}`,
+      }
+    });
     return response.data;
   } catch (error) {
     throw new Error('Failed to delete appointment');

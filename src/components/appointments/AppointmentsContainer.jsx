@@ -6,14 +6,17 @@ import Appointments from './Appointments';
 import SideMenu from '../SideMenu';
 
 export default function DoctorsContainer() {
-  const { appointments, isLoading, error } = useSelector((state) => state.appointments);
+  
   const dispatch = useDispatch();
 
+
   useEffect(() => {
-    if (appointments.length === 0) {
+   
       dispatch(fetchAppointments());
-    }
-  }, [dispatch, appointments.length]);
+ 
+  }, [dispatch]);
+
+  const { appointments, isLoading, error } = useSelector((state) => state.appointments);
 
   if (isLoading) {
     return <p>Loading...</p>;
