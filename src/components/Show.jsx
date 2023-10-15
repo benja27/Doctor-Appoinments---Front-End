@@ -5,13 +5,15 @@ import SideMenu from './SideMenu';
 
 function Show() {
  
-  const { doctorId } = useParams();
-
-  
-  const {doctors, isLoading} = useSelector((state) => state.doctors);
   
 
-  const doctor = doctors.find((doc) => doc.id === parseInt(doctorId, 10));
+  
+  const {doctors, isLoading, selectedDoctor} = useSelector((state) => state.doctors);
+  console.log(selectedDoctor)
+
+  const doctor = doctors.find((doctor) => doctor.id === selectedDoctor);
+
+  console.log(doctor)
 
   if (isLoading) {
     return (

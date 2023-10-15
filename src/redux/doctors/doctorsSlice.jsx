@@ -71,12 +71,9 @@ const doctorSlice = createSlice({
   name: 'doctorsSlice',
   initialState,
   reducers: {
-    showDoctor: (state, action) =>({
-      ...state,
-      selectedDoctor:  action.payload
-      
-    })
-    
+    showDoctor(state, action) {
+      state.selectedDoctor = action.payload;
+    },    
   },
   extraReducers(builder) {
     builder
@@ -127,6 +124,6 @@ const doctorSlice = createSlice({
   },
 });
 
-export const {showDoctor} = doctorSlice.actions
+export const { showDoctor } = doctorSlice.actions;
 
 export default doctorSlice.reducer;

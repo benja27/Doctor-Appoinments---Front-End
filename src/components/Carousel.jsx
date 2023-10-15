@@ -32,13 +32,8 @@ const Carousel = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (doctors.length === 0) {
-      dispatch(fetchDoctors());
-    }
-  }, [dispatch, doctors]);
 
-  const totalImages = images.length;
+  const totalDoctors = doctors.length;
   const endIndex = startIndex + itemsToShow - 1;
 
   const goToPrevSlide = () => {
@@ -48,7 +43,7 @@ const Carousel = () => {
   };
 
   const goToNextSlide = () => {
-    if (endIndex < totalImages - 1) {
+    if (endIndex < totalDoctors - 1) {
       setStartIndex(startIndex + 1);
     }
   };
@@ -86,7 +81,7 @@ const Carousel = () => {
 
         <div className="image-container">
 
-        {doctors.slice(startIndex, endIndex + 1).map((doctor, index) => (
+        {doctors.slice(startIndex, endIndex + 1).map((doctor) => (
    
            
   <Doctors  key={doctor.id} doctor={doctor}/>
@@ -103,7 +98,7 @@ const Carousel = () => {
         >
           &#62;
         </button>
-        {/* {endIndex < totalImages - 1 &&
+        {/* {endIndex < totalDoctors - 1 &&
           <button onClick={goToNextSlide} className="arrow right-arrow">&#62;</button>} */}
       </div>
     </div>
