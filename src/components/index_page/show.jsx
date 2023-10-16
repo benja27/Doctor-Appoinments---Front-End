@@ -34,7 +34,7 @@ function Show() {
 
             <div className="d-flex flex-column align-items-center justify-content-center vh-100">
               <div>
-                <img src="https://picsum.photos/id/1/200/200" alt="" />
+                {/* <img src="https://picsum.photos/id/1/200/200" alt="" /> */}
               </div>
 
               <div className="w-100 mt-5">
