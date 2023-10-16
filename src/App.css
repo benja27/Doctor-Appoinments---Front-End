@@ -225,10 +225,10 @@ h3 {
   .login-container {
     flex-direction: row;
     position: relative;
-    width: 20rem;
-    height: 15rem;
-    left: 2rem;
-    bottom: 24.9rem;
+    width: 12rem;
+    height: 3rem;
+    left: 40rem;
+    bottom: 27.9rem;
   }
 
   .login-up-btn,
@@ -236,6 +236,8 @@ h3 {
     width: 100px;
     height: 35px;
     text-align: center;
+    justify-content: center;
+    color: #fff;
   }
 
   .nav {

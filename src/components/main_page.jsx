@@ -21,7 +21,7 @@ function Main_page() {
 
   return (
     <div className="main-page-layout grid d-flex justify-content-evenly flex-column nav-bg">
-      <div className="row">
+      <div className="container fluid row">
         <div className="col-md-3 page_container">
           <Side_menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </div>
