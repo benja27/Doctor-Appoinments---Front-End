@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import SideNav from './side_nav';
-import Corrousel from './corrousel';
+import SideNav from '../side_nav';
+import Corrousel from './corrousel_splash';
 
 function MainPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen); 
   };
 
   return (
