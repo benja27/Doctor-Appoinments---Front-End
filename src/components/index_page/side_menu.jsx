@@ -11,10 +11,12 @@ function Side_menu() {
   useEffect(() => {
     window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
+        setIsVisible(true);
+      }else{
         setIsVisible(false);
       }
     });
-  }, [isvisible]);
+  }, []);
 
   return (
     <article className={`d-flex flex-column justify-content-betwee vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3 col-md-3 px-3`}  >

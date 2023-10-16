@@ -157,10 +157,15 @@ body {
 
 /* ============================================= */
 
+body {
+  background-color:#F8F9FA;  
+}
+
 .side_menu {
   border-right: 1px solid black;  
   /* position: fixed; */
   /* max-width: 250px; */
+  background-color:#F8F9FA;
 }
 .fas {
   cursor: pointer;
@@ -174,9 +179,9 @@ body {
     left: 0;
     right: 0;
     left: 0;
-    background-color: rgb(18, 151, 171);
+    background-color: rgb(255, 255, 255);
     z-index: 99; 
-    color: white;   
+    color: rgb(0, 0, 0);   
   }
 } 
 
@@ -184,6 +189,7 @@ body {
   width: 0px;
   margin: 0;
   padding: 0;
+  position: fixed;
 }
 
 .side_menu_cont > section {
