@@ -15,6 +15,7 @@ import Logout from './components/authentication/Logout';
 import Main_page from './components/index_page/main_page';
 import Set_appoiment from './components/set_appoiment'
 import Show from './components/index_page/show';
+import MainPage from './components/splash_screen/splash_screen';
 
 
 // import AppointmentsContainer from './components/appointments/AppointmentsContainer';
@@ -64,7 +65,8 @@ function App() {
         {/* <Header /> */}
         {/* <Logout /> */}
         <Routes>          
-          <Route path="/" element={<Main_page />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/doctors" element={<Main_page />} />
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/set_appoinment" element={<Set_appoiment  />} />          
           <Route path="/doctors/:doctorId" element={<Show />} />
