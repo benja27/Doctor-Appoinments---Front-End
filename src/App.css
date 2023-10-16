@@ -158,8 +158,32 @@ body {
 /* ============================================= */
 
 .side_menu {
-  border-right: 1px solid black;
-  max-width: 250px;
+  border-right: 1px solid black;  
+  /* position: fixed; */
+  /* max-width: 250px; */
+}
+.fas {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .side_menu {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(18, 151, 171);
+    z-index: 99; 
+    color: white;   
+  }
+} 
+
+.hidden{
+  width: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .side_menu_cont > section {
