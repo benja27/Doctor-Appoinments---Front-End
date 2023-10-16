@@ -48,35 +48,32 @@ function Side_menu() {
             </section>
             <section>
               <Link to="/add-doctor">
-                <h4 className="h4 fw-bold">Doctors</h4>
-              </Link>
-              {/* <a href="/add-doctor">
                 <h4 className="h4 fw-bold">Add Doctor</h4>
-              </a> */}
+              </Link>              
             </section>
             <section>
-              <a href="/delete-doctor">
+              <Link to="/delete-doctor">
                 <h4 className="h4 fw-bold">Delete Doctor</h4>
-              </a>
+              </Link>
             </section>
             <section>
-              <a href="/appointments">
+              <Link to="/appointments">
                 <h4 className="h4 fw-bold">My appnmts</h4>
-              </a>
+              </Link>
             </section>
             <section>
-              <a href="/add-appointment">
+              <Link to="/add-appointment">
                 <h4 className="h4 fw-bold">Add appnmts</h4>
-              </a>
+              </Link>
             </section>
 
             <section>
-              <a href="/add-appointment">
+              <Link to="/add-appointment">
                 <h4 className="h4 fw-bold bg-transparent">
                   {" "}
                   <Logout></Logout>{" "}
                 </h4>
-              </a>
+              </Link>
             </section>
           </div>
         </div>
