@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
-import doc1 from '../../assets/image/doc1.jpg';
+import doc1 from '../../assets/image/doc1.jpeg';
 import doc2 from '../../assets/image/doc2.jpg';
-import doc3 from '../../assets/image/doc3.jpg';
+import doc3 from '../../assets/image/doc3.jpeg';
 import doc4 from '../../assets/image/doc4.jpeg';
 
 function Corrousel() {
