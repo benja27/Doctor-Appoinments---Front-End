@@ -1,5 +1,6 @@
 import Logout from "../authentication/Logout";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Side_menu() {
   const [isvisible, setIsVisible] = useState(true);
@@ -46,9 +47,12 @@ function Side_menu() {
               </a>
             </section>
             <section>
-              <a href="/add-doctor">
+              <Link to="/add-doctor">
+                <h4 className="h4 fw-bold">Doctors</h4>
+              </Link>
+              {/* <a href="/add-doctor">
                 <h4 className="h4 fw-bold">Add Doctor</h4>
-              </a>
+              </a> */}
             </section>
             <section>
               <a href="/delete-doctor">
