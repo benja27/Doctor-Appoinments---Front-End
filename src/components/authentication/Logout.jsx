@@ -9,16 +9,14 @@ const Logout = () => {
     dispatch(logoutUser());
   };
   return (
-    
-    
+
   // <input type="submit" value="Logout" className='bg-transparent border border-0 h4 fw-bold' onClick={handleClick} />
-    
-    
-  <section>
-    <a href="/">
-      <h4 onClick={handleClick} className="h4 fw-bold">Logout</h4>
-    </a>
-  </section>
+
+    <section>
+      <a href="/">
+        <h4 onClick={handleClick} className="h4 fw-bold">Logout</h4>
+      </a>
+    </section>
   );
 };
 

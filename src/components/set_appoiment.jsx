@@ -1,9 +1,9 @@
-import BookForm from "./appointments/AppointmentForm";
-import Appointments from "./appointments/Appointments";
-import DoctorsContainer from "./appointments/AppointmentsContainer";
+import BookForm from './appointments/AppointmentForm';
+import Appointments from './appointments/Appointments';
+import DoctorsContainer from './appointments/AppointmentsContainer';
 // import BookForm from "./appointments/FullAppointmentForm";
 
-function Set_appoiment() {
+function SetAppoiment() {
   return (
     <div className="position-relative c">
       <div className="imagen-con-filtro position-absolut">
@@ -23,10 +23,9 @@ function Set_appoiment() {
       {/* <Appointments /> */}
       {/* <DoctorsContainer /> */}
 
-
     </div>
 
   );
 }
 
-export default Set_appoiment;
+export default SetAppoiment;

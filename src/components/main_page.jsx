@@ -15,13 +15,11 @@ function Main_page() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const filteredData = data.filter((item) =>
-    item.name.toLowerCase().includes(searchItem.toLowerCase())
-  );
+  const filteredData = data.filter((item) => item.name.toLowerCase().includes(searchItem.toLowerCase()));
 
   return (
     <div className="main-page-layout grid d-flex justify-content-evenly flex-column nav-bg">
-      
+
       <div className="row">
         <div className="col-md-3 page_container">
           <Side_menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />

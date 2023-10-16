@@ -5,10 +5,9 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchDoctors } from '../../redux/doctors/doctorsSlice';
-import Doctors from '../doctors/Doctors';
-import doctor_img from '../../../src/assets/pngegg.png'
+// import Doctors from '../doctors/Doctors';
+import doctorImg from '../../assets/pngegg.png';
 import Loader from './Loader';
-
 
 const Carousel = () => {
   function calculateItemsToShow() {
@@ -21,7 +20,7 @@ const Carousel = () => {
 
   const [itemsToShow, setItemsToShow] = useState(calculateItemsToShow());
   const [startIndex, setStartIndex] = useState(0);
-  const { doctors, isLoading, error } = useSelector((state) => state.doctors);
+  const { doctors, isLoading } = useSelector((state) => state.doctors);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -38,7 +37,6 @@ const Carousel = () => {
     if (doctors.length === 0) {
       dispatch(fetchDoctors());
     }
-    console.log(doctors);
   }, [dispatch, doctors.length]);
 
   const totalImages = doctors.length;
@@ -57,15 +55,14 @@ const Carousel = () => {
   };
 
   if (isLoading) {
-    return (    
-    <Loader />
-    )
+    return (
+      <Loader />
+    );
   }
 
   return (
 
-    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1" style={{verflowY:"hidde"}} >
-
+    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1" style={{ verflowY: 'hidde' }}>
 
       <div className="text-center d-flex flex-column align-items-center">
         <h1 className="h1 fw-bold ">LATEST DOCTORS</h1>
@@ -86,9 +83,9 @@ const Carousel = () => {
           {doctors.slice(startIndex, endIndex + 1).map((doctor, index) => (
 
             <div
-              style={{ maxWidth: '500px', margin: '0 auto'     }}
+              style={{ maxWidth: '500px', margin: '0 auto' }}
               className={`shadow pb-3 col-12 item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
-              key={index}
+              key={Math.random()}
 
             >
               <Link to={`/doctors/${doctor.id}`} className="item_index_cont">
@@ -96,7 +93,7 @@ const Carousel = () => {
                 <div className="index_img_circle_2" />
                 <img
                   className="index_item_img position-absolute"
-                  src={`${doctor_img}`}
+                  src={`${doctorImg}`}
                   alt=""
                 />
               </Link>

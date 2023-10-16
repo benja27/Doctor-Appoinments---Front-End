@@ -7,7 +7,7 @@ function SideNav({ isMenuOpen, toggleMenu }) {
       <div onClick={toggleMenu} onKeyPress={toggleMenu} role="button" tabIndex={0} className={`toggle d-flex p-0 justify-content-start ml-6 align-items-center d-md-flex ${isMenuOpen ? 'text-white' : ''}`}>
         <i className={`d-flex fa fa-${isMenuOpen ? 'times' : 'bars'} fa-2x mt-3 mr-3`} />
       </div>
- 
+
       {isMenuOpen && (
         <div className="mobile-menu with-background">
           <div onClick={toggleMenu} onKeyPress={toggleMenu} role="button" tabIndex={0} className={`toggle d-flex p-0 justify-content-start ml-6 align-items-center d-md-flex ${isMenuOpen ? 'text-white' : ''}`}>

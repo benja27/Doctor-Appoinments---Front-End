@@ -1,37 +1,37 @@
-import Logout from "../authentication/Logout";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Logout from '../authentication/Logout';
 
-function Side_menu() {
+function SideMenu() {
   const [isvisible, setIsVisible] = useState(true);
 
   const toogleMenu = () => {
-    setIsVisible(!isvisible);    
+    setIsVisible(!isvisible);
   };
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         setIsVisible(true);
-      }else{
+      } else {
         setIsVisible(false);
       }
     });
   }, []);
 
   return (
-    <article className={`d-flex flex-column justify-content-betwee vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3 col-md-3 px-3`}  >
+    <article className={`d-flex flex-column justify-content-betwee vh-100 ${isvisible ? 'side_menu' : 'hidden'} ps-3 col-md-3 px-3`}>
       <div className="text-end mt-3 me-2">
-        <i onClick={toogleMenu} className={`h3 fas ${isvisible ? "fa-close" : "fa-bars"}`}></i>
+        <i onClick={toogleMenu} className={`h3 fas ${isvisible ? 'fa-close' : 'fa-bars'}`} />
       </div>
 
-      <div className={`vh-100 ${isvisible ? "d-flex" : "d-none" } flex-column justify-content-around`}  >
+      <div className={`vh-100 ${isvisible ? 'd-flex' : 'd-none'} flex-column justify-content-around`}>
 
         <div className="">
           <div className="text-center">
             <img
               className="rounded round"
-              style={{ width: "100px" }}
+              style={{ width: '100px' }}
               src="https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg"
               alt=""
             />
@@ -49,7 +49,7 @@ function Side_menu() {
             <section>
               <Link to="/add-doctor">
                 <h4 className="h4 fw-bold">Add Doctor</h4>
-              </Link>              
+              </Link>
             </section>
             <section>
               <Link to="/delete-doctor">
@@ -70,8 +70,9 @@ function Side_menu() {
             <section>
               <Link to="/add-appointment">
                 <h4 className="h4 fw-bold bg-transparent">
-                  {" "}
-                  <Logout></Logout>{" "}
+                  {' '}
+                  <Logout />
+                  {' '}
                 </h4>
               </Link>
             </section>
@@ -94,4 +95,4 @@ function Side_menu() {
   );
 }
 
-export default Side_menu;
+export default SideMenu;

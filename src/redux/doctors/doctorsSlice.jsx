@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { bool } from 'prop-types';
+// import { bool } from 'prop-types';
 
 const initialState = {
   doctors: [],
@@ -41,7 +41,7 @@ export const addDoctor = createAsyncThunk('doctors/addDoctor', async (doctor) =>
 
       },
     });
-    console.log(response.data);
+    // console.log(response.data);
     return response.data;
   } catch (error) {
     throw new Error('Failed to add doctor');

@@ -20,7 +20,7 @@ function Show() {
   if (isLoading) {
     return (
       <Loader />
-    )
+    );
   }
 
   if (doctor !== undefined) {

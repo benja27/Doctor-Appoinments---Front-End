@@ -26,9 +26,9 @@ export const signupUser = createAsyncThunk('currentUser/signup', async (userInfo
       localStorage.setItem('user', JSON.stringify(user));
       return { token, user };
     }
-    throw data.error;
+    // throw data.error;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return error;
   }
 });
@@ -48,15 +48,15 @@ export const loginUser = createAsyncThunk('currentUser/login', async (userInfo) 
       const data = await res.json();
       const token = res.headers.get('Authorization');
       const { user } = data.status.data;
-      console.log(data);
-      console.log(user);
+      // console.log(data);
+      // console.log(user);
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
       return { token, user };
     }
-    throw data.error;
+    // throw data.error;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return error;
   }
 });
@@ -80,7 +80,7 @@ export const logoutUser = createAsyncThunk('currentUser/logout', async (_, { dis
     }
     throw data.error;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return error;
   }
 });

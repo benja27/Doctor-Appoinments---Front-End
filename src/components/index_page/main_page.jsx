@@ -1,7 +1,7 @@
 import Side_menu from './side_menu';
 import Carousel from './corrousel';
 
-function Main_page() {
+function MainPageIndex() {
   return (
     <div className="d-flex justify-content-between chec vh-100 chec">
       <Side_menu />
@@ -11,4 +11,4 @@ function Main_page() {
   );
 }
 
-export default Main_page;
+export default MainPageIndex;

@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../redux/currentUser/currentUserSlice';
 
@@ -53,3 +54,7 @@ const Login = ({ setShow }) => {
 };
 
 export default Login;
+
+const propTypes = {
+  setShow: PropTypes.func.isRequired,
+};
