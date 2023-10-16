@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: #fff;
 }
 
 ul {
@@ -56,13 +56,14 @@ h3 {
 }
 
 .mobile-menu.with-background {
-  background-color: white;
+  background-color: #fff;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999; /* Make sure it's above other content */
+  z-index: 999;
+  transition: 0.5s;
 }
 
 .login-container {
@@ -228,7 +229,7 @@ h3 {
     width: 12rem;
     height: 3rem;
     left: 40rem;
-    bottom: 27.9rem;
+    bottom: 26.9rem;
   }
 
   .login-up-btn,
@@ -240,6 +241,11 @@ h3 {
     color: #fff;
   }
 
+  .maim-page-layout {
+    height: 100vh;
+    background: #000;
+  }
+
   .nav {
     width: 100%;
     height: 100%;
@@ -247,7 +253,27 @@ h3 {
     margin-bottom: 5rem;
   }
 
-  .search {
+  .mobile-menu.with-background {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 14rem;
+    z-index: 999;
+    transition: 0.5s;
+  }
+
+  .side_menu_cont {
+    margin-top: 10rem;
+  }
+
+  .mobile-menu-content {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 89vh;
+    margin: 0;
   }
 }

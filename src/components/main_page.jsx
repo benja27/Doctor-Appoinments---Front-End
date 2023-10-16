@@ -1,42 +1,22 @@
 import React, { useState } from 'react';
-import Side_menu from './side_menu';
+import SideNav from './side_nav';
 import Corrousel from './corrousel';
-import data from './doctor';
 
-function Main_page() {
-  const [searchItem, setSearchItem] = useState('');
+function MainPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleSearchInputChange = (event) => {
-    setSearchItem(event.target.value);
-  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const filteredData = data.filter((item) =>
-    item.name.toLowerCase().includes(searchItem.toLowerCase())
-  );
-
   return (
     <div className="main-page-layout grid d-flex justify-content-evenly flex-column nav-bg">
       <div className="container fluid row">
         <div className="col-md-3 page_container">
-          <Side_menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+          <SideNav isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </div>
         <div className="col-md-9 mt-3">
-          <nav className="navbar d-flex justify-content-between align-items-center m-0 p-2">
-            <section className="search mr-3 d-none">
-              <input
-                type="text"
-                placeholder="Search"
-                className="search rounded-pill w-100"
-                value={searchItem}
-                onChange={handleSearchInputChange}
-              />
-            </section>
-          </nav>
+
           <main className="main-body d-flex row text-light justify-content-between bg-black mt-6 h-100">
             <div className="greetings text-center">
               <h1 className="display-3 fw-bold">Your health is our concern!</h1>
@@ -44,9 +24,7 @@ function Main_page() {
             </div>
 
             <div className="start_cont none justify-content-center align-items-center mt-5">
-              <div className="d-none container_starter flex-column align-items-center">
-                <button className="start_container rounded-pill w-75 p-3">Start medication here</button>
-              </div>
+              <div className="d-none container_starter flex-column align-items-center" />
             </div>
 
             <div className="login-container d-flex flex-row justify-content-center align-items-center mt-6">
@@ -56,9 +34,6 @@ function Main_page() {
               <button
                 className="btn login-up-btn"
                 type="button"
-                onClick={() => {
-                  console.log('Login button clicked');
-                }}
               >
                 Login
               </button>
@@ -71,4 +46,4 @@ function Main_page() {
   );
 }
 
-export default Main_page;
+export default MainPage;

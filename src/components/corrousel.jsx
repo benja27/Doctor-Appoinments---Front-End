@@ -13,24 +13,32 @@ function Corrousel() {
   };
 
   return (
-    <div className='corrousel scroll d-flex w-100 h-100 position-fixed'>
-       <div className="slide-show-dots ">
+    <div className="corrousel scroll d-flex w-100 h-100 position-fixed">
+      <div className="slide-show-dots ">
         <button
+          type="button"
           className={`slide-dot ${index === 0 ? 'active' : ''}`}
           onClick={() => setIndex(0)}
-        ></button>
+          aria-label="0"
+        />
         <button
+          type="button"
           className={`slide-dot ${index === 1 ? 'active' : ''}`}
           onClick={() => setIndex(1)}
-        ></button>
+          aria-label="1"
+        />
         <button
+          type="button"
           className={`slide-dot ${index === 2 ? 'active' : ''}`}
           onClick={() => setIndex(2)}
-        ></button>
+          aria-label="2"
+        />
         <button
+          type="button"
           className={`slide-dot ${index === 3 ? 'active' : ''}`}
           onClick={() => setIndex(3)}
-        ></button>
+          aria-label="3"
+        />
       </div>
       <Carousel
         interval={8000}
@@ -40,25 +48,21 @@ function Corrousel() {
         fade={false}
         className="w-100 h-100"
         style={{ backgroundColor: 'transparent' }}
-      > 
-        <Carousel.Item style={{ backgroundColor: 'transparent' }}> 
-          <div className="background-image" style={{ backgroundImage: `url(${doc5})` }}>
-          </div>
+      >
+        <Carousel.Item style={{ backgroundColor: 'transparent' }}>
+          <div className="background-image" style={{ backgroundImage: `url(${doc5})` }} />
         </Carousel.Item>
         <Carousel.Item style={{ backgroundColor: 'transparent' }}>
-          <div className="background-image" style={{ backgroundImage: `url(${nurse})` }}>
-          </div>
+          <div className="background-image" style={{ backgroundImage: `url(${nurse})` }} />
         </Carousel.Item>
         <Carousel.Item style={{ backgroundColor: 'transparent' }}>
-          <div className="background-image" style={{ backgroundImage: `url(${doc4})` }}>
-          </div>
+          <div className="background-image" style={{ backgroundImage: `url(${doc4})` }} />
         </Carousel.Item>
         <Carousel.Item style={{ backgroundColor: 'transparent' }}>
-          <div className="background-image" style={{ backgroundImage: `url(${doctor})` }}>
-          </div>
+          <div className="background-image" style={{ backgroundImage: `url(${doctor})` }} />
         </Carousel.Item>
       </Carousel>
-     
+
     </div>
   );
 }
