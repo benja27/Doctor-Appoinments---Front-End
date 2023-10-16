@@ -42,7 +42,7 @@ function Side_menu() {
             style={{}}
           >
             <section>
-              <a href="/">
+              <a href="/doctors">
                 <h4 className="h4 fw-bold">Home</h4>
               </a>
             </section>

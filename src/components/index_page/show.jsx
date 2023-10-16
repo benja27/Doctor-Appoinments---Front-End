@@ -40,7 +40,7 @@ function Show() {
               <div className="w-100 mt-5">
                 <div className="mt-5">
                   {/* <a className='bg-success d-block col-2 py-2 px-2' > Back </a> */}
-                  <Link className="bg-success d-block col-2 py-2 arrow left-arrow px-2" to="/">
+                  <Link className="bg-success d-block col-2 py-2 arrow left-arrow px-2" to="/doctors">
                     {' '}
                     <span className="h5">back</span>
                     {' '}

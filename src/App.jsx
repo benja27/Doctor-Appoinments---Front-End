@@ -69,6 +69,7 @@ function App() {
           <Route path="/doctors" element={<Main_page />} />
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/set_appoinment" element={<Set_appoiment  />} />          
+          {/* <Route path="/doctors/:doctorId" element={<Show />} /> */}
           <Route path="/doctors/:doctorId" element={<Show />} />
           <Route path="/delete-doctor" element={<DeleteDoctorContainer />} />
           <Route path="/appointments" element={<AppointmentsContainer />} />

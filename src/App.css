@@ -165,7 +165,7 @@ body {
   border-right: 1px solid black;  
   /* position: fixed; */
   /* max-width: 250px; */
-  background-color:#F8F9FA;
+  /* background-color:#F8F9FA; */
 }
 .fas {
   cursor: pointer;
@@ -355,4 +355,288 @@ body {
 @keyframes fillLq {
   0% , 10% { background-position: 0 120px}
   90% , 100% { background-position: 0 0}
+}
+
+/* ============================================= */
+/* ==========SPLASH SCREEN====================== */
+/* ============================================= */
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+ul.list-unstyled li:hover i {
+  color: #fff;
+}
+
+ul.list-unstyled:hover + p {
+  color: #fff;
+}
+
+li {
+  text-decoration: none;
+}
+
+.fa-times {
+  width: fit-content;
+  padding-bottom: 0;
+  color: red;
+}
+
+.fa-bars {
+  width: fit-content;
+  color: #afd23d;
+}
+
+.main_toggle {
+  width: 100%;
+}
+
+.toggle {
+  margin-left: 2rem;
+  width: fit-content;
+}
+
+.fa-twitter,
+.fa-facebook,
+.fa-linkedin,
+.fa-pinterest-square {
+  color: #7a7575;
+}
+
+h3 {
+  width: fit-content;
+}
+
+.mobile-menu.with-background {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  transition: 0.5s;
+}
+
+.login-container {
+  margin-top: 2rem;
+}
+
+.main-body {
+  margin-top: 8rem;
+}
+
+.side-item:hover {
+  background-color: #fff;
+}
+
+.side-item:active {
+  background-color: #0d6efd;
+}
+
+.social {
+  margin-top: 10rem;
+}
+
+.scroll {
+  width: 100vh;
+  height: 100vh;
+}
+
+.background-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  z-index: -1000;
+}
+
+.nav {
+  width: 100%;
+  height: 100vh;
+}
+
+.carousel-control-next-icon {
+  display: none;
+}
+
+.carousel-control-prev-icon {
+  display: none;
+}
+
+.slide-show-dots {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.2rem;
+}
+
+.slide-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #7bcd00;
+  border: none;
+  border-radius: 50%;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.slide-dot.active {
+  background-color: #fff;
+  border-color: #7bcd00;
+}
+
+.corrousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+  background-color: transparent;
+
+  .background-images {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    opacity: 1000;
+  }
+
+  .slide-show-dots {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    button.slide-dot {
+      background-color: #fff;
+      border: none;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        background-color: #0dcaf0;
+      }
+    }
+  }
+}
+
+.slideDot {
+  margin-top: 7rem;
+}
+
+.sign-up-btn {
+  background-color: #7bcd00;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  margin: 12px;
+  width: 150px;
+  font-size: large;
+}
+
+.login-up-btn {
+  border: 2px solid #7bcd00;
+  border-radius: 5px;
+  color: #7bcd00;
+  cursor: pointer;
+  font-weight: 700;
+  height: 50px;
+  margin: 12px;
+  padding: 0 20px;
+  width: 150px;
+}
+
+@media only screen and (min-width: 769px) {
+  .slide-show-dots {
+    margin-top: 30rem;
+    position: relative;
+    right: 18%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .containr_starter,
+  .start_cont,
+  .start_container {
+    display: none;
+    width: 20rem;
+    left: 2rem;
+  }
+
+  .login-container {
+    flex-direction: row;
+    position: relative;
+    width: 12rem;
+    height: 3rem;
+    left: 40rem;
+    bottom: 26.9rem;
+  }
+
+  .login-up-btn,
+  .sign-up-btn {
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .maim-page-layout {
+    height: 100vh;
+    background: #000;
+  }
+
+  .nav {
+    width: 100%;
+    height: 100%;
+    border: #7a7575 solid;
+    margin-bottom: 5rem;
+  }
+
+  .mobile-menu.with-background {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 14rem;
+    z-index: 999;
+    transition: 0.5s;
+  }
+
+  .side_menu_cont {
+    margin-top: 10rem;
+  }
+
+  .mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 89vh;
+    margin: 0;
+  }
 }

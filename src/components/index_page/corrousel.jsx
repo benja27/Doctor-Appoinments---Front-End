@@ -91,7 +91,7 @@ const Carousel = () => {
               key={index}
 
             >
-              <Link to={`doctors/${doctor.id}`} className="item_index_cont">
+              <Link to={`/doctors/${doctor.id}`} className="item_index_cont">
                 <div className="index_img_circle" />
                 <div className="index_img_circle_2" />
                 <img
