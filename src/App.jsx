@@ -6,7 +6,6 @@ import User from './components/authentication/User';
 import DoctorForm from './components/doctors/DoctorForm';
 
 import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
-
 import AppointmentsContainer from './components/appointments/AppointmentsContainer';
 import AppointmentForm from './components/appointments/AppointmentForm';
 import FullAppointmentForm from './components/appointments/FullAppointmentForm';
@@ -41,7 +40,7 @@ function App() {
 
   const { isAuth, currentUser } = useSelector((state) => state.currentUser);
 
-  if (isAuth) {
+  if (true) {
     return (
       <>
   

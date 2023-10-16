@@ -9,7 +9,7 @@ const initialState = {
 
 export const signupUser = createAsyncThunk('currentUser/signup', async (userInfo) => {
   try {
-    const url = 'http://localhost:3001/signup';
+    const url = 'https://rails-j4lh.onrender.com/signup';
     const res = await fetch(url, {
       method: 'POST',
       body: JSON.stringify(userInfo),
@@ -33,7 +33,7 @@ export const signupUser = createAsyncThunk('currentUser/signup', async (userInfo
 
 export const loginUser = createAsyncThunk('currentUser/login', async (userInfo) => {
   try {
-    const url = 'http://localhost:3001/login';
+    const url = 'https://rails-j4lh.onrender.com/login';
     const res = await fetch(url, {
       method: 'POST',
       body: JSON.stringify(userInfo),

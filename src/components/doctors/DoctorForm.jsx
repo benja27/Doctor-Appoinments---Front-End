@@ -35,49 +35,59 @@ export default function BookForm() {
   };
 
   return (
+    <div className='d-flex vh-100 p-0 m-0 '  >
 
-    <div className="d-flex vh-100 p-0 m-0">
-      <SideMenu />
-      <h1 className="add-new-book">ADD NEW DOCTOR</h1>
+      <Side_menu />
 
-      <div>
-        <input
-          type="text"
-          placeholder="Doctor Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Doctor Specialization"
-          value={specialization}
-          onChange={(e) => setSpecialization(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Doctor Consultation Fee"
-          value={consultationFee}
-          onChange={(e) => setConsultationFee(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Doctor Prescription Fee"
-          value={prescriptionFee}
-          onChange={(e) => setPrescriptionFee(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="link to doctor's photo"
-          value={photo}
-          onChange={(e) => setPhoto(e.target.value)}
-        />
-        <button
-          aria-label="add-btn"
-          type="button"
-          onClick={handleAddDoctor}
-        >
-          ADD DOCTOR
-        </button>
+      <div className='d-flex flex-column align-items-center justify-content-center gap-5  w-100 bg-light' >
+
+        <h1 className="add-new-book bg-dark px-4 py-2 round rounded" style={{color:"gold"}} >ADD NEW DOCTOR</h1>
+
+        <div className='d-flex flex-column col-10 col-lg-6 gap-3 shadow px-2 py-3' >
+          <input
+            type="text"
+            className='form-control'
+            placeholder="Doctor Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="text"
+            className='form-control'
+            placeholder="Doctor Specialization"
+            value={specialization}
+            onChange={(e) => setSpecialization(e.target.value)}
+          />
+          <input
+            type="number"
+            className='form-control'
+            placeholder="Doctor Consultation Fee"
+            value={consultationFee}
+            onChange={(e) => setConsultationFee(e.target.value)}
+          />
+          <input
+            type="number"
+            className='form-control'
+            placeholder="Doctor Prescription Fee"
+            value={prescriptionFee}
+            onChange={(e) => setPrescriptionFee(e.target.value)}
+          />
+          <input
+            type="text"
+            className='form-control'
+            placeholder="link to doctor's photo"
+            value={photo}
+            onChange={(e) => setPhoto(e.target.value)}
+          />
+          <button
+            aria-label="add-btn"
+            className='btn btn-primary'
+            type="button"
+            onClick={handleAddDoctor}
+          >
+            ADD DOCTOR
+          </button>
+        </div>
       </div>
     </div>
   );
