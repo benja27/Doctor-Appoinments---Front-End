@@ -2,6 +2,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteDoctor } from '../../redux/doctors/doctorsSlice';
 import { useState } from 'react';
+import Loader from '../index_page/Loader';
+import SideMenu from '../SideMenu';
 
 
 export default function DeleteDoctorsContainer() {
@@ -18,9 +20,9 @@ export default function DeleteDoctorsContainer() {
     )
   }
 
-  if (error !== undefined) {
-    return 'Error... something went wrong';
-  }
+ 
+
+
  const handleDeleteDoctor = (id) => {
   dispatch(deleteDoctor(id));
   setRemoved(true);
@@ -28,7 +30,7 @@ export default function DeleteDoctorsContainer() {
  
   return (
     <div className='d-flex' >
-      <Side_menu />
+      <SideMenu />
       <div className='d-flex vh-100 align-items-center bg-light justify-content-center flex-column  w-100' >
       
       <div className="doctors-container mb-3">
@@ -48,7 +50,9 @@ export default function DeleteDoctorsContainer() {
                 className='btn btn-danger'
                 type="button"
               >
-                Delete Doctor
+                {
+                  removed ? 'Deleted' : 'Delete'
+                }
               </button>
             </div>
           </div>

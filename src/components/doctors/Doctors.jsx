@@ -12,9 +12,10 @@ export default function Doctors({doctor, index}) {
  
   return (
     <div
-    style={{ }}
-    className={` item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
-    key={doctor.id}
+    style={{ maxWidth: '500px', margin: '0 auto'     }}
+    className={`shadow pb-3 col-12 item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
+    key={index}
+
   >
     <Link to={`doctors/${doctor.id}`}  onClick={()=>dispatch(showDoctor(doctor.id))} >
       <div className="item_index_cont">
@@ -42,7 +43,7 @@ export default function Doctors({doctor, index}) {
                   consultatio fee:
                   {doctor.consultation_fee }
                 </h6>
-                <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
+                {/* <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
                   {' '}
                   id:
                   {doctor.id}
@@ -66,19 +67,20 @@ export default function Doctors({doctor, index}) {
                   {' '}
                   especialization:
                   {doctor.specialization}
-                </h6>
+                </h6> */}
 
-                <div className="index_item_social_cont d-flex justify-content-center gap-3 text-center">
-                  <i className="fab fa-facebook" />
-                  <i className="fab fa-twitter" />
-                  <i className="fas fa-home" />
-                </div>
+               
               </div>
              
               
           
      
     </Link>
+    <div className="index_item_social_cont d-flex justify-content-center gap-3 text-center">
+                  <i className="fab fa-facebook" />
+                  <i className="fab fa-twitter" />
+                  <i className="fas fa-home" />
+                </div>
   </div>
   );
 }

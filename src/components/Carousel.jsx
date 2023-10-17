@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import '../css/Carousel.css';
+import '../Carousel.css';
 import { useSelector } from 'react-redux';
 
 
 import Doctors from './doctors/Doctors';
-import Logout from './authentication/Logout';
 
 
-const Carousel = ({user}) => {
+
+const Carousel = () => {
   function calculateItemsToShow() {
     const screenWidth = window.innerWidth;
     if (screenWidth < 999) {
@@ -67,14 +67,14 @@ const Carousel = ({user}) => {
 
   return (
 
-    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 " style={{ verflowY: 'hidde' }}>
+    <div className="d-flex flex-column align-items-center bg-success justify-content-center flex-grow-1 " style={{ verflowY: 'hidde' }}>
 
       <div className="text-center d-flex flex-column align-items-center">
         <h1 className="h1 fw-bold ">LATEST MODELS</h1>
         <h4 className="h5 text-gray col-9" style={{ color: 'gray' }}>Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque cumqu</h4>
       </div>
-      <span>Hello {user.name}</span>
-<Logout/>
+     
+
       <div className="carousel ">
         <button
          onClick={goToPrevSlide}
@@ -87,14 +87,17 @@ const Carousel = ({user}) => {
         <div className="image-container">
 
         {doctors.slice(startIndex, endIndex + 1).map((doctor, index) => (
-   
+  
            
   <Doctors  key={doctor.id} doctor={doctor} index={index}/>
 
  
 
+ 
+
           ))}
         </div>
+       
 
         <button
          onClick={goToNextSlide}
@@ -106,6 +109,7 @@ const Carousel = ({user}) => {
         
       </div>
     </div>
+
   );
 };
 

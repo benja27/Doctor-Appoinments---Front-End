@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import SideMenu from './SideMenu';
+import Loader from './index_page/Loader';
 
 function Show() {
  
@@ -16,12 +17,7 @@ function Show() {
   
 
   if (isLoading) {
-    return (
-      <div className="d-flex justify-content-center align-items-center vh-100">
-        <div className="spinner-border text-success" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      </div>
+    return (<Loader />
     );
   }
 
@@ -39,7 +35,7 @@ function Show() {
 
             <div className="d-flex flex-column align-items-center justify-content-center vh-100">
               <div>
-                <img src="https://picsum.photos/id/1/200/200" alt="" />
+                <img src={doctor.photo} alt="" />
               </div>
 
               <div className="w-100 mt-5">

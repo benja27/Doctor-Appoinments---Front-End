@@ -1,13 +1,35 @@
+import React, { useState } from 'react';
 import SideMenu from './SideMenu';
 import Carousel from './Carousel';
 
-function MainPage({ user}) {
+
+
+function Main_page() {
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+
+
   return (
-    <div className="d-flex justify-content-between chec vh-100 chec">
-      <SideMenu />
-      <Carousel user={user}/>
+    <div className="main-page-layout c grid d-flex justify-content-evenly flex-column nav-bg">
+      
+      <div className="row">
+        <div className="col-md-3 page_container">
+          <SideMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+        </div>
+        <div className="col-md-9 mt-3">
+    
+         <Carousel />
+        </div>
+      </div>
     </div>
   );
 }
 
-export default MainPage;
+export default Main_page;

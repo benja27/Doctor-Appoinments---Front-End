@@ -39,11 +39,14 @@ function App() {
 
 
   const { isAuth, currentUser } = useSelector((state) => state.currentUser);
+  console.log(currentUser);
+  console.log(isAuth);
 
-  if (true) {
+  if (isAuth) {
     return (
       <>
-  
+  <span>Hello {currentUser.name}</span>
+       <Logout />
        
         <Routes>
 
