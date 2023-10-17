@@ -17,7 +17,7 @@ const Carousel = () => {
     }
     return 3;
   }
-
+  const { doctors, isLoading, error } = useSelector((state) => state.doctors);
   const [itemsToShow, setItemsToShow] = useState(calculateItemsToShow());
   const [startIndex, setStartIndex] = useState(0);
 
@@ -33,7 +33,7 @@ const Carousel = () => {
     
   
   
-  const { doctors, isLoading, error } = useSelector((state) => state.doctors);
+  
  
 
 

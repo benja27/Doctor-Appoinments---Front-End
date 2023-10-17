@@ -46,7 +46,7 @@ export default function DeleteDoctorsContainer() {
             </div>
             <div className='text-center' >
               <button
-                onClick={() => dispatch(handleDeleteDoctor(doctor.id))}
+                onClick={() => handleDeleteDoctor(doctor.id)}
                 className='btn btn-danger'
                 type="button"
               >

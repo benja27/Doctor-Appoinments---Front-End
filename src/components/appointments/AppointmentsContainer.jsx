@@ -4,6 +4,7 @@ import { fetchAppointments } from '../../redux/appointments/appointmentsSlice';
 import Appointments from './Appointments';
 
 import SideMenu from '../SideMenu';
+import { logout } from '../../redux/currentUser/currentUserSlice';
 
 export default function DoctorsContainer() {
   
@@ -17,13 +18,13 @@ export default function DoctorsContainer() {
   }, [dispatch]);
 
   const { appointments, isLoading, error } = useSelector((state) => state.appointments);
-
+console.log(appointments)
   if (isLoading) {
     return <p>Loading...</p>;
   }
 
-  if (error !== undefined) {
-    return 'Error... something went wrong';
+  if(error){
+    dispatch(logout())
   }
 
   return (

@@ -4,7 +4,7 @@ import Carousel from './Carousel';
 
 
 
-function Main_page({user}) {
+function MainPage({user}) {
   
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -33,4 +33,4 @@ function Main_page({user}) {
   );
 }
 
-export default Main_page;
+export default MainPage;

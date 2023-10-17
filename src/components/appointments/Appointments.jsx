@@ -8,6 +8,13 @@ export default function Appointments({
   date,
 }) {
   const dispatch = useDispatch();
+ 
+
+  const handleDelete = (id) => {
+    dispatch(deleteAppointment(id));
+   window.location.reload();
+
+  }
 
   return (
 
@@ -31,7 +38,7 @@ export default function Appointments({
         </div>
         <div className="d-flex justify-content-center">
           <button
-            onClick={() => dispatch(deleteAppointment(appointmentId))}
+            onClick={() => handleDelete(appointmentId)}
             type="button"
             className="d-flex justify-content-around -w-100 bg-succes btn btn-danger"
           >

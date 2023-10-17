@@ -13,7 +13,7 @@ const url = 'http://127.0.0.1:3001/doctors';
 export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
   try {
     const token = localStorage.getItem('token');
-    console.log(token);
+  
     const response = await fetch(url, {
       method: 'GET',
       headers: {
@@ -52,7 +52,7 @@ export const deleteDoctor = createAsyncThunk('doctors/deleteDoctor', async (doct
   const deleteUrl = `${url}/${doctorId}`;
   const token = localStorage.getItem('token');
   try {
-    const response = await axios.delete(
+    const response = await axios(
       deleteUrl, {
         method: 'DELETE',
         headers: {

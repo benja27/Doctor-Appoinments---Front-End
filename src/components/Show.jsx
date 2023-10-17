@@ -34,10 +34,9 @@ function Show() {
           <div className="bg-primar vh-100 col-8 ">
 
             <div className="d-flex flex-column align-items-center justify-content-center vh-100">
-              <div>
-                <img src={doctor.photo} alt="" />
+            <div style={{height:'50px', width:'20px'}}>
+                <img src={doctor.photo} alt="photo" />
               </div>
-
               <div className="w-100 mt-5">
                 <div className="mt-5">
                   
@@ -48,6 +47,7 @@ function Show() {
                   </Link>
                 </div>
               </div>
+         
 
             </div>
 
@@ -55,19 +55,10 @@ function Show() {
 
           <div className="bg-succes col-4 mt-5">
 
-            <div className="d-flex bg-succes align-items-center justify-content-cente flex-column vh-100 mt-5">
+            <div className="d-flex bg-succes align-items-center justify-content-cente flex-column vh-100">
 
               <div className="col-10 col-md-10 mt-5">
                 <div className="d-flex h2 justify-content-end gap-3 mb-1 px-2 ">
-                  {' '}
-                  <span>
-                    {' '}
-                    {doctor.name}
-                    {' '}
-                  </span>
-                  {' '}
-                </div>
-                <div className="d-flex h6 justify-content-end gap-3 mb-4 px-2 ">
                   {' '}
                   <span>
                     {' '}

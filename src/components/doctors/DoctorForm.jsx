@@ -25,13 +25,14 @@ export default function BookForm() {
       user_id: userId,
     };
     dispatch(addDoctor(newDoctor));
-console.log(newDoctor)
+
     // Reset input fields after adding the doctor
     setName('');
     setSpecialization('');
     setConsultationFee('');
     setPrescriptionFee('');
     setPhoto('');
+    console.log(newDoctor);
     navigate('/')
   };
 
