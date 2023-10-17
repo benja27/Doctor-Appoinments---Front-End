@@ -1,20 +1,18 @@
-import { useEffect } from 'react';
+
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDoctors, deleteDoctor } from '../../redux/doctors/doctorsSlice';
-import { fetchAppointments, deleteAppointment } from '../../redux/appointments/appointmentsSlice';
-import Side_menu from '../index_page/side_menu';
+import { deleteDoctor } from '../../redux/doctors/doctorsSlice';
+import { useState } from 'react';
 import Loader from '../index_page/Loader';
+import SideMenu from '../SideMenu';
+
 
 export default function DeleteDoctorsContainer() {
+  const [removed, setRemoved] = useState(false);
   const { doctors, isLoading, error } = useSelector((state) => state.doctors);
-  const { appointments } = useSelector((state) => state.appointments);
+ 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchDoctors());
-    dispatch(fetchAppointments());
-  },
-  [dispatch]);
+ 
 
   if (isLoading) {
     return (
@@ -22,35 +20,17 @@ export default function DeleteDoctorsContainer() {
     )
   }
 
-  if (error !== undefined) {
-    return 'Error... something went wrong';
-  }
+ 
 
-  const handleDeleteDoctor = async (id) => {
-    try {
-      // Create an array of appointment deletion promises
-      const appointmentDeletionPromises = [];
 
-      // Iterate through the appointments and create promises for each deletion
-      appointments.forEach((appointment) => {
-        if (appointment.doctor_id === id) {
-          appointmentDeletionPromises.push(dispatch(deleteAppointment(appointment.id)));
-        }
-      });
-
-      // Wait for all appointment deletion promises to complete
-      await Promise.all(appointmentDeletionPromises);
-
-      // Once all appointments are deleted, delete the doctor
-      await dispatch(deleteDoctor(id));
-    } catch (error) {
-      throw new Error('Error deleting doctor');
-    }
-  };
-
+ const handleDeleteDoctor = (id) => {
+  dispatch(deleteDoctor(id));
+  setRemoved(true);
+}
+ 
   return (
     <div className='d-flex' >
-      <Side_menu />
+      <SideMenu />
       <div className='d-flex vh-100 align-items-center bg-light justify-content-center flex-column  w-100' >
       
       <div className="doctors-container mb-3">
@@ -70,7 +50,9 @@ export default function DeleteDoctorsContainer() {
                 className='btn btn-danger'
                 type="button"
               >
-                Delete Doctor
+                {
+                  removed ? 'Deleted' : 'Delete'
+                }
               </button>
             </div>
           </div>

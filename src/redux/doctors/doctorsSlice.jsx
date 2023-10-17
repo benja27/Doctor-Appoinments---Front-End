@@ -1,19 +1,19 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { bool } from 'prop-types';
 
 const initialState = {
   doctors: [],
   isLoading: false,
   error: undefined,
-  showDoctor: {},
+  selectedDoctor: null
 };
 
-const url = 'https://rails-j4lh.onrender.com/doctors';
+const url = 'http://127.0.0.1:3001/doctors';
 
 export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
   try {
     const token = localStorage.getItem('token');
+    console.log(token);
     const response = await fetch(url, {
       method: 'GET',
       headers: {
@@ -41,7 +41,7 @@ export const addDoctor = createAsyncThunk('doctors/addDoctor', async (doctor) =>
 
       },
     });
-    console.log(response.data);
+
     return response.data;
   } catch (error) {
     throw new Error('Failed to add doctor');
@@ -57,7 +57,7 @@ export const deleteDoctor = createAsyncThunk('doctors/deleteDoctor', async (doct
         method: 'DELETE',
         headers: {
           'content-type': 'application/json',
-          authorization: token,
+          authorization: `${token}`,
         },
       },
     );
@@ -67,26 +67,14 @@ export const deleteDoctor = createAsyncThunk('doctors/deleteDoctor', async (doct
   }
 });
 
-export const showDoctor = createAsyncThunk('doctors/showDoctor', async (doctorId) => {
-  const showUrl = `${url}/${doctorId}`;
-  try {
-    const response = await axios.get(showUrl, {
-      method: 'GET',
-      headers: {
-        'content-type': 'application/json',
-        authorization: localStorage.getItem('token'),
-      },
-    });
-    return response.data;
-  } catch (error) {
-    throw new Error('Failed to show doctor');
-  }
-});
-
 const doctorSlice = createSlice({
   name: 'doctorsSlice',
   initialState,
-  reducers: {},
+  reducers: {
+    showDoctor(state, action) {
+      state.selectedDoctor = action.payload;
+    },    
+  },
   extraReducers(builder) {
     builder
       .addCase(fetchDoctors.pending, (state) => ({
@@ -97,7 +85,7 @@ const doctorSlice = createSlice({
         ...state,
         isLoading: false,
         doctors: action.payload,
-        showDoctor: {},
+       
       }))
       .addCase(fetchDoctors.rejected, (state) => ({
         ...state,
@@ -132,16 +120,10 @@ const doctorSlice = createSlice({
         isLoading: false,
         error: true,
       }))
-      .addCase(showDoctor.pending, (state) => ({
-        ...state,
-        isLoading: true,
-      }))
-      .addCase(showDoctor.fulfilled, (state, action) => ({
-        ...state,
-        isLoading: false,
-        showDoctor: action.payload,
-      }));
+
   },
 });
+
+export const { showDoctor } = doctorSlice.actions;
 
 export default doctorSlice.reducer;

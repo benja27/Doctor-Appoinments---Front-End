@@ -1,9 +1,6 @@
-import BookForm from "./appointments/AppointmentForm";
-import Appointments from "./appointments/Appointments";
-import DoctorsContainer from "./appointments/AppointmentsContainer";
-// import BookForm from "./appointments/FullAppointmentForm";
+import BookForm from './appointments/AppointmentForm';
 
-function Set_appoiment() {
+function SetAppoiment() {
   return (
     <div className="position-relative c">
       <div className="imagen-con-filtro position-absolut">
@@ -13,9 +10,8 @@ function Set_appoiment() {
         <h4 className="h3 mb-4 text-white">Set an Appoinment</h4>
         <h6 className="h6 text-white mb-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ab soluta qui ea officia beatae eos. Iure adipisci ab voluptatibus ea incidunt nobis, atque commodi quam aspernatur odio. Obcaecati, veniam. </h6>
         <div className="d-flex mb-4 justify-content-center gap-4">
-          <button className="btn btn-primary">Set Appoinment</button>
+          <button className="btn btn-primary" type="button">Set Appoinment</button>
 
-          <button className="btn btn-primary">Set Appoinment</button>
         </div>
       </div>
 
@@ -23,10 +19,9 @@ function Set_appoiment() {
       {/* <Appointments /> */}
       {/* <DoctorsContainer /> */}
 
-
     </div>
 
   );
 }
 
-export default Set_appoiment;
+export default SetAppoiment;

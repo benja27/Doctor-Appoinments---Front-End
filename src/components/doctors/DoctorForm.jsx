@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addDoctor } from '../../redux/doctors/doctorsSlice';
-import Side_menu from '../index_page/side_menu';
+
+import { useNavigate } from 'react-router-dom';
+import SideMenu from '../SideMenu';
 
 export default function BookForm() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const [name, setName] = useState('');
   const [specialization, setSpecialization] = useState('');
   const [consultationFee, setConsultationFee] = useState('');
@@ -22,21 +25,20 @@ export default function BookForm() {
       user_id: userId,
     };
     dispatch(addDoctor(newDoctor));
-
-    console.log(newDoctor);
-
+console.log(newDoctor)
     // Reset input fields after adding the doctor
     setName('');
     setSpecialization('');
     setConsultationFee('');
     setPrescriptionFee('');
     setPhoto('');
+    navigate('/')
   };
 
   return (
     <div className='d-flex vh-100 p-0 m-0 '  >
 
-      <Side_menu />
+      <SideMenu/>
 
       <div className='d-flex flex-column align-items-center justify-content-center gap-5  w-100 bg-light' >
 

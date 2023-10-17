@@ -1,32 +1,33 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useParams, Link } from 'react-router-dom';
-import { useEffect } from 'react';
-import { showDoctor } from '../../redux/doctors/doctorsSlice';
-import Side_menu from './side_menu';
-import Loader from './Loader';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+import SideMenu from './SideMenu';
+import Loader from './index_page/Loader';
 
 function Show() {
-  const { doctorId } = useParams();
-  const dispatch = useDispatch();
+ 
+  
 
-  const doctor = useSelector((state) => state.doctors.showDoctor);
-  const isLoading = useSelector((state) => state.doctors.isLoading);
+  
+  const {doctors, isLoading, selectedDoctor} = useSelector((state) => state.doctors);
+  
 
-  useEffect(() => {
-    dispatch(showDoctor(doctorId));
-    console.log(doctor);
-  }, [dispatch, doctorId]);
+  const doctor = doctors.find((doctor) => doctor.id === selectedDoctor);
+
+  
 
   if (isLoading) {
-    return (
-      <Loader />
-    )
+    return (<Loader />
+    );
   }
 
-  if (doctor !== undefined) {
+
+ 
+
+  if (doctor) {
     return (
       <div className="d-flex" style={{ overflowY: 'hidden', height: '100vh' }}>
-        <Side_menu> </Side_menu>
+        <SideMenu />
 
         <div className="d-flex justify-content-strech w-100 bg-light">
 
@@ -34,12 +35,12 @@ function Show() {
 
             <div className="d-flex flex-column align-items-center justify-content-center vh-100">
               <div>
-                {/* <img src="https://picsum.photos/id/1/200/200" alt="" /> */}
+                <img src={doctor.photo} alt="" />
               </div>
 
               <div className="w-100 mt-5">
                 <div className="mt-5">
-                  {/* <a className='bg-success d-block col-2 py-2 px-2' > Back </a> */}
+                  
                   <Link className="bg-success d-block col-2 py-2 arrow left-arrow px-2" to="/">
                     {' '}
                     <span className="h5">back</span>
@@ -135,7 +136,7 @@ function Show() {
               </div>
 
               <div className="col-10 text-end me-5 mt-5">
-                {/* <button type="button" class="btn btn-large btn-success rounded">Book an appoinment</button> */}
+
                 <Link className="btn btn-large btn-success rounded" to="/set_appoinment">
                   {' '}
                   <span className="h5">Book appoinment</span>

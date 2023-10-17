@@ -1,8 +1,12 @@
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { signupUser } from '../../redux/currentUser/currentUserSlice';
 
 const Signup = ({ setShow }) => {
+  Signup.propTypes = {
+    setShow: PropTypes.func.isRequired,
+  };
   const formRef = useRef();
   const dispatch = useDispatch();
 

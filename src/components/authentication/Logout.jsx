@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { logoutUser } from '../../redux/currentUser/currentUserSlice';
+import { logout, logoutUser } from '../../redux/currentUser/currentUserSlice';
 
 const Logout = () => {
   const dispatch = useDispatch();
@@ -7,6 +7,9 @@ const Logout = () => {
   const handleClick = (e) => {
     e.preventDefault();
     dispatch(logoutUser());
+    dispatch(logout())
+    localStorage.removeItem('user');
+   
   };
   return (
     

@@ -1,8 +1,8 @@
-import Logout from "../authentication/Logout";
+import Logout from "./authentication/Logout";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function Side_menu() {
+function SideMenu() {
   const [isvisible, setIsVisible] = useState(true);
 
   const toogleMenu = () => {
@@ -20,7 +20,7 @@ function Side_menu() {
   }, []);
 
   return (
-    <article className={`d-flex flex-column justify-content-betwee vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3 col-md-3 px-3`}  >
+    <article className={`d-flex flex-column c justify-content-betwee vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3 col-md-3 px-3`}  >
       <div className="text-end mt-3 me-2">
         <i onClick={toogleMenu} className={`h3 fas ${isvisible ? "fa-close" : "fa-bars"}`}></i>
       </div>
@@ -67,14 +67,6 @@ function Side_menu() {
               </Link>
             </section>
 
-            <section>
-              <Link to="/add-appointment">
-                <h4 className="h4 fw-bold bg-transparent">
-                  {" "}
-                  <Logout></Logout>{" "}
-                </h4>
-              </Link>
-            </section>
           </div>
         </div>
 
@@ -94,4 +86,4 @@ function Side_menu() {
   );
 }
 
-export default Side_menu;
+export default SideMenu;

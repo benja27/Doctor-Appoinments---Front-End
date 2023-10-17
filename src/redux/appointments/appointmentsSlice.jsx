@@ -7,13 +7,20 @@ const initialState = {
   error: undefined,
 };
 
-const url = 'https://rails-j4lh.onrender.com/appointments';
+const url = 'http://127.0.0.1:3001/appointments';
 
 export const fetchAppointments = createAsyncThunk('appointments/fetchAppointments', async () => {
   try {
-    const response = await fetch(url);
-    const doctors = await response.json();
-    return doctors;
+    const token = localStorage.getItem('token');
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `${token}`,
+      }
+    });
+    const appointments = await response.json();
+    return appointments;
   } catch (error) {
     throw new Error('Failed to fetch appointments');
   }
@@ -21,7 +28,13 @@ export const fetchAppointments = createAsyncThunk('appointments/fetchAppointment
 
 export const addAppointment = createAsyncThunk('appointments/addAppointment', async (appointment) => {
   try {
-    const response = await axios.post(url, appointment);
+    const token = localStorage.getItem('token');
+    const response = await axios.post(url, appointment, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `${token}`,
+      }
+    });
     return response.data;
   } catch (error) {
     throw new Error('Failed to add appointment');
@@ -30,8 +43,14 @@ export const addAppointment = createAsyncThunk('appointments/addAppointment', as
 
 export const deleteAppointment = createAsyncThunk('appointments/deleteAppointment', async (appointmentId) => {
   const deleteUrl = `${url}/${appointmentId}`;
+  const token = localStorage.getItem('token');
   try {
-    const response = await axios.delete(deleteUrl);
+    const response = await axios.delete(deleteUrl, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `${token}`,
+      }
+    });
     return response.data;
   } catch (error) {
     throw new Error('Failed to delete appointment');
