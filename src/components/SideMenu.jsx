@@ -2,10 +2,13 @@
 import Logout from "./authentication/Logout";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { logout } from "../redux/currentUser/currentUserSlice";
+import { useDispatch } from "react-redux";
 
 function SideMenu({toggleMenu, isMenuOpen, user}) {
   const [isvisible, setIsVisible] = useState(true);
 
+  const dispatch = useDispatch()
   const toogleMenu = () => {
     setIsVisible(!isvisible);  
     toggleMenu();  
@@ -20,6 +23,8 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
       }
     });
   }, []);
+
+ 
 
   return (
     <article className={`d-flex flex-column justify-content-betwee vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3 col-md-3 px-3`}  >
@@ -43,8 +48,8 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
           <div
             className=" side_menu_cont d-flex flex-column gap-3 "
             style={{}}
-          >
-             <span className="h5 text-center">Hello {user.name}</span>
+          >{user &&    <span className="h5 text-center">Hello {user.name}</span>}
+          
             <section>
               <a href="/">
                 <h4 className="h4 fw-bold">Home</h4>

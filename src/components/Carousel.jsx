@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import '../Carousel.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 import Doctors from './doctors/Doctors';
+import { logout } from '../redux/currentUser/currentUserSlice';
 
 
 
 const Carousel = () => {
+  const dispatch =useDispatch()
   function calculateItemsToShow() {
     const screenWidth = window.innerWidth;
     if (screenWidth < 999) {
@@ -31,10 +33,9 @@ const Carousel = () => {
     
   
   
-  const { doctors, isLoading } = useSelector((state) => state.doctors);
+  const { doctors, isLoading, error } = useSelector((state) => state.doctors);
  
 
-  console.log(doctors);
 
 
   const totalDoctors = doctors.length;
@@ -57,7 +58,9 @@ const Carousel = () => {
 
   
 
-  
+  if(error){
+    dispatch(logout())
+  }
 
   
 
