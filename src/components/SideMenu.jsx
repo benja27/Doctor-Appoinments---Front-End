@@ -1,12 +1,14 @@
+
 import Logout from "./authentication/Logout";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function SideMenu() {
+function SideMenu({toggleMenu, isMenuOpen, user}) {
   const [isvisible, setIsVisible] = useState(true);
 
   const toogleMenu = () => {
-    setIsVisible(!isvisible);    
+    setIsVisible(!isvisible);  
+    toggleMenu();  
   };
 
   useEffect(() => {
@@ -20,8 +22,8 @@ function SideMenu() {
   }, []);
 
   return (
-    <article className={`d-flex flex-column c justify-content-betwee vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3 col-md-3 px-3`}  >
-      <div className="text-end mt-3 me-2">
+    <article className={`d-flex flex-column justify-content-betwee vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3 col-md-3 px-3`}  >
+      <div className="text-end mt-2 me-2">
         <i onClick={toogleMenu} className={`h3 fas ${isvisible ? "fa-close" : "fa-bars"}`}></i>
       </div>
 
@@ -36,11 +38,13 @@ function SideMenu() {
               alt=""
             />
           </div>
+         
 
           <div
-            className="mt-5 side_menu_cont pt-5 d-flex flex-column gap-4 text-center"
+            className=" side_menu_cont d-flex flex-column gap-3 "
             style={{}}
           >
+             <span className="h5 text-center">Hello {user.name}</span>
             <section>
               <a href="/">
                 <h4 className="h4 fw-bold">Home</h4>
@@ -58,13 +62,16 @@ function SideMenu() {
             </section>
             <section>
               <Link to="/appointments">
-                <h4 className="h4 fw-bold">My appnmts</h4>
+                <h4 className="h4 fw-bold">My appointments</h4>
               </Link>
             </section>
             <section>
               <Link to="/add-appointment">
-                <h4 className="h4 fw-bold">Add appnmts</h4>
+                <h4 className="h4 fw-bold">Add appointments</h4>
               </Link>
+              <div className="h5">
+              <Logout />
+              </div>
             </section>
 
           </div>

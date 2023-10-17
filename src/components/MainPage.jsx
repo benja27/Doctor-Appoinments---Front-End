@@ -4,7 +4,7 @@ import Carousel from './Carousel';
 
 
 
-function Main_page() {
+function Main_page({user}) {
   
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -12,22 +12,23 @@ function Main_page() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    console.log(isMenuOpen);
   };
 
 
 
   return (
-    <div className="main-page-layout c grid d-flex justify-content-evenly flex-column nav-bg">
+    <div className="main-page-layout grid d-flex nav-bg">
       
-      <div className="row">
-        <div className="col-md-3 page_container">
-          <SideMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+     
+        <div className={` page_container ${isMenuOpen ? '' : 'col-md-3' }`}>
+          <SideMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} user={user}/>
         </div>
-        <div className="col-md-9 mt-3">
+       
     
          <Carousel />
-        </div>
-      </div>
+        
+  
     </div>
   );
 }

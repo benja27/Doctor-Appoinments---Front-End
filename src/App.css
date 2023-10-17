@@ -172,7 +172,7 @@ body {
 .side_menu {
   border-right: 1px solid black;  
    position: fixed; 
-  max-width: 250px; 
+  max-width: 350px; 
   background-color:#F8F9FA;
  
 }

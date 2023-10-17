@@ -67,7 +67,7 @@ const Carousel = () => {
 
   return (
 
-    <div className="d-flex flex-column align-items-center bg-success justify-content-center flex-grow-1 " style={{ verflowY: 'hidde' }}>
+    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 " style={{ verflowY: 'hidde' }}>
 
       <div className="text-center d-flex flex-column align-items-center">
         <h1 className="h1 fw-bold ">LATEST MODELS</h1>

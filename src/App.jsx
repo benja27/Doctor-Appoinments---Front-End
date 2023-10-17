@@ -45,8 +45,8 @@ function App() {
   if (isAuth) {
     return (
       <>
-  <span>Hello {currentUser.name}</span>
-       <Logout />
+ 
+      
        
         <Routes>
 
