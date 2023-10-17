@@ -8,7 +8,7 @@ const initialState = {
   selectedDoctor: null
 };
 
-const url = 'http://127.0.0.1:3001/doctors';
+const url = 'https://rails-j4lh.onrender.com/doctors';
 
 export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
   try {
