@@ -13,7 +13,7 @@ import SplashScreen from './components/splashScreen/SplashScreen';
 import Login from './components/authentication/Login';
 import Logout from './components/authentication/Logout';
 import Signup from './components/authentication/Signup';
-
+import BookForm from './components/appointments/AppointmentForm';
 
 
 import MainPage from './components/MainPage';
@@ -54,7 +54,14 @@ function App() {
        
         <Routes>
 
-          <Route path="/" element={<MainPage user={currentUser}/>} />
+          <Route path="/" element={<SplashScreen user={currentUser}/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
+          <Route path="/app" element={<BookForm />} />
+          
+          
+          <Route path="/doctors" element={<MainPage user={currentUser}/>} />
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/set_appoinment" element={<SetAppoiment />} />
 
