@@ -54,14 +54,14 @@ function App() {
        
         <Routes>
 
-          <Route path="/" element={<SplashScreen user={currentUser}/>} />
+         
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 
           <Route path="/app" element={<BookForm />} />
           
           
-          <Route path="/doctors" element={<MainPage user={currentUser}/>} />
+          <Route path="/" element={<MainPage user={currentUser}/>} />
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/set_appoinment" element={<SetAppoiment />} />
 
