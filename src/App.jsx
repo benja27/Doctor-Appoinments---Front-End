@@ -65,7 +65,7 @@ function App() {
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/set_appoinment" element={<SetAppoiment />} />
 
-          <Route path="/doctors/:doctorId" element={<Show />} />
+          <Route path="/:doctorId" element={<Show />} />
           <Route path="/delete-doctor" element={<DeleteDoctorContainer />} />
           <Route path="/appointments" element={<AppointmentsContainer />} />
           <Route path="/add-appointment" element={<FullAppointmentForm />} />
@@ -76,7 +76,7 @@ function App() {
     );
   }
   return (
-    <User />
+    <SplashScreen/>
   );
 }
 

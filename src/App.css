@@ -341,7 +341,7 @@ h3 {
 }
 
 .main-body {
-  margin-top: 8rem;
+  margin-top: 2rem;
 }
 
 .side-item:hover {
@@ -462,19 +462,19 @@ h3 {
   margin: 12px;
   width: 150px;
   font-size: large;
+  border: 2px solid #7bcd00;
 }
 
-.login-up-btn {
+.sign-up-btn:hover {
   border: 2px solid #7bcd00;
-  border-radius: 5px;
+  background-color: #fff;
   color: #7bcd00;
   cursor: pointer;
   font-weight: 700;
-  height: 50px;
-  margin: 12px;
-  padding: 0 20px;
-  width: 150px;
+
 }
+
+
 
 @media only screen and (min-width: 769px) {
   .slide-show-dots {
@@ -483,6 +483,10 @@ h3 {
     right: 18%;
     transform: translateX(-50%);
     z-index: 1;
+  }
+
+  .main-body {
+    margin-top: 8rem;
   }
 
   .containr_starter,
@@ -496,11 +500,11 @@ h3 {
   .login-container {
     flex-direction: row;
     position: relative;
-    width: 12rem;
-    height: 3rem;
-    left: 40rem;
-    bottom: 26.9rem;
+    margin-top: 8rem;
+    left: 70%;
+    bottom: 60%;
   }
+
 
   .login-up-btn,
   .sign-up-btn {

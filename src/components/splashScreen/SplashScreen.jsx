@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
-import SideNav from './sideNav';
+
 import Corrousel from './sliderSplash';
-import { Link } from 'react-router-dom';
+
+import Signup from '../authentication/Signup';
+import Login from '../authentication/Login';
 
 function SplashScreen() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [show, setShow] = useState(true);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); 
-  };
+
 
   return (
     <div className="main-page-layout grid d-flex justify-content-evenly flex-column nav-bg">
       <div className="container fluid row">
-        <div className="col-md-3 page_container">
-          <SideNav isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-        </div>
+  
         <div className="col-md-9 mt-3">
 
           <main className="main-body d-flex row text-light justify-content-between bg-black mt-6 h-100">
@@ -23,21 +22,26 @@ function SplashScreen() {
               <h1 className="display-3 fw-bold">Your health is our concern!</h1>
               <p className="text-x-large fw-semi-bold">How are you feeling today</p>
             </div>
+      
+    
 
-            <div className="start_cont none justify-content-center align-items-center mt-5">
-              <div className="d-none container_starter flex-column align-items-center" />
-            </div>
-
-            <div className="login-container d-flex flex-row justify-content-center align-items-center mt-6">
-              <button className="btn text-white sign-up-btn mb-3" type="button">
-                <Link className='text-white' to={"/signup"} >Signup</Link>
-              </button>
-              <button
-                className="btn login-up-btn"
-                type="button"
+            <div className="login-container d-flex flex-row justify-content-center align-items-center ">
+            {
+            show
+            ?
+              <div >
+               
+                <Login setShow={setShow} className='text-white' />
+              </div>
+               :
+              <div
+               
+                
               >
-                <Link className='text-white' to={"/login"} >Login</Link>
-              </button>
+                
+                <Signup setShow={setShow} className='text-white'/>
+              </div>
+               }
             </div>
           </main>
           <Corrousel />
