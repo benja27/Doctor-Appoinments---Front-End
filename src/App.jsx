@@ -55,12 +55,14 @@ function App() {
           
           <Route path="/" element={<MainPage user={currentUser}/>} />
           <Route path="/add-doctor" element={<DoctorForm />} />
-          <Route path="/set_appoinment" element={<SetAppoiment />} />
+          
+          <Route path="/add-appointment" element={<SetAppoiment />} />
+
+          <Route path="/set_appoinment" element={<BookForm />} />
 
           <Route path="doctors/:doctorId" element={<Show />} />
           <Route path="/delete-doctor" element={<DeleteDoctorContainer />} />
           <Route path="/appointments" element={<AppointmentsContainer />} />
-          <Route path="/add-appointment" element={<SetAppoiment />} />
           {/* <Route path="/add-appointment/:doctorId" element={<AppointmentForm />} /> */}
 
         </Routes>
