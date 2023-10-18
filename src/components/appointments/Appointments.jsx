@@ -8,13 +8,11 @@ export default function Appointments({
   date,
 }) {
   const dispatch = useDispatch();
- 
 
   const handleDelete = (id) => {
     dispatch(deleteAppointment(id));
-   window.location.reload();
-
-  }
+    window.location.reload();
+  };
 
   return (
 

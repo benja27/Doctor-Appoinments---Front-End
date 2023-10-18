@@ -1,9 +1,9 @@
-import Logout from "./authentication/Logout";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { logout } from "../redux/currentUser/currentUserSlice";
-import { useDispatch } from "react-redux";
-import "../css/hamburgers.css";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logout } from '../redux/currentUser/currentUserSlice';
+import Logout from './authentication/Logout';
+import '../css/hamburgers.css';
 
 function SideMenu({ toggleMenu, isMenuOpen, user }) {
   const [isvisible, setIsVisible] = useState(true);
@@ -14,7 +14,7 @@ function SideMenu({ toggleMenu, isMenuOpen, user }) {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         setIsVisible(true);
       } else {
@@ -26,26 +26,27 @@ function SideMenu({ toggleMenu, isMenuOpen, user }) {
   return (
     <article
       className={`d-flex flex-column vh-100 ${
-        isvisible ? "side_menu" : "hidden"
+        isvisible ? 'side_menu' : 'hidden'
       } ps-3 px-3`}
+      style={{ borderRight: '1px solid black' }}
     >
       <div className="text-end mt-2 me-2">
         <button
           onClick={toogleMenu}
           className={`hamburger hamburger--vortex s-active ${
-            isvisible ? "is-active" : ""
+            isvisible ? 'is-active' : ''
           } `}
           type="button"
         >
           <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
+            <span className="hamburger-inner" />
           </span>
         </button>
       </div>
 
       <div
         className={`vh-100 d-flex ${
-          isvisible ? "visible" : "no-visible"
+          isvisible ? 'visible' : 'no-visible'
         } flex-column justify-content-between`}
       >
         <div className="mt-5 flex-grow-1 d-flex flex-column ">
@@ -53,18 +54,21 @@ function SideMenu({ toggleMenu, isMenuOpen, user }) {
           <div className="text-center mb-3 ">
             <img
               className="rounded round"
-              style={{ width: "100px" }}
+              style={{ width: '100px' }}
               src="https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg"
               alt=""
             />
             {user && (
-              <h4 className="h5 text-center fw-bold">Hello! {user.name}</h4>
+              <h4 className="h5 text-center fw-bold">
+                Hello!
+                {user.name}
+              </h4>
             )}
           </div>
 
           <div className=" side_menu_con d-flex flex-column gap-3 text-center h-100 gap-4 justify-content-between pb-3">
 
-            <div className="d-flex flex-column gap-4 " >
+            <div className="d-flex flex-column gap-4 ">
               <section>
                 <a href="/">
                   <h4 className="h4 fw-bold">Home</h4>

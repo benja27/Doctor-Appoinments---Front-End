@@ -1,14 +1,14 @@
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import doctor_img from "../assets/pngegg.png";
-import { Tilt } from 'react-tilt'
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { Tilt } from 'react-tilt';
+import doctor_img from '../assets/pngegg.png';
 
-import SideMenu from "./SideMenu";
-import Loader from "./index_page/Loader";
+import SideMenu from './SideMenu';
+import Loader from './index_page/Loader';
 
 function Show() {
   const { doctors, isLoading, selectedDoctor } = useSelector(
-    (state) => state.doctors
+    (state) => state.doctors,
   );
 
   const doctor = doctors.find((doctor) => doctor.id === selectedDoctor);
@@ -19,7 +19,7 @@ function Show() {
 
   if (doctor) {
     return (
-      <div className="d-flex " style={{ overflowY: "hidden", height: "100vh" }}>
+      <div className="d-flex " style={{ overflowY: 'hidden', height: '100vh' }}>
         <SideMenu />
 
         <div className="d-flex w-100 bg-ligh show_cont">
@@ -27,13 +27,13 @@ function Show() {
           <div className="vh-10 show_cont_img col-md-8 col-12">
 
             <div className="d-flex flex-column align-items-center justify-content-center vh-100 ">
-              
+
               <Tilt
                 className="col-8 "
-                style={{ borderRadius: "50%", overflow: "hidden", backgroundColor:"#E2E3E5" }}
+                style={{ borderRadius: '50%', overflow: 'hidden', backgroundColor: '#E2E3E5' }}
               >
                 <img
-                  style={{ width: "100%" }}
+                  style={{ width: '100%' }}
                   src={
                     /^https:\/\//.test(doctor.photo) ? doctor.photo : doctor_img
                   }
@@ -43,12 +43,13 @@ function Show() {
               <div className="w-100 mt-5">
                 <div className="mt-5">
                   <Link
-                    style={{ backgroundColor: "#0FC00F", zIndex: "100" }}
+                    style={{ backgroundColor: '#0FC00F', zIndex: '100' }}
                     className=" d-flex justify-content-center align-items-center col-2 py-2 arrow left-arrow px-2"
                     to="/"
                   >
-                    {" "}
-                    <span className="h5 m-0 arro">back</span>{" "}
+                    {' '}
+                    <span className="h5 m-0 arro">back</span>
+                    {' '}
                   </Link>
                 </div>
               </div>
@@ -62,28 +63,58 @@ function Show() {
 
               <div className="col-10 col-md-10 mt-md-5">
                 <div className="d-flex h2 justify-content-end gap-3 mb-1 px-2 mb-4">
-                  {" "}
-                  <span> Dr. {doctor.name} </span>{" "}
+                  {' '}
+                  <span>
+                    {' '}
+                    Dr.
+                    {doctor.name}
+                  </span>
+                  {' '}
                 </div>
 
-                <div style={{backgroundColor:"#E2E3E5"}} className="d-flex py-2 px-2 rounded justify-content-between gap-3">
-                  {" "}
-                  <span> Consultation fee </span>{" "}
-                  <span> {doctor.consultation_fee} </span>{" "}
+                <div style={{ backgroundColor: '#E2E3E5' }} className="d-flex py-2 px-2 rounded justify-content-between gap-3">
+                  {' '}
+                  <span> Consultation fee </span>
+                  {' '}
+                  <span>
+                    {' '}
+                    {doctor.consultation_fee}
+                    {' '}
+                  </span>
+                  {' '}
                 </div>
                 <div className="d-flex py-2 px-2 rounded justify-content-between gap-3">
-                  {" "}
-                  <span> Photo </span> <span> {doctor.photo} </span>{" "}
+                  {' '}
+                  <span> Photo </span>
+                  {' '}
+                  <span>
+                    {' '}
+                    {doctor.photo}
+                    {' '}
+                  </span>
+                  {' '}
                 </div>
-                <div style={{backgroundColor:"#E2E3E5"}} className="d-flex py-2 px-2 rounded justify-content-between gap-3">
-                  {" "}
-                  <span> Prescription fee </span>{" "}
-                  <span> {doctor.prescription_fee} </span>{" "}
+                <div style={{ backgroundColor: '#E2E3E5' }} className="d-flex py-2 px-2 rounded justify-content-between gap-3">
+                  {' '}
+                  <span> Prescription fee </span>
+                  {' '}
+                  <span>
+                    {' '}
+                    {doctor.prescription_fee}
+                    {' '}
+                  </span>
+                  {' '}
                 </div>
                 <div className="d-flex py-2 px-2 rounded justify-content-between gap-3">
-                  {" "}
-                  <span> Specialization </span>{" "}
-                  <span> {doctor.specialization} </span>{" "}
+                  {' '}
+                  <span> Specialization </span>
+                  {' '}
+                  <span>
+                    {' '}
+                    {doctor.specialization}
+                    {' '}
+                  </span>
+                  {' '}
                 </div>
               </div>
 
@@ -92,7 +123,7 @@ function Show() {
               </div>
 
               <div className="d-flex justify-content-end col-10 pt-4">
-                <span className="h6 fw-bold " style={{ fontSize: "10px" }}>
+                <span className="h6 fw-bold " style={{ fontSize: '10px' }}>
                   DISCOVER MORE DOCTORS
                 </span>
               </div>
@@ -102,18 +133,19 @@ function Show() {
                   src="https://s1.significados.com/foto/20fc-ryb-circulo-cromatico.png"
                   alt=""
                   className="col-6 mt-4"
-                  style={{ idth: "100%" }}
+                  style={{ idth: '100%' }}
                 />
               </div>
 
               <div className="col-10 text-end me-5 mt-5">
                 <Link
-                  style={{ backgroundColor: "#0FC00F" }}
+                  style={{ backgroundColor: '#0FC00F' }}
                   className="btn btn-large text-white rounded"
                   to="/set_appoinment"
                 >
-                  {" "}
-                  <span className="h5">Book appoinment</span>{" "}
+                  {' '}
+                  <span className="h5">Book appoinment</span>
+                  {' '}
                 </Link>
               </div>
 

@@ -17,7 +17,7 @@ export const fetchAppointments = createAsyncThunk('appointments/fetchAppointment
       headers: {
         'Content-Type': 'application/json',
         Authorization: `${token}`,
-      }
+      },
     });
     const appointments = await response.json();
     return appointments;
@@ -33,7 +33,7 @@ export const addAppointment = createAsyncThunk('appointments/addAppointment', as
       headers: {
         'Content-Type': 'application/json',
         Authorization: `${token}`,
-      }
+      },
     });
     return response.data;
   } catch (error) {
@@ -49,7 +49,7 @@ export const deleteAppointment = createAsyncThunk('appointments/deleteAppointmen
       headers: {
         'Content-Type': 'application/json',
         Authorization: `${token}`,
-      }
+      },
     });
     return response.data;
   } catch (error) {

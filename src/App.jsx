@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import User from './components/authentication/User';
 
 import DoctorForm from './components/doctors/DoctorForm';
-
 import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
 import AppointmentsContainer from './components/appointments/AppointmentsContainer';
 import AppointmentForm from './components/appointments/AppointmentForm';
@@ -15,7 +14,6 @@ import Logout from './components/authentication/Logout';
 import Signup from './components/authentication/Signup';
 import BookForm from './components/appointments/AppointmentForm';
 
-
 import MainPage from './components/MainPage';
 import SetAppoiment from './components/SetAppoiment';
 import Show from './components/Show';
@@ -25,12 +23,10 @@ import { authSuccess } from './redux/currentUser/currentUserSlice';
 import { fetchDoctors } from './redux/doctors/doctorsSlice';
 
 function App() {
-
   const dispatch = useDispatch();
   useEffect(() => {
-    
-      dispatch(fetchDoctors());
-    
+    dispatch(fetchDoctors());
+
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user'));
 
@@ -39,8 +35,6 @@ function App() {
     }
   },
   [dispatch]);
- 
-
 
   const { isAuth, currentUser } = useSelector((state) => state.currentUser);
   console.log(currentUser);
@@ -49,26 +43,23 @@ function App() {
   if (isAuth) {
     return (
       <>
- 
-      
-       
+
         <Routes>
 
-          <Route path="/" element={<SplashScreen user={currentUser}/>} />
+          <Route path="/" element={<SplashScreen user={currentUser} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 
           <Route path="/app" element={<BookForm />} />
-          
-          
-          <Route path="/doctors" element={<MainPage user={currentUser}/>} />
+
+          <Route path="/doctors" element={<MainPage user={currentUser} />} />
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/set_appoinment" element={<SetAppoiment />} />
 
           <Route path="doctors/:doctorId" element={<Show />} />
           <Route path="/delete-doctor" element={<DeleteDoctorContainer />} />
           <Route path="/appointments" element={<AppointmentsContainer />} />
-          <Route path="/add-appointment" element={<FullAppointmentForm />} />
+          <Route path="/add-appointment" element={<SetAppoiment />} />
           {/* <Route path="/add-appointment/:doctorId" element={<AppointmentForm />} /> */}
 
         </Routes>
@@ -76,7 +67,7 @@ function App() {
     );
   }
   return (
-    <SplashScreen/>
+    <SplashScreen />
   );
 }
 

@@ -7,24 +7,20 @@ import SideMenu from '../SideMenu';
 import { logout } from '../../redux/currentUser/currentUserSlice';
 
 export default function DoctorsContainer() {
-  
   const dispatch = useDispatch();
 
-
   useEffect(() => {
-   
-      dispatch(fetchAppointments());
- 
+    dispatch(fetchAppointments());
   }, [dispatch]);
 
   const { appointments, isLoading, error } = useSelector((state) => state.appointments);
-console.log(appointments)
+  console.log(appointments);
   if (isLoading) {
     return <p>Loading...</p>;
   }
 
-  if(error){
-    dispatch(logout())
+  if (error) {
+    dispatch(logout());
   }
 
   return (
@@ -33,7 +29,7 @@ console.log(appointments)
       <SideMenu />
       <div className="d-flex flex-column align-items-center justify-content-center w-100">
 
-        <div className="doctors-container bg-dark px-3 py-2 round d-flex mb-4 justify-content-center text-center" style={{color:"gold"}} >
+        <div className="doctors-container bg-dark px-3 py-2 round d-flex mb-4 justify-content-center text-center" style={{ color: 'gold' }}>
           <h2 className="doctor h1 text-center">Appointments</h2>
         </div>
 

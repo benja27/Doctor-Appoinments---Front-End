@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import "../Carousel.css";
-import { useDispatch, useSelector } from "react-redux";
-import Loader from "./index_page/Loader";
+import { useState, useEffect } from 'react';
+import '../Carousel.css';
+import { useDispatch, useSelector } from 'react-redux';
+import Loader from './index_page/Loader';
 
-import Doctors from "./doctors/Doctors";
-import { logout } from "../redux/currentUser/currentUserSlice";
+import Doctors from './doctors/Doctors';
+import { logout } from '../redux/currentUser/currentUserSlice';
 
 const Carousel = () => {
   const dispatch = useDispatch();
@@ -23,9 +23,9 @@ const Carousel = () => {
     function handleResize() {
       setItemsToShow(calculateItemsToShow());
     }
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -51,17 +51,17 @@ const Carousel = () => {
   if (isLoading) {
     return (
       <Loader />
-    )
+    );
   }
 
   return (
     <div
       className="d-flex flex-column justify-content-center flex-grow-1 vh-100"
-      style={{ verflowY: "hidde" }}
+      style={{ verflowY: 'hidde' }}
     >
       <div className="text-center d-flex flex-column align-items-center mb-5">
         <h1 className="h1 fw-bold ">LATEST DOCTORS</h1>
-        <h4 className="h5 text-gray col-9" style={{ color: "gray" }}>
+        <h4 className="h5 text-gray col-9" style={{ color: 'gray' }}>
           Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque
           cumqu
         </h4>

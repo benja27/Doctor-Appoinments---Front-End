@@ -1,17 +1,17 @@
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { loginUser } from '../../redux/currentUser/currentUserSlice';
 import { Link, useNavigate } from 'react-router-dom';
+import { loginUser } from '../../redux/currentUser/currentUserSlice';
 
-const Login = ({setShow}) => {
+const Login = ({ setShow }) => {
   Login.propTypes = {
     setShow: PropTypes.func.isRequired,
   };
 
   const formRef = useRef();
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,9 +26,7 @@ const Login = ({setShow}) => {
     };
     dispatch(loginUser(userInfo)).then(() => window.location.reload());
     e.target.reset();
-    navigate('/')
-  
-   
+    navigate('/');
   };
 
   const handleClick = (e) => {
@@ -37,27 +35,27 @@ const Login = ({setShow}) => {
   };
 
   return (
-    <div className='d-flex align-items-center justify-content-center flex-column ' >
+    <div className="d-flex align-items-center justify-content-center flex-column ">
 
-      <form className=' p-5   shadow ' ref={formRef} onSubmit={handleSubmit}>
-        <div className='d-flex gap-4 align-items-center mb-4' >
-          <h5 className='m-0' >Email:</h5>          
+      <form className=" p-5   shadow " ref={formRef} onSubmit={handleSubmit}>
+        <div className="d-flex gap-4 align-items-center mb-4">
+          <h5 className="m-0">Email:</h5>
           {' '}
-          <input className='form-control' type="email" name="email" placeholder="email" />
+          <input className="form-control" type="email" name="email" placeholder="email" />
         </div>
-        
-        <div className='d-flex gap-4 align-items-center mb-4' >
+
+        <div className="d-flex gap-4 align-items-center mb-4">
           Password:
           {' '}
-          <input className='form-control' type="password" name="password" placeholder="password" />
+          <input className="form-control" type="password" name="password" placeholder="password" />
         </div>
-        
-        <div className='text-center' >
-          <input type="submit"  className='sign-up-btn' value="Login" />
+
+        <div className="text-center">
+          <input type="submit" className="sign-up-btn" value="Login" />
         </div>
       </form>
-      
-      <div className='mb-4' >
+
+      <div className="mb-4">
         Not registered,
         {' '}
         {/* <a href="/signup" onClick={handleClick}>Signup</a> */}
@@ -66,7 +64,6 @@ const Login = ({setShow}) => {
         here.
       </div>
 
-     
     </div>
   );
 };

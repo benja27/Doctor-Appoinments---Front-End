@@ -5,7 +5,7 @@ const initialState = {
   doctors: [],
   isLoading: false,
   error: undefined,
-  selectedDoctor: null
+  selectedDoctor: null,
 };
 
 const url = 'https://rails-j4lh.onrender.com/doctors';
@@ -13,7 +13,7 @@ const url = 'https://rails-j4lh.onrender.com/doctors';
 export const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
   try {
     const token = localStorage.getItem('token');
-  
+
     const response = await fetch(url, {
       method: 'GET',
       headers: {
@@ -73,7 +73,7 @@ const doctorSlice = createSlice({
   reducers: {
     showDoctor(state, action) {
       state.selectedDoctor = action.payload;
-    },    
+    },
   },
   extraReducers(builder) {
     builder
@@ -85,7 +85,7 @@ const doctorSlice = createSlice({
         ...state,
         isLoading: false,
         doctors: action.payload,
-       
+
       }))
       .addCase(fetchDoctors.rejected, (state) => ({
         ...state,
@@ -119,8 +119,7 @@ const doctorSlice = createSlice({
         ...state,
         isLoading: false,
         error: true,
-      }))
-
+      }));
   },
 });
 
