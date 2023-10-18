@@ -18,7 +18,7 @@ function MainPage({user}) {
 
 
   return (
-    <div className="main-page-layout grid d-flex nav-bg">
+    <div className="main-page-layout grid d-flex nav-bg c">
       
      
         <div className={` page_container ${isMenuOpen ? '' : 'col-md-3' }`}>

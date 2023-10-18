@@ -8,12 +8,12 @@ a{
   text-decoration: none;
 }
 
-.check,
-.check * {
+.c,
+.c * {
   border: 1px solid #000;
 }
 
-.b {
+.d {
   background-color: black;
 }
 
@@ -27,12 +27,6 @@ a{
 /* ===================================== Carousel */
 
 /* ============================================= */
-
-
-.c,
-.c * {
-  border: 1px solid black;
-}
 
 .carousel {
   width: 100%;
@@ -173,7 +167,7 @@ body {
 
 .side_menu {
   border-right: 1px solid black;  
-   position: fixed; 
+  /* position: fixed;  */
   max-width: 350px; 
   background-color:#F8F9FA;
  
@@ -185,12 +179,13 @@ body {
 @media screen and (max-width: 768px) {
   .side_menu {
     position: absolute;
+    max-width: 100%;
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
     left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);    
     z-index: 99; 
     color: rgb(0, 0, 0);   
   }

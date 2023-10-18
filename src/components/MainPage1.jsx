@@ -3,7 +3,7 @@ import Carousel from './Carousel';
 
 function MainPage({ user}) {
   return (
-    <div className="d-flex justify-content-between chec vh-100 chec">
+    <div className="d-flex justify-content-between vh-100">
       <SideMenu />
       <Carousel user={user}/>
     </div>

@@ -27,7 +27,8 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
  
 
   return (
-    <article className={`d-flex flex-column justify-content-betwee vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3 col-md-3 px-3`}  >
+    <article className={`d-flex flex-column vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3  px-3`}  >
+
       <div className="text-end mt-2 me-2">
         <i onClick={toogleMenu} className={`h3 fas ${isvisible ? "fa-close" : "fa-bars"}`}></i>
       </div>
@@ -35,20 +36,24 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
       <div className={`vh-100 ${isvisible ? "d-flex" : "d-none" } flex-column justify-content-around`}  >
 
         <div className="">
-          <div className="text-center">
+
+          <div className="text-center ">
             <img
               className="rounded round"
               style={{ width: "100px" }}
               src="https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg"
               alt=""
             />
+            {user && <h4 className="h5 text-center fw-bold">Hello! {user.name}</h4>}
           </div>
          
 
           <div
             className=" side_menu_cont d-flex flex-column gap-3 "
             style={{}}
-          >{user &&    <span className="h5 text-center">Hello {user.name}</span>}
+          >
+            
+            
           
             <section>
               <a href="/">
@@ -80,6 +85,7 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
             </section>
 
           </div>
+
         </div>
 
         <div className="">
@@ -94,6 +100,7 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
         </div>
 
       </div>
+
     </article>
   );
 }
