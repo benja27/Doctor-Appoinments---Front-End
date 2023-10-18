@@ -156,6 +156,25 @@ body {
   height: 70%;
 }
 
+.show_cont {  
+  flex-wrap: wrap !important;
+  overflow-y : scroll !important;
+}
+
+@media only screen and (max-width: 769px) {
+  .show_cont {  
+    flex-wrap: wrap !important;
+    overflow-y : scroll !important;
+  }
+  .show_cont_img {
+    height: min-content;
+    /* background-color: red; */
+  }
+  .show_img_info {
+    /* background-color: #0d6efd; */
+    margin-top: -70px ;
+  }
+}
 /* ============================================= */
 
 /* ===================================== SET APPOINTMENT */
