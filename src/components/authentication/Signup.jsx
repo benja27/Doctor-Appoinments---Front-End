@@ -28,6 +28,7 @@ const Signup = ({setShow}) => {
     };
     dispatch(signupUser(userInfo)).then(() => window.location.reload());
     e.target.reset();
+    navigate('/')
   };
   
   const handleClick = (e) => {

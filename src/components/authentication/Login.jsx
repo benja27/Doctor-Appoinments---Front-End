@@ -26,7 +26,7 @@ const Login = ({setShow}) => {
     };
     dispatch(loginUser(userInfo)).then(() => window.location.reload());
     e.target.reset();
-  
+    navigate('/')
   
    
   };

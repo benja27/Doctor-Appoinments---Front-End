@@ -66,7 +66,7 @@ function SideMenu({ toggleMenu, isMenuOpen, user }) {
 
             <div className="d-flex flex-column gap-4 " >
               <section>
-                <a href="/doctors">
+                <a href="/">
                   <h4 className="h4 fw-bold">Home</h4>
                 </a>
               </section>

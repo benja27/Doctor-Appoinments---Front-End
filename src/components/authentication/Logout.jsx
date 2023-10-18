@@ -4,14 +4,14 @@ import { useNavigate } from 'react-router';
 
 const Logout = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate
+  
 
   const handleClick = (e) => {
     e.preventDefault();
     dispatch(logoutUser());
     dispatch(logout())
     localStorage.removeItem('user');
-   
+    
   };
   return (
     
