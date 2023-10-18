@@ -1,4 +1,5 @@
 /* Carousel.css */
+
 /* =================================== */
 
 .carousel {
@@ -8,6 +9,7 @@
   position: relative;
   display: flex;
   align-items: center;
+
   /* background-color: red; */
 }
 
@@ -28,7 +30,7 @@
 
 .image-container .item_slider:hover {
   transform: scale(1.1);
-  background-color: #0FC00F;
+  background-color: #0fc00f;
   color: white;
   border-radius: 20px;
 }

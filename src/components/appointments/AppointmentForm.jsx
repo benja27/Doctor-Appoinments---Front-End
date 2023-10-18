@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import { addAppointment } from '../../redux/appointments/appointmentsSlice';
 
-import SideMenu from '../SideMenu';
+// import SideMenu from '../SideMenu';
 
 export default function BookForm() {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ export default function BookForm() {
 
     setDate('');
     setLocation('');
-    console.log(newAppointment);
+    // console.log(newAppointment);
 
     navigate('/');
   };

@@ -6,7 +6,7 @@ import Signup from '../authentication/Signup';
 import Login from '../authentication/Login';
 
 function SplashScreen() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [show, setShow] = useState(true);
 
   return (

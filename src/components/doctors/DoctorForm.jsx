@@ -32,7 +32,7 @@ export default function BookForm() {
     setConsultationFee('');
     setPrescriptionFee('');
     setPhoto('');
-    console.log(newDoctor);
+    // console.log(newDoctor);
     navigate('/');
   };
 

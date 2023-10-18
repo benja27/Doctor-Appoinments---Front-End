@@ -71,9 +71,10 @@ const doctorSlice = createSlice({
   name: 'doctorsSlice',
   initialState,
   reducers: {
-    showDoctor(state, action) {
-      state.selectedDoctor = action.payload;
-    },
+    showDoctor: (state, action) => ({
+      ...state,
+      selectedDoctor: action.payload,
+    }),
   },
   extraReducers(builder) {
     builder

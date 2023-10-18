@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { logout } from '../redux/currentUser/currentUserSlice';
+import PropTypes from 'prop-types';
+// import { useDispatch } from 'react-redux';
+// import { logout } from '../redux/currentUser/currentUserSlice';
 import Logout from './authentication/Logout';
 import '../css/hamburgers.css';
 
-function SideMenu({ toggleMenu, isMenuOpen, user }) {
+// function SideMenu({ toggleMenu, isMenuOpen, user }) {
+function SideMenu({ user }) {
   const [isvisible, setIsVisible] = useState(true);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const toogleMenu = () => {
     setIsVisible(!isvisible);
   };
@@ -118,5 +120,11 @@ function SideMenu({ toggleMenu, isMenuOpen, user }) {
     </article>
   );
 }
+
+SideMenu.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string,
+  }).isRequired,
+};
 
 export default SideMenu;

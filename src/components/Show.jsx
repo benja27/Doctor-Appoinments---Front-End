@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Tilt } from 'react-tilt';
-import doctor_img from '../assets/pngegg.png';
+// import doctor_img from '../assets/pngegg.png';
 
 import SideMenu from './SideMenu';
 import Loader from './index_page/Loader';
@@ -35,8 +35,9 @@ function Show() {
                 <img
                   style={{ width: '100%' }}
                   src={
-                    /^https:\/\//.test(doctor.photo) ? doctor.photo : doctor_img
+                    /^https:\/\//.test(doctor.photo) ? doctor.photo : 'https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg'
                   }
+                  alt="of a doctor"
                 />
               </Tilt>
 

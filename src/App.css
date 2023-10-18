@@ -1,10 +1,11 @@
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-a{
+
+a {
   text-decoration: none;
 }
 
@@ -24,17 +25,23 @@ a{
 /* ============================================= */
 
 body {
-  background-color:#F8F9FA;  
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
 }
 
 .side_menu {
-  border-right: 1px solid black;  
+  border-right: 1px solid black;
+
   /* position: fixed;  */
-  max-width: 300px; 
-  background-color:#F8F9FA;
+  max-width: 300px;
+  background-color: #f8f9fa;
   transition: all 0.5s ease-in-out;
- 
 }
+
 .fas {
   cursor: pointer;
 }
@@ -47,26 +54,29 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);    
-    z-index: 99; 
-    color: rgb(0, 0, 0);   
+    background-color: rgb(255, 255, 255);
+    z-index: 99;
+    color: rgb(0, 0, 0);
   }
-  .image-container .item_slider{
+
+  .image-container .item_slider {
     max-width: 100px;
   }
-} 
+}
 
-.hidden{
+.hidden {
   /* width: 0px; */
+
   /* margin: 0;
   padding: 0; */
   position: fixed;
+
   /* left: -300px; */
 }
 
-.visible{
+.visible {
   left: 0;
+
   /* transition: all 5s ease-in-out; */
 }
 
@@ -75,7 +85,7 @@ body {
   position: fixed;
   transform: scale(0);
   overflow: hidden;
-  transition: all .3s ease-in-out;  
+  transition: all 0.3s ease-in-out;
 }
 
 .side_menu_con > section {
@@ -102,7 +112,7 @@ body {
 }
 
 .side_menu_con h4:hover {
-  background-color: #0FC00F;
+  background-color: #0fc00f;
   border-radius: 4px;
   color: #fff;
   transition: all 0.25s ease-in-out;
@@ -141,6 +151,7 @@ body {
 
 .index_item_img {
   width: 80%;
+
   /* opacity: 0.2; */
 }
 
@@ -156,25 +167,29 @@ body {
   height: 70%;
 }
 
-.show_cont {  
+.show_cont {
   flex-wrap: wrap !important;
-  overflow-y : scroll !important;
+  overflow-y: scroll !important;
 }
 
 @media only screen and (max-width: 769px) {
-  .show_cont {  
+  .show_cont {
     flex-wrap: wrap !important;
-    overflow-y : scroll !important;
+    overflow-y: scroll !important;
   }
+
   .show_cont_img {
     height: min-content;
+
     /* background-color: red; */
   }
+
   .show_img_info {
     /* background-color: #0d6efd; */
-    margin-top: -100px ;
+    margin-top: -100px;
   }
 }
+
 /* ============================================= */
 
 /* ===================================== SET APPOINTMENT */
@@ -239,43 +254,40 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  box-shadow: inset 0 0 20px -5px rgba(255, 255, 255, 0.5),
-          inset 0 -40px 40px -20px rgba(255, 255, 255, 0.5);
-  background: linear-gradient(#FF3D00 120px, transparent 0) no-repeat;
-  background-position: 0px 120px;
+  box-shadow:
+    inset 0 0 20px -5px rgba(255, 255, 255, 0.5),
+    inset 0 -40px 40px -20px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(#ff3d00 120px, transparent 0) no-repeat;
+  background-position: 0 120px;
   animation: fillLq 10s linear infinite alternate;
 }
-.loader:before {
+
+.loader::before {
   position: absolute;
   content: '';
   width: 40%;
   height: 25%;
   top: 20px;
   left: 10px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transform: rotate(-45deg);
 }
 
 @keyframes fillLq {
-  0% , 10% { background-position: 0 120px}
-  90% , 100% { background-position: 0 0}
+  0%,
+  10% { background-position: 0 120px; }
+
+  90%,
+  100% { background-position: 0 0; }
 }
 
 
 /* ================================== */
+
 /* ================================== SLIDER */
-/* ================================== */
 
-body {
-  /* overflow: hidden; */
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: #fff;
-}
+/* ================================== */
 
 ul {
   list-style-type: none;
@@ -471,10 +483,7 @@ h3 {
   color: #7bcd00;
   cursor: pointer;
   font-weight: 700;
-
 }
-
-
 
 @media only screen and (min-width: 769px) {
   .slide-show-dots {
@@ -504,7 +513,6 @@ h3 {
     left: 70%;
     bottom: 60%;
   }
-
 
   .login-up-btn,
   .sign-up-btn {

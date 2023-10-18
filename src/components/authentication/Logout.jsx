@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 import { logout, logoutUser } from '../../redux/currentUser/currentUserSlice';
 
 const Logout = () => {
@@ -13,11 +13,9 @@ const Logout = () => {
   };
   return (
 
-  // <input type="submit" value="Logout" className='bg-transparent border border-0 h4 fw-bold' onClick={handleClick} />
-
     <section>
       <a href="/">
-        <h4 onClick={handleClick} className="h4 fw-bold">Logout</h4>
+        <button type="button" onClick={handleClick} className="btn fw-bold">Logout</button>
       </a>
     </section>
   );

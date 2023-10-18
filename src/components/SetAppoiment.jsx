@@ -1,5 +1,5 @@
 import FullBookForm from './appointments/FullAppointmentForm';
-import SideMenu from './SideMenu';
+// import SideMenu from './SideMenu';
 
 function SetAppoiment() {
   return (

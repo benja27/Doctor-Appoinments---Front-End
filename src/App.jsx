@@ -1,16 +1,16 @@
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import User from './components/authentication/User';
+// import User from './components/authentication/User';
 
 import DoctorForm from './components/doctors/DoctorForm';
 import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
 import AppointmentsContainer from './components/appointments/AppointmentsContainer';
-import AppointmentForm from './components/appointments/AppointmentForm';
-import FullAppointmentForm from './components/appointments/FullAppointmentForm';
+// import AppointmentForm from './components/appointments/AppointmentForm';
+// import FullAppointmentForm from './components/appointments/FullAppointmentForm';
 import SplashScreen from './components/splashScreen/SplashScreen';
 import Login from './components/authentication/Login';
-import Logout from './components/authentication/Logout';
+// import Logout from './components/authentication/Logout';
 import Signup from './components/authentication/Signup';
 import BookForm from './components/appointments/AppointmentForm';
 
@@ -37,8 +37,8 @@ function App() {
   [dispatch]);
 
   const { isAuth, currentUser } = useSelector((state) => state.currentUser);
-  console.log(currentUser);
-  console.log(isAuth);
+  // console.log(currentUser);
+  // console.log(isAuth);
 
   if (isAuth) {
     return (

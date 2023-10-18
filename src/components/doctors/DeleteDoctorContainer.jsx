@@ -6,7 +6,7 @@ import SideMenu from '../SideMenu';
 
 export default function DeleteDoctorsContainer() {
   const [removed, setRemoved] = useState(false);
-  const { doctors, isLoading, error } = useSelector((state) => state.doctors);
+  const { doctors, isLoading } = useSelector((state) => state.doctors);
 
   const dispatch = useDispatch();
 

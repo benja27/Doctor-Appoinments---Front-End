@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { signupUser } from '../../redux/currentUser/currentUserSlice';
 
 const Signup = ({ setShow }) => {

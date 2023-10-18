@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Tilt } from 'react-tilt';
 import { showDoctor } from '../../redux/doctors/doctorsSlice';
-import doctor_img from '../../assets/pngegg.png';
+// import doctorImg from '../../assets/pngegg.png';
 
 export default function Doctors({ doctor, index }) {
   const dispatch = useDispatch();
@@ -11,26 +11,17 @@ export default function Doctors({ doctor, index }) {
   return (
     <Tilt
       style={{ maxWidth: '500px', margin: '0 auto' }}
-      className={`shadow pb-3 col-12 item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
+      className="shadow pb-3 col-12 item_slider"
       key={index}
       data-tilt
     >
       <Link to={`/doctors/${doctor.id}`} onClick={() => dispatch(showDoctor(doctor.id))}>
         <div className="item_index_cont">
-          {/* {doctor.photo ?  (<img
-                  className="index_item_img position-absolute"
-                  src={`${doctor.photo}`}
-                  alt="Image of doctor"
-                />) : (
-                <div className="index_img_circle" ></div>
-
-                )
-                }  */}
 
           <img
             className="index_item_img position-absolute"
-                  // src={doctor.photo ? doctor.photo : "https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg"}
-            src={/^https:\/\//.test(doctor.photo) ? doctor.photo : doctor_img}
+            alt="doctor"
+            src={/^https:\/\//.test(doctor.photo) ? doctor.photo : 'https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg'}
           />
 
           <div className="index_img_circle" />
@@ -50,32 +41,6 @@ export default function Doctors({ doctor, index }) {
             consultatio fee:
             {doctor.consultation_fee }
           </h6>
-          {/* <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
-                  {' '}
-                  id:
-                  {doctor.id}
-                </h6>
-                <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
-                  {' '}
-                  name:
-                  {doctor.name}
-                </h6>
-                <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
-                  {' '}
-                  photo:
-                  {doctor.photo}
-                </h6>
-                <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
-                  {' '}
-                  prescription fee:
-                  {doctor.prescription_fee}
-                </h6>
-                <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
-                  {' '}
-                  especialization:
-                  {doctor.specialization}
-                </h6> */}
-
         </div>
 
       </Link>
@@ -88,10 +53,15 @@ export default function Doctors({ doctor, index }) {
   );
 }
 
-// Doctors.propTypes = {
-//   doctorId: PropTypes.number.isRequired,
-//   doctorName: PropTypes.string.isRequired,
-//   specialization: PropTypes.string.isRequired,
-//   consultationFee: PropTypes.string.isRequired,
-//   prescriptionFee: PropTypes.string.isRequired,
-// };
+Doctors.propTypes = {
+  doctor: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    specialization: PropTypes.string.isRequired,
+    consultation_fee: PropTypes.string.isRequired,
+    prescription_fee: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired,
+    // Otras propiedades del objeto doctor, si las hay...
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+};
