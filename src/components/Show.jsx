@@ -42,7 +42,7 @@ function Show() {
                   
                   <Link className="bg-success d-block col-2 py-2 arrow left-arrow px-2" to="/">
                     {' '}
-                    <span className="h5">back</span>
+                    <span className="h5 arro">back</span>
                     {' '}
                   </Link>
                 </div>

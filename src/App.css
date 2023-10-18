@@ -78,14 +78,14 @@ body {
   transition: all .3s ease-in-out;  
 }
 
-.side_menu_cont > section {
+.side_menu_con > section {
   /* background-color: #000000; */
   color: #303030;
   padding: 0;
   margin: 0;
 }
 
-.side_menu_cont a {
+.side_menu_con a {
   color: inherit;
   background-color: inherit;
   width: 100%;
@@ -96,12 +96,12 @@ body {
   text-decoration: none;
 }
 
-.side_menu_cont h4 {
+.side_menu_con h4 {
   margin: 0;
   padding: 4px 0;
 }
 
-.side_menu_cont h4:hover {
+.side_menu_con h4:hover {
   background-color: #0FC00F;
   border-radius: 4px;
   color: #fff;
@@ -249,7 +249,8 @@ body {
 /* ================================== */
 
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   height: 100vh;
