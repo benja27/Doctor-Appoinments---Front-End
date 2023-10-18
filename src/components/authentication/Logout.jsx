@@ -14,9 +14,9 @@ const Logout = () => {
   return (
 
     <section>
-      <a href="/">
-        <button type="button" onClick={handleClick} className="btn fw-bold">Logout</button>
-      </a>
+      <btn onClick={handleClick} className="btn fw-bold" href="/">
+        <h1 type="button" className="fw-bold h3">Logout</h1>
+      </btn>
     </section>
   );
 };

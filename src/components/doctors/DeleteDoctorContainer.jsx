@@ -3,10 +3,13 @@ import { useState } from 'react';
 import { deleteDoctor } from '../../redux/doctors/doctorsSlice';
 import Loader from '../index_page/Loader';
 import SideMenu from '../SideMenu';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function DeleteDoctorsContainer() {
   const [removed, setRemoved] = useState(false);
   const { doctors, isLoading } = useSelector((state) => state.doctors);
+
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -19,6 +22,7 @@ export default function DeleteDoctorsContainer() {
   const handleDeleteDoctor = (id) => {
     dispatch(deleteDoctor(id));
     setRemoved(true);
+    navigate('/');
   };
 
   return (
