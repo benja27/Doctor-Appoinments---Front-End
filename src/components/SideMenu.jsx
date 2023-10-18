@@ -58,7 +58,7 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
             style={{}}
           >
             <section>
-              <a href="/">
+              <a href="/doctors">
                 <h4 className="h4 fw-bold">Home</h4>
               </a>
             </section>

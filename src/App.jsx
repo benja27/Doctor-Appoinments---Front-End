@@ -9,8 +9,12 @@ import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
 import AppointmentsContainer from './components/appointments/AppointmentsContainer';
 import AppointmentForm from './components/appointments/AppointmentForm';
 import FullAppointmentForm from './components/appointments/FullAppointmentForm';
-
+import SplashScreen from './components/splashScreen/SplashScreen';
+import Login from './components/authentication/Login';
 import Logout from './components/authentication/Logout';
+import Signup from './components/authentication/Signup';
+
+
 
 import MainPage from './components/MainPage';
 import SetAppoiment from './components/SetAppoiment';
@@ -50,7 +54,12 @@ function App() {
        
         <Routes>
 
-          <Route path="/" element={<MainPage user={currentUser}/>} />
+          <Route path="/" element={<SplashScreen user={currentUser}/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          
+          
+          <Route path="/doctors" element={<MainPage user={currentUser}/>} />
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/set_appoinment" element={<SetAppoiment />} />
 
