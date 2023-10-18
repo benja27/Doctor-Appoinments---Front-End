@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import doctor_img from "../assets/pngegg.png";
+import { Tilt } from 'react-tilt'
 
 import SideMenu from "./SideMenu";
 import Loader from "./index_page/Loader";
@@ -27,9 +28,9 @@ function Show() {
 
             <div className="d-flex flex-column align-items-center justify-content-center vh-100 ">
               
-              <div
-                className="d col-8 "
-                // style={{ height: "50px", idth: "200px" }}
+              <Tilt
+                className="col-8 "
+                style={{ borderRadius: "50%", overflow: "hidden", backgroundColor:"#E2E3E5" }}
               >
                 <img
                   style={{ width: "100%" }}
@@ -37,12 +38,12 @@ function Show() {
                     /^https:\/\//.test(doctor.photo) ? doctor.photo : doctor_img
                   }
                 />
-              </div>
+              </Tilt>
 
               <div className="w-100 mt-5">
                 <div className="mt-5">
                   <Link
-                    style={{ backgroundColor: "#0FC00F" }}
+                    style={{ backgroundColor: "#0FC00F", zIndex: "100" }}
                     className=" d-flex justify-content-center align-items-center col-2 py-2 arrow left-arrow px-2"
                     to="/"
                   >
@@ -57,15 +58,15 @@ function Show() {
           </div>
 
           <div className="bg-succes show_img_info col-md-4 col-12 mt-md-5">
-            <div className="d-flex bg-succes align-items-center justify-content-cente flex-column vh-100 c">
+            <div className="d-flex bg-succes align-items-center justify-content-cente flex-column vh-100 ">
 
               <div className="col-10 col-md-10 mt-md-5">
-                <div className="d-flex h2 justify-content-end gap-3 mb-1 px-2 ">
+                <div className="d-flex h2 justify-content-end gap-3 mb-1 px-2 mb-4">
                   {" "}
-                  <span> {doctor.name} </span>{" "}
+                  <span> Dr. {doctor.name} </span>{" "}
                 </div>
 
-                <div className="d-flex py-2 px-2 rounded justify-content-between gap-3 bg-secondary">
+                <div style={{backgroundColor:"#E2E3E5"}} className="d-flex py-2 px-2 rounded justify-content-between gap-3">
                   {" "}
                   <span> Consultation fee </span>{" "}
                   <span> {doctor.consultation_fee} </span>{" "}
@@ -74,7 +75,7 @@ function Show() {
                   {" "}
                   <span> Photo </span> <span> {doctor.photo} </span>{" "}
                 </div>
-                <div className="d-flex py-2 px-2 rounded justify-content-between gap-3 bg-secondary">
+                <div style={{backgroundColor:"#E2E3E5"}} className="d-flex py-2 px-2 rounded justify-content-between gap-3">
                   {" "}
                   <span> Prescription fee </span>{" "}
                   <span> {doctor.prescription_fee} </span>{" "}
@@ -86,7 +87,7 @@ function Show() {
                 </div>
               </div>
 
-              <div className="col-10 col-md-10">
+              <div className="col-10 col-md-10 mt-4">
                 <span className="fw-bold px-2">5.9% success ratio</span>
               </div>
 
@@ -100,7 +101,7 @@ function Show() {
                 <img
                   src="https://s1.significados.com/foto/20fc-ryb-circulo-cromatico.png"
                   alt=""
-                  className="col-4"
+                  className="col-6 mt-4"
                   style={{ idth: "100%" }}
                 />
               </div>
@@ -115,7 +116,7 @@ function Show() {
                   <span className="h5">Book appoinment</span>{" "}
                 </Link>
               </div>
-              
+
             </div>
           </div>
 
