@@ -2,6 +2,10 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { showDoctor } from '../../redux/doctors/doctorsSlice';
+import doctor_img from  "../../assets/pngegg.png"
+import { Tilt } from 'react-tilt'
+
+
 
 
 
@@ -11,15 +15,15 @@ export default function Doctors({doctor, index}) {
 
  
   return (
-    <div
+    <Tilt
     style={{ maxWidth: '500px', margin: '0 auto'     }}
     className={`shadow pb-3 col-12 item_slider ${index === 4 && itemsToShow === 3 ? 'center' : ''} `}
     key={index}
-
+    data-tilt
   >
     <Link to={`doctors/${doctor.id}`}  onClick={()=>dispatch(showDoctor(doctor.id))} >
       <div className="item_index_cont">
-     {doctor.photo ?  (<img
+     {/* {doctor.photo ?  (<img
                   className="index_item_img position-absolute"
                   src={`${doctor.photo}`}
                   alt="Image of doctor"
@@ -27,7 +31,21 @@ export default function Doctors({doctor, index}) {
                 <div className="index_img_circle" ></div>
                 
                 )
-                } 
+                }  */}
+
+                
+                <img
+                  className="index_item_img position-absolute"
+                  // src={doctor.photo ? doctor.photo : "https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg"}
+                  src={/^https:\/\//.test(doctor.photo) ? doctor.photo : doctor_img}
+
+
+                  // alt="Image of doctor"
+                /> 
+                
+                <div className="index_img_circle" ></div>
+                
+                
       </div>            
 
               <div className="mt-3 text-center">
@@ -81,7 +99,7 @@ export default function Doctors({doctor, index}) {
                   <i className="fab fa-twitter" />
                   <i className="fas fa-home" />
                 </div>
-  </div>
+  </Tilt>
   );
 }
 

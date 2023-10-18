@@ -18,17 +18,11 @@ function MainPage({user}) {
 
 
   return (
-    <div className="main-page-layout grid d-flex nav-bg c">
-      
-     
-        <div className={` page_container ${isMenuOpen ? '' : 'col-md-3' }`}>
+    <div className="main-page-layout grid d-flex nav-bg ">
+        <div className={` page_container ${isMenuOpen ? '' : 'co-md-3' }`}>
           <SideMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} user={user}/>
-        </div>
-       
-    
-         <Carousel />
-        
-  
+        </div>         
+         <Carousel />          
     </div>
   );
 }

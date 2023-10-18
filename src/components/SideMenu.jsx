@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { logout } from "../redux/currentUser/currentUserSlice";
 import { useDispatch } from "react-redux";
+import "../css/hamburgers.css"
 
 function SideMenu({toggleMenu, isMenuOpen, user}) {
   const [isvisible, setIsVisible] = useState(true);
@@ -27,17 +28,21 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
  
 
   return (
-    <article className={`d-flex flex-column vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3  px-3`}  >
+    <article className={`d-flex flex-column vh-100 ${isvisible ? "side_menu" : "hidden"} ps-3 px-3`}  >
 
-      <div className="text-end mt-2 me-2">
-        <i onClick={toogleMenu} className={`h3 fas ${isvisible ? "fa-close" : "fa-bars"}`}></i>
+      <div className="text-end mt-2 me-2">        
+        <button onClick={toogleMenu} className={`hamburger hamburger--vortex s-active ${isvisible ? "is-active" : ""} `} type="button">
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
+            
+      <div className={`vh-100 d-flex ${isvisible ? "visible" : "no-visible" } flex-column justify-content-between`}  >
 
-      <div className={`vh-100 ${isvisible ? "d-flex" : "d-none" } flex-column justify-content-around`}  >
+        <div className="mt-5 flex-grow-1">
 
-        <div className="">
-
-          <div className="text-center ">
+          <div className="text-center mb-3">
             <img
               className="rounded round"
               style={{ width: "100px" }}
@@ -49,12 +54,9 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
          
 
           <div
-            className=" side_menu_cont d-flex flex-column gap-3 "
+            className=" side_menu_cont d-flex flex-column gap-3 text-center h-100 gap-4"
             style={{}}
           >
-            
-            
-          
             <section>
               <a href="/">
                 <h4 className="h4 fw-bold">Home</h4>
@@ -78,9 +80,11 @@ function SideMenu({toggleMenu, isMenuOpen, user}) {
             <section>
               <Link to="/add-appointment">
                 <h4 className="h4 fw-bold">Add appointments</h4>
-              </Link>
+              </Link>              
+            </section>
+            <section>
               <div className="h5">
-              <Logout />
+                <Logout />
               </div>
             </section>
 

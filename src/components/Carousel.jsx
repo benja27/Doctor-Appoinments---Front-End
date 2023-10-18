@@ -1,15 +1,13 @@
-import { useState, useEffect } from 'react';
-import '../Carousel.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useState, useEffect } from "react";
+import "../Carousel.css";
+import { useDispatch, useSelector } from "react-redux";
+import Loader from "./index_page/Loader";
 
-
-import Doctors from './doctors/Doctors';
-import { logout } from '../redux/currentUser/currentUserSlice';
-
-
+import Doctors from "./doctors/Doctors";
+import { logout } from "../redux/currentUser/currentUserSlice";
 
 const Carousel = () => {
-  const dispatch =useDispatch()
+  const dispatch = useDispatch();
   function calculateItemsToShow() {
     const screenWidth = window.innerWidth;
     if (screenWidth < 999) {
@@ -25,18 +23,11 @@ const Carousel = () => {
     function handleResize() {
       setItemsToShow(calculateItemsToShow());
     }
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
-    }
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
-    
-  
-  
-  
- 
-
-
 
   const totalDoctors = doctors.length;
   const endIndex = startIndex + itemsToShow - 1;
@@ -52,67 +43,54 @@ const Carousel = () => {
       setStartIndex(startIndex + 1);
     }
   };
-   
 
-
-
-  
-
-  if(error){
-    dispatch(logout())
+  if (error) {
+    dispatch(logout());
   }
 
-  
-
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return (
+      <Loader />
+    )
   }
 
   return (
-
-    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 vh-100" style={{ verflowY: 'hidde' }}>
-
-      <div className="text-center d-flex flex-column align-items-center">
-        <h1 className="h1 fw-bold ">LATEST MODELS</h1>
-        <h4 className="h5 text-gray col-9" style={{ color: 'gray' }}>Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque cumqu</h4>
+    <div
+      className="d-flex flex-column justify-content-center flex-grow-1 vh-100"
+      style={{ verflowY: "hidde" }}
+    >
+      <div className="text-center d-flex flex-column align-items-center mb-5">
+        <h1 className="h1 fw-bold ">LATEST DOCTORS</h1>
+        <h4 className="h5 text-gray col-9" style={{ color: "gray" }}>
+          Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque
+          cumqu
+        </h4>
       </div>
-     
 
-      <div className="carousel ">
+      <div className="carousel">
         <button
-         onClick={goToPrevSlide}
+          onClick={goToPrevSlide}
           className="arrow left-arrow col-1"
           type="button"
         >
           &#60;
         </button>
 
-        <div className="image-container">
-
-        {doctors.slice(startIndex, endIndex + 1).map((doctor, index) => (
-  
-           
-  <Doctors  key={doctor.id} doctor={doctor} index={index}/>
-
- 
-
- 
-
+        <div className="image-container ">
+          {doctors.slice(startIndex, endIndex + 1).map((doctor, index) => (
+            <Doctors key={doctor.id} doctor={doctor} index={index} />
           ))}
         </div>
-       
 
         <button
-         onClick={goToNextSlide}
+          onClick={goToNextSlide}
           className="arrow right-arrow col-1"
           type="button"
         >
           &#62;
         </button>
-        
       </div>
     </div>
-
   );
 };
 
