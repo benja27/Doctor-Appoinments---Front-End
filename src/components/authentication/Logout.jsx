@@ -1,8 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { logout, logoutUser } from '../../redux/currentUser/currentUserSlice';
+import { useNavigate } from 'react-router';
 
 const Logout = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate
 
   const handleClick = (e) => {
     e.preventDefault();

@@ -54,16 +54,11 @@ function App() {
        
         <Routes>
 
-          <Route path="/" element={<SplashScreen user={currentUser}/>} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          
-          
-          <Route path="/doctors" element={<MainPage user={currentUser}/>} />
+          <Route path="/" element={<MainPage user={currentUser}/>} />
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/set_appoinment" element={<SetAppoiment />} />
 
-          <Route path="/doctors/:doctorId" element={<Show />} />
+          <Route path="/:doctorId" element={<Show />} />
           <Route path="/delete-doctor" element={<DeleteDoctorContainer />} />
           <Route path="/appointments" element={<AppointmentsContainer />} />
           <Route path="/add-appointment" element={<FullAppointmentForm />} />
@@ -74,7 +69,7 @@ function App() {
     );
   }
   return (
-    <User />
+    <SplashScreen/>
   );
 }
 
