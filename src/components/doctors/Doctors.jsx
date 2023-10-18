@@ -21,7 +21,7 @@ export default function Doctors({doctor, index}) {
     key={index}
     data-tilt
   >
-    <Link to={`doctors/${doctor.id}`}  onClick={()=>dispatch(showDoctor(doctor.id))} >
+    <Link to={`${doctor.id}`}  onClick={()=>dispatch(showDoctor(doctor.id))} >
       <div className="item_index_cont">
      {/* {doctor.photo ?  (<img
                   className="index_item_img position-absolute"
