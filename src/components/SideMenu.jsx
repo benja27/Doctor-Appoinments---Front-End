@@ -30,7 +30,7 @@ function SideMenu({ user }) {
       className={`d-flex  flex-column vh-100 ${
         isvisible ? 'side_menu shadow shadow-5' : 'hidden'
       } ps-3 px-3`}
-      style={ isvisible ? { borderRight: '1px solid black'} : {}  }
+      style={isvisible ? { borderRight: '1px solid black' } : {}}
     >
       <div className="text-end mt-2 me-2">
         <button
