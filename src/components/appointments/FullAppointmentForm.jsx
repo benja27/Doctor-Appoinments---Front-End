@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { addAppointment } from '../../redux/appointments/appointmentsSlice';
-// import BookForm from './AppointmentForm';
 
 export default function FullBookForm() {
   const navigate = useNavigate();
@@ -31,7 +30,7 @@ export default function FullBookForm() {
 
   return (
 
-    <div className="info w-100">
+    <div className="info w-100 ">
 
       <div className="text-center">
         <h1 className="h1">MAKE APPOINTMENT</h1>
@@ -82,6 +81,12 @@ export default function FullBookForm() {
           >
             Add Appointment
           </button>
+        </div>
+
+        <div className={`text-center  ${window.innerWidth < 768 ? 'pt-4' : ''} mb-4 d-flex align-items-center justify-content-center`}>
+          <Link to="/">
+            <button type="button" className="btn btn-secondary">Home</button>
+          </Link>
         </div>
       </div>
     </div>
