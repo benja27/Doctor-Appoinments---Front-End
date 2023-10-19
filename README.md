@@ -3,14 +3,14 @@ Final capstone for module 6 of microverse program, we are creating a full stack 
 
 <div align="center">
 
-  <h2><b>Fast-Lane-Racer</b><br><small>Doctor Appoinments</small></h2>
+  <h2><b Doctor-Appointments</b><br><small>Doctor Appoinments</small></h2>
 
 </div>
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Fast-Lane-Racer ](#-Fast-Lane-Racer-)
+- [📖 Doctor-Appointments](#-doctor-appointments-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -31,12 +31,12 @@ Final capstone for module 6 of microverse program, we are creating a full stack 
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-# 📖 Doctor-Appoinments <a name="about-project"></a>
+# 📖 Doctor-Appointments <a name="doctor-appointments"></a>
 
-**Doctor-Appoinments** is a medical booking website that allows users to easily book a medical appointment with a doctor either for a diagonises or for 
+**Doctor-Appoinments** is a medical booking website that allows users to easily book a medical appointment with a doctor either for a diagonises or for a checkUp
 Doctor-Appoinments provides a seamless and reliable appointment booking experience.
 
-**Link for the Backend repository:** [URL](add backend url)
+**Link for the Backend repository:** [URL](https://github.com/sylvester-wamaya/doctor-appointment-backend)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -65,12 +65,16 @@ Doctor-Appoinments provides a seamless and reliable appointment booking experien
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ### Kanban Board <a name="kanban-board"></a>
+### Kanban Board <a name="kanban-board"></a>
 
 Initial Kanban board
-<img src='./public/images/Kanban-board.PNG'>
 
-[Final Kanban Board](https://github.com/users/muneeb3123/projects/4/views/1) -->
+<p></p>
+
+![image](https://github.com/benja27/Doctor-Appoinments---Front-End/assets/50673336/1553dc48-4dcd-48ae-9419-c3ea03b52551)
+
+
+[Final Kanban Board](https://github.com/users/benja27/projects/14)
 
 The final number of team members is 4. View the details of team members [here](#-authors-)
 
@@ -90,11 +94,11 @@ The final number of team members is 4. View the details of team members [here](#
 
 ## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/539px-React-icon.svg.png" width="23" height="20"/> React Frontend <a name="react-frontend"></a>
 
-<!-- - Backend part of the project [Fast-Lane-Racer-frontend](https://github.com/muneeb3123/Fast-Lane-Racers-front-end) -->
+ Backend part of the project [Doctor-Appointment](https://github.com/sylvester-wamaya/doctor-appointment-backend)
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+ ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://shiny-longma-bba6fb.netlify.app) -->
+- [Live Demo](https://scintillating-marshmallow-856784.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,9 +128,8 @@ Clone these repositories by using the command line to your desired folder:
 <u>**For Backend**</u>
 
 ```sh
-git clone https://github.com/muneeb3123/Fast-Lane-Racers-back-end.git
-
-cd Fast-Lane-Racer-backend
+git clone https://github.com/sylvester-wamaya/doctor-appointment-backend.git
+cd doctor-appointment-backend
 ```
 
 <u>**For Frontend**</u>
@@ -192,7 +195,17 @@ Render or any other platform.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Authors <a name="authors"></a>
+### Authors <a name="-authors-"></a>
+
+👤 **Mariano Benjamin**
+
+- GitHub: [@githubhandle](https://github.com/benja27)
+- LinkedIn: [LinkedIn](http://www.linkedin.com/in/BenjaMendez2699)
+
+👤 **Adeyemi Olusola**
+
+- GitHub: [@emarkees](https://github.com/emarkees)
+- LinkedIn: [LinkedIn](http://www.linkedin.com/in/adeyemi-olusola)
 
 👤 **Clinton Younge**
 
@@ -205,16 +218,6 @@ Render or any other platform.
 - GitHub: [@githubhandle](https://github.com/sylvester-wamaya)
 - Twitter: [@twitterhandle](https://twitter.com/The_Seal_)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/sylvester-wamaya-b11a93112/)
-
-👤 **Mariano Benjamin**
-
-- GitHub: [@githubhandle](https://github.com/benja27)
-- LinkedIn: [LinkedIn](http://www.linkedin.com/in/BenjaMendez2699)
-
-👤 **Adeyemi Olusola**
-
-- GitHub: [@emarkees](https://github.com/emarkees)
-- LinkedIn: [LinkedIn](http://www.linkedin.com/in/adeyemi-olusola)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -263,6 +266,6 @@ I would like to acknowledge:
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/benja27/Doctor-Appoinments---Front-End/blob/dev/License.md) licensed.
+This project is [MIT](https://github.com/benja27/Doctor-Appoinments---Front-End/blob/Update_Readme/License.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
