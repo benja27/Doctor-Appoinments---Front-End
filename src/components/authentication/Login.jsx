@@ -39,13 +39,11 @@ const Login = ({ setShow }) => {
 
       <form className=" p-5   shadow " ref={formRef} onSubmit={handleSubmit}>
         <div className="d-flex gap-4 align-items-center mb-4">
-          <h5 className="m-0">Email:</h5>
           {' '}
           <input className="form-control" type="email" name="email" placeholder="email" />
         </div>
 
         <div className="d-flex gap-4 align-items-center mb-4">
-          Password:
           {' '}
           <input className="form-control" type="password" name="password" placeholder="password" />
         </div>
