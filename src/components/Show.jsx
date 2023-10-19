@@ -1,8 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Tilt } from 'react-tilt';
-// import doctor_img from '../assets/pngegg.png';
-
 import SideMenu from './SideMenu';
 import Loader from './index_page/Loader';
 
