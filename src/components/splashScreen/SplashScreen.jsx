@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-
 import Corrousel from './sliderSplash';
-
 import Signup from '../authentication/Signup';
 import Login from '../authentication/Login';
 
 function SplashScreen() {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [show, setShow] = useState(true);
 
   return (
