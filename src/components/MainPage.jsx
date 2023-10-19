@@ -8,7 +8,6 @@ function MainPage({ user }) {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    // console.log(isMenuOpen);
   };
 
   return (
