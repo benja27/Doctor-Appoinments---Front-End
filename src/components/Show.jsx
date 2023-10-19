@@ -88,12 +88,12 @@ function Show() {
                   {' '}
                   <span> Photo  </span>
                   {' '}
-                  <span className='d-none' >
+                  <span className="d-none">
                     {' '}
                     {doctor.photo}
                     {' '}
                   </span>
-                    <span>verified : ✅</span>
+                  <span>verified : ✅</span>
                   {' '}
                 </div>
                 <div style={{ backgroundColor: '#E2E3E5' }} className="d-flex py-2 px-2 rounded justify-content-between gap-3">
