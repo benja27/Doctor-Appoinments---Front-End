@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import { addAppointment } from '../../redux/appointments/appointmentsSlice';
-
-// import SideMenu from '../SideMenu';
+import imgDoc from '../../assets/image/doc2.jpg';
 
 export default function BookForm() {
   const dispatch = useDispatch();
@@ -34,7 +33,7 @@ export default function BookForm() {
     <div className="position-relative ">
 
       <div className="imagen-con-filtro position-absolut vh-100">
-        <img className="vh-100" src="https://picsum.photos/id/1/300/300" alt="Descripción de la imagen" />
+        <img className="vh-100" style={{ objectFit: 'cover' }} src={`${imgDoc}`} alt="Descripción de la imagen" />
       </div>
 
       <div className="info w-100 ">
