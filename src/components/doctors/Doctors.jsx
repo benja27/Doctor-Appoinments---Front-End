@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Tilt } from 'react-tilt';
 import { showDoctor } from '../../redux/doctors/doctorsSlice';
-// import doctorImg from '../../assets/pngegg.png';
 
 export default function Doctors({ doctor, index }) {
   const dispatch = useDispatch();
@@ -61,7 +60,6 @@ Doctors.propTypes = {
     consultation_fee: PropTypes.string.isRequired,
     prescription_fee: PropTypes.string.isRequired,
     photo: PropTypes.string.isRequired,
-    // Otras propiedades del objeto doctor, si las hay...
   }).isRequired,
   index: PropTypes.number.isRequired,
 };

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addDoctor } from '../../redux/doctors/doctorsSlice';
-
 import SideMenu from '../SideMenu';
 
 export default function BookForm() {
@@ -25,14 +24,11 @@ export default function BookForm() {
       user_id: userId,
     };
     dispatch(addDoctor(newDoctor));
-
-    // Reset input fields after adding the doctor
     setName('');
     setSpecialization('');
     setConsultationFee('');
     setPrescriptionFee('');
     setPhoto('');
-    // console.log(newDoctor);
     navigate('/');
     setTimeout(() => {
       window.location.reload();
