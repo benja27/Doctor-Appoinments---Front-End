@@ -1,5 +1,3 @@
-// import React from 'react'
-// import doctor from '../assets/pngegg.png'
 import PropTypes from 'prop-types';
 
 function IndexItem({ big, img }) {
