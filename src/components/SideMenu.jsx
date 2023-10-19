@@ -10,19 +10,25 @@ import '../css/hamburgers.css';
 function SideMenu({ user }) {
   const [isvisible, setIsVisible] = useState(false);
 
-  // const dispatch = useDispatch();
   const toogleMenu = () => {
     setIsVisible(!isvisible);
   };
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
+    const handleVisibilityChange = () => {
       if (window.innerWidth > 768) {
         setIsVisible(true);
       } else {
-        // setIsVisible(false);
+        setIsVisible(false);
       }
-    });
+    };
+
+    window.addEventListener('resize', handleVisibilityChange);
+    handleVisibilityChange();
+
+    return () => {
+      window.removeEventListener('resize', handleVisibilityChange);
+    };
   }, []);
 
   return (

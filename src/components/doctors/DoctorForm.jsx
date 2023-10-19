@@ -34,6 +34,9 @@ export default function BookForm() {
     setPhoto('');
     // console.log(newDoctor);
     navigate('/');
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   };
 
   return (

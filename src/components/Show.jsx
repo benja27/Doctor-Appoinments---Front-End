@@ -44,7 +44,7 @@ function Show() {
               <div className="w-100 mt-5">
                 <div className="mt-5">
                   <Link
-                    style={{ backgroundColor: '#0FC00F', zIndex: '100' }}
+                    style={{ backgroundColor: '#0FC00F', zIndex: '1000', position: 'sticky' }}
                     className=" d-flex justify-content-center align-items-center col-2 py-2 arrow left-arrow px-2"
                     to="/"
                   >
@@ -59,7 +59,7 @@ function Show() {
 
           </div>
 
-          <div className="bg-succes show_img_info col-md-4 col-12 mt-md-5">
+          <div className="bg-succes show_img_info col-md-4 col-12 mt-md-5" style={{ overflow: 'hidden' }}>
             <div className="d-flex bg-succes align-items-center justify-content-cente flex-column vh-100 ">
 
               <div className="col-10 col-md-10 mt-md-5">
