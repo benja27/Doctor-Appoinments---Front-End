@@ -30,7 +30,7 @@ function Show() {
 
               <Tilt
                 className="col-8 "
-                style={{ borderRadius: '50%', overflow: 'hidden', backgroundColor: '#E2E3E5' }}
+                style={{ borderRadius: '50%', overflowX: 'hidden', backgroundColor: '#E2E3E5' }}
               >
                 <img
                   style={{ width: '100%' }}
@@ -86,13 +86,14 @@ function Show() {
                 </div>
                 <div className="d-flex py-2 px-2 rounded justify-content-between gap-3">
                   {' '}
-                  <span> Photo </span>
+                  <span> Photo  </span>
                   {' '}
-                  <span>
+                  <span className='d-none' >
                     {' '}
                     {doctor.photo}
                     {' '}
                   </span>
+                    <span>verified : ✅</span>
                   {' '}
                 </div>
                 <div style={{ backgroundColor: '#E2E3E5' }} className="d-flex py-2 px-2 rounded justify-content-between gap-3">
