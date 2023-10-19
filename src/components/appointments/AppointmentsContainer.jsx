@@ -14,7 +14,6 @@ export default function DoctorsContainer() {
   }, [dispatch]);
 
   const { appointments, isLoading, error } = useSelector((state) => state.appointments);
-  // console.log(appointments);
   if (isLoading) {
     return <p>Loading...</p>;
   }

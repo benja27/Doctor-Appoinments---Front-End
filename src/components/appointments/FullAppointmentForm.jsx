@@ -21,7 +21,6 @@ export default function FullBookForm() {
       doctor_id: doctorId,
     };
     dispatch(addAppointment(newAppointment));
-    // console.log(newAppointment);
 
     setDate('');
     setLocation('');
@@ -91,7 +90,5 @@ export default function FullBookForm() {
       </div>
     </div>
 
-  //   </div>
-  // </div>
   );
 }
