@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-// import { useNavigate } from 'react-router';
 import { logout, logoutUser } from '../../redux/currentUser/currentUserSlice';
 
 const Logout = () => {
