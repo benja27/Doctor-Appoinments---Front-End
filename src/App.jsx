@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-// import User from './components/authentication/User';
-
 import DoctorForm from './components/doctors/DoctorForm';
 import DeleteDoctorContainer from './components/doctors/DeleteDoctorContainer';
 import AppointmentsContainer from './components/appointments/AppointmentsContainer';
@@ -17,7 +15,7 @@ import './App.css';
 import { authSuccess } from './redux/currentUser/currentUserSlice';
 import { fetchDoctors } from './redux/doctors/doctorsSlice';
 
-const App() {
+const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchDoctors());
