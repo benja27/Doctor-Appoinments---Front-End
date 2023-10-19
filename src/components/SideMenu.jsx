@@ -77,7 +77,7 @@ function SideMenu({ user }) {
                 </a>
               </section>
               <section>
-                <Link  to="/add-doctor">
+                <Link to="/add-doctor">
                   <h4 className="h4 fw-bold">Add Doctor</h4>
                 </Link>
               </section>
