@@ -195,7 +195,7 @@ body {
 
 .imagen-con-filtro {
   position: relative;
-  width: 100%; /* Ajusta el ancho según tus necesidades */
+  width: 100%;
   max-height: 100vh;
   overflow: hidden;
 }
