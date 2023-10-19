@@ -8,7 +8,7 @@ import '../css/hamburgers.css';
 
 // function SideMenu({ toggleMenu, isMenuOpen, user }) {
 function SideMenu({ user }) {
-  const [isvisible, setIsVisible] = useState(true);
+  const [isvisible, setIsVisible] = useState(false);
 
   // const dispatch = useDispatch();
   const toogleMenu = () => {
@@ -20,7 +20,7 @@ function SideMenu({ user }) {
       if (window.innerWidth > 768) {
         setIsVisible(true);
       } else {
-        setIsVisible(false);
+        // setIsVisible(false);
       }
     });
   }, []);
@@ -77,7 +77,7 @@ function SideMenu({ user }) {
                 </a>
               </section>
               <section>
-                <Link to="/add-doctor">
+                <Link  to="/add-doctor">
                   <h4 className="h4 fw-bold">Add Doctor</h4>
                 </Link>
               </section>
