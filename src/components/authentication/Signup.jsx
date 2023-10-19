@@ -41,17 +41,17 @@ const Signup = ({ setShow }) => {
         <form ref={formRef} onSubmit={handleSubmit}>
           <div className="d-flex align-items-center gap-3 mb-4">
             {' '}
-            <input type="text" className="form-control" name="name" placeholder="name" />
+            <input type="text" className="form-control" name="name" placeholder="FullName" />
           </div>
 
           <div className="mb-4 d-flex align-items-center gap-3">
             {' '}
-            <input className="form-control" type="email" name="email" placeholder="email" />
+            <input className="form-control" type="email" name="email" placeholder="Email" />
           </div>
 
           <div className="mb-4 d-flex align-items-center gap-3">
             {' '}
-            <input className="form-control" type="password" name="password" placeholder="password" />
+            <input className="form-control" type="password" name="password" placeholder="Password" />
           </div>
 
           <div className="text-center">
