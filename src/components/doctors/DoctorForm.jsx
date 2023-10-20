@@ -88,7 +88,6 @@ export default function BookForm() {
             style={{ backgroundColor: '#0fc00f' }}
             type="button"
             onClick={handleAddDoctor}
-            style={{ color: 'white', backgroundColor: '#0FC00F' }}
           >
             <h5>ADD DOCTOR</h5>
           </button>
