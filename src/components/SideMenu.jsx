@@ -56,19 +56,21 @@ function SideMenu({ user }) {
       >
         <div className="mt-5 flex-grow-1 d-flex flex-column ">
 
-          <div className="text-center mb-3 ">
+          <div className="text-center mb-3 fst-italic">
+            {user && (
+              <h3 className="text-center fw-bold">
+                Hello,
+                {' '}
+                {user.name}
+                !
+              </h3>
+            )}
             <img
               className="rounded round"
               style={{ width: '100px' }}
               src="https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg"
               alt=""
             />
-            {user && (
-              <h4 className="h5 text-center fw-bold">
-                Hello!
-                {user.name}
-              </h4>
-            )}
           </div>
 
           <div className=" side_menu_con d-flex flex-column gap-3 text-center h-100 gap-4 justify-content-between pb-3">
@@ -76,27 +78,27 @@ function SideMenu({ user }) {
             <div className="d-flex flex-column gap-4 ">
               <section>
                 <a href="/">
-                  <h4 className="h4 fw-bold">Home</h4>
+                  <h5 className="h5 fw-bold">Home</h5>
                 </a>
               </section>
               <section>
                 <Link to="/add-doctor">
-                  <h4 className="h4 fw-bold">Add Doctor</h4>
+                  <h5 className="h5 fw-bold">Add Doctor</h5>
                 </Link>
               </section>
               <section>
                 <Link to="/delete-doctor">
-                  <h4 className="h4 fw-bold">Delete Doctor</h4>
+                  <h5 className="h5 fw-bold">Delete Doctor</h5>
                 </Link>
               </section>
               <section>
                 <Link to="/appointments">
-                  <h4 className="h4 fw-bold">My appointments</h4>
+                  <h5 className="h5 fw-bold">My appointments</h5>
                 </Link>
               </section>
               <section>
                 <Link to="/add-appointment">
-                  <h4 className="h4 fw-bold">Add appointments</h4>
+                  <h5 className="h5 fw-bold">Add appointments</h5>
                 </Link>
               </section>
               <section>
@@ -108,11 +110,26 @@ function SideMenu({ user }) {
 
             <div className="">
               <div className="d-flex justify-content-between mb-3 social_media_cont">
-                <i className="fab h5 fa-twitter" />
-                <i className="fab h5 fa-facebook" />
-                <i className="fas h5 fa-envelope" />
-                <i className="fas h5 fa-home" />
-                <i className="fab h5 fa-pinterest" />
+                <a href="https://twitter.com">
+                  <i className="fab h5 fa-twitter" />
+                </a>
+
+                <a href="https://facebook.com">
+                  <i className="fab h5 fa-facebook" />
+                </a>
+
+                <a href="mailto:youremail@example.com">
+                  <i className="fas h5 fa-envelope" />
+                </a>
+
+                <a href="/">
+                  <i className="fas h5 fa-home" />
+                </a>
+
+                <a href="https://pinterest.com">
+                  <i className="fab h5 fa-pinterest" />
+                </a>
+
               </div>
               <h6 className="h6 text-center">@2023 Brand sa de cv</h6>
             </div>
