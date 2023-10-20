@@ -23,8 +23,9 @@ export default function DeleteDoctorsContainer() {
     dispatch(deleteDoctor(id));
     setRemoved(true);
     setTimeout(() => {
-      navigate('/doctors');
+      window.location.reload();
     }, 500);
+    navigate('/');
   };
 
   return (
