@@ -62,8 +62,10 @@ const Carousel = () => {
       <div className="text-center d-flex flex-column align-items-center mb-5">
         <h1 className="h1 fw-bold ">LATEST DOCTORS</h1>
         <h4 className="h5 text-gray col-9" style={{ color: 'gray' }}>
-          Lorem ipsum dolor sit, amet consectetur m, doloremque blanditiis eaque
-          cumqu
+          “In our job, you will never go home at the end of the day
+          thinking that you haven’t done something valuable and important.”
+
+          ― Suneel Dhand
         </h4>
       </div>
 
