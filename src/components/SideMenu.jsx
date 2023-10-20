@@ -35,7 +35,7 @@ function SideMenu({ user }) {
       } ps-3 px-3`}
       style={isvisible ? { borderRight: '1px solid black' } : {}}
     >
-      <div className="text-end mt-2 me-2">
+      <div className="text-end mt-2 ">
         <button
           onClick={toogleMenu}
           className={`hamburger hamburger--vortex s-active ${
