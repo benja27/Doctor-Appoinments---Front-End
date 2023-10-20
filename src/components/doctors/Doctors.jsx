@@ -16,21 +16,26 @@ export default function Doctors({ doctor, index }) {
     >
       <Link to={`/doctors/${doctor.id}`} onClick={() => dispatch(showDoctor(doctor.id))}>
         <div className="item_index_cont">
-
-          <img
-            className="index_item_img position-absolute"
-            alt="doctor"
-            src={/^https:\/\//.test(doctor.photo) ? doctor.photo : 'https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg'}
-          />
-
-          <div className="index_img_circle" />
-
+          {doctor.photo
+            ? (
+              <img
+                className="index_item_img position-absolute"
+                alt="doctor"
+                src={doctor.photo}
+              />
+            )
+            : (
+              <img
+                className="index_item_img position-absolute"
+                alt="doctor"
+                src={doctor.photo ? doctor.photo : 'https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg'}
+              />
+            )}
         </div>
 
         <div className="mt-3 text-center">
           <h5 className="h2 fw-bold">
             {doctor.name}
-            {index}
 
           </h5>
           <h4 className="p-0 m-0 py-1 " style={{ color: 'gray' }}>.......................</h4>

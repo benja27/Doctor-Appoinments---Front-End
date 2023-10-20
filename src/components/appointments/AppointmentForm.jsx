@@ -30,7 +30,7 @@ export default function BookForm() {
 
     setDate('');
     setLocation('');
-    navigate('/');
+    navigate('/appointments');
   };
 
   return (

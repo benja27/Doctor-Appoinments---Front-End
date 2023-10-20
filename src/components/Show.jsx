@@ -28,15 +28,24 @@ function Show() {
 
               <Tilt
                 className="col-8 "
-                style={{ borderRadius: '50%', overflowX: 'hidden', backgroundColor: '#E2E3E5' }}
               >
-                <img
-                  style={{ width: '100%' }}
-                  src={
-                    /^https:\/\//.test(doctor.photo) ? doctor.photo : 'https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg'
-                  }
-                  alt="of a doctor"
-                />
+                <div className="item_index_cont">
+                  {doctor.photo
+                    ? (
+                      <img
+                        className="index_item_img position-absolute"
+                        alt="doctor"
+                        src={doctor.photo}
+                      />
+                    )
+                    : (
+                      <img
+                        className="index_item_img position-absolute"
+                        alt="doctor"
+                        src={doctor.photo ? doctor.photo : 'https://i.pinimg.com/564x/39/97/b8/3997b837ba0548ec1a5430ee31fb43aa.jpg'}
+                      />
+                    )}
+                </div>
               </Tilt>
 
               <div className="w-100 mt-5">
