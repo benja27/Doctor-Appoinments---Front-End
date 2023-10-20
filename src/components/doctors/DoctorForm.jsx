@@ -36,13 +36,15 @@ export default function BookForm() {
   };
 
   return (
-    <div className="d-flex vh-100 p-0 m-0 ">
+    <div className="d-flex  vh-100 p-0 m-0 ">
 
       <SideMenu />
 
-      <div className="d-flex flex-column align-items-center justify-content-center gap-5  w-100 bg-light">
+      <div className="d-flex bg_doctor flex-column align-items-center justify-content-center gap-4  w-100 bg-ligh">
 
-        <h1 className="add-new-book px-4 py-2 round rounded" style={{ color: 'white', backgroundColor: '#0fc00f' }}>ADD NEW DOCTOR</h1>
+        <button type="button" className="add-new-book btn px-4 py-2 round rounded" style={{ color: 'white', backgroundColor: '#0FC00F' }}>
+          <h4 className="h4">ADD NEW DOCTOR</h4>
+        </button>
 
         <div className="d-flex flex-column col-10 col-lg-6 gap-3 shadow px-2 py-3">
           <input
@@ -75,7 +77,7 @@ export default function BookForm() {
           />
           <input
             type="text"
-            className="form-control"
+            className="form-control mb-4"
             placeholder="link to doctor's photo"
             value={photo}
             onChange={(e) => setPhoto(e.target.value)}
@@ -86,8 +88,9 @@ export default function BookForm() {
             style={{ backgroundColor: '#0fc00f' }}
             type="button"
             onClick={handleAddDoctor}
+            style={{ color: 'white', backgroundColor: '#0FC00F' }}
           >
-            ADD DOCTOR
+            <h5>ADD DOCTOR</h5>
           </button>
         </div>
       </div>

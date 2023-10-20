@@ -119,18 +119,10 @@ In order to run this project you need:
 - Install Ruby on your computer
 - Install rails on your computer
 - Node.js
-- PostgreSQL
 
 ### Setup
 
 Clone these repositories by using the command line to your desired folder:
-
-<u>**For Backend**</u>
-
-```sh
-git clone https://github.com/sylvester-wamaya/doctor-appointment-backend.git
-cd doctor-appointment-backend
-```
 
 <u>**For Frontend**</u>
 
@@ -144,12 +136,6 @@ cd Doctor-Appoinments---Front-End
 
 Install this project with:
 
-<u>**For Backend**</u>
-
-```sh
-bundle install
-```
-
 <u>**For Frontend**</u>
 
 ```sh
@@ -158,19 +144,6 @@ npm install
 
 ### Usage
 
-<u>**For Backend**</u>
-
-If you are a Microverse reviewer, create a ```master.key``` file in ```config``` directory and paste the master key provided with the review request. If you are someone other than a Microverse Reviewer, contact us.
-
-To run the project, execute the following commands:
-
-```sh
-  rails db:create
-  rails db:migrate
-  rails db:seed
-  rails server
-```
-
 <u>**For Frontend**</u>
 
 To run the project, execute the following command:
@@ -178,14 +151,6 @@ To run the project, execute the following command:
 ```sh
   npm run dev
 ```
-
-### Run tests
-
-To run tests, run the following command:
-
-<!-- ```sh
-  Backend:  rspec
-``` -->
 
 ### Deployment
 
