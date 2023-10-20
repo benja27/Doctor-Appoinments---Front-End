@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import { deleteAppointment } from '../../redux/appointments/appointmentsSlice';
 
 export default function Appointments({
@@ -8,10 +9,11 @@ export default function Appointments({
   date,
 }) {
   const dispatch = useDispatch();
+  const navi = useNavigate();
 
   const handleDelete = (id) => {
     dispatch(deleteAppointment(id));
-    window.location.reload();
+    navi('/');
   };
 
   return (
