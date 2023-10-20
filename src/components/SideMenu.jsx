@@ -35,7 +35,7 @@ function SideMenu({ user }) {
       } ps-3 px-3`}
       style={isvisible ? { borderRight: '1px solid black' } : {}}
     >
-      <div className="text-end mt-2 me-2">
+      <div className="text-end mt-2 ">
         <button
           onClick={toogleMenu}
           className={`hamburger hamburger--vortex s-active ${
@@ -58,12 +58,12 @@ function SideMenu({ user }) {
 
           <div className="text-center mb-3 fst-italic">
             {user && (
-              <h3 className="text-center fw-bold">
-                Hello,
+            <h3 className="text-center fw-bold">
+              Hello,
                 {' '}
-                {user.name}
-                !
-              </h3>
+              {user.name}
+              !
+            </h3>
             )}
             <img
               className="rounded round"
