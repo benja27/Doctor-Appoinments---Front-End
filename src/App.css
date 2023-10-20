@@ -189,6 +189,24 @@ body {
   filter: hue-rotate(220deg);
 }
 
+.bg_doctor {
+  background-image: url("https://cloudinary.hbs.edu/hbsit/image/upload/s--sFv3MZbN--/f_auto,c_fill,h_375,w_750,/v20200101/D730ED9CC0AF1A0C18B3499EF75E86D7.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg_doctor2 {
+  background-image: url("https://www.hsph.harvard.edu/ecpe/wp-content/uploads/sites/2020/2016/07/ContentPages15.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg_doctor3 {
+  background-image: url("https://www.hoeven.senate.gov/imo/media/image/health_banner.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 .set_appoin {
   opacity: 0.3;
 }
@@ -213,7 +231,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 255, 0, 0.832);
+  background-color: rgba(15, 192, 15, 0.832);
 }
 
 .info {

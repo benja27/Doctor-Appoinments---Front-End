@@ -37,8 +37,9 @@ export default function Doctors({ doctor, index }) {
 
           <h6 className="h5 fw-bold mb-4" style={{ color: 'gray' }}>
             {' '}
-            consultatio fee:
-            {doctor.consultation_fee }
+            Consultation fee:
+            {' '}
+            {doctor.consultation_fee}
           </h6>
         </div>
 
