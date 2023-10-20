@@ -14,7 +14,7 @@ const Logout = () => {
 
     <section>
       <btn onClick={handleClick} className="btn fw-bold" href="/">
-        <h1 type="button" className="fa-solid fa-right-from-brack">Logout</h1>
+        <i className="fa-solid fa-right-from-bracket" />
       </btn>
     </section>
   );
