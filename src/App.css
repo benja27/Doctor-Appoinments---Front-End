@@ -143,6 +143,8 @@ body {
 
 .index_item_img {
   width: 80%;
+  border-radius: 25px;
+  height: 250px;
 }
 
 .item_index_cont:hover .index_item_img {
@@ -552,6 +554,10 @@ h3 {
     justify-content: space-evenly;
     height: 89vh;
     margin: 0;
+  }
+
+  .index_item_img2 {
+    height: 400px;
   }
 }
 
