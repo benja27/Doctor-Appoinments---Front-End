@@ -42,7 +42,7 @@ export default function BookForm() {
 
       <div className="d-flex bg_doctor flex-column align-items-center justify-content-center gap-4  w-100 bg-ligh">
 
-        <button type="button" className="add-new-book btn bg-dar px-4 py-2 round rounded" style={{ color: 'white', backgroundColor: '#0FC00F' }}>
+        <button type="button" className="add-new-book btn px-4 py-2 round rounded" style={{ color: 'white', backgroundColor: '#0FC00F' }}>
           <h4 className="h4">ADD NEW DOCTOR</h4>
         </button>
 
@@ -85,9 +85,9 @@ export default function BookForm() {
           <button
             aria-label="add-btn"
             className="btn btn-primary"
+            style={{ backgroundColor: '#0fc00f' }}
             type="button"
             onClick={handleAddDoctor}
-            style={{ color: 'white', backgroundColor: '#0FC00F' }}
           >
             <h5>ADD DOCTOR</h5>
           </button>

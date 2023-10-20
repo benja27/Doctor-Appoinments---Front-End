@@ -58,12 +58,12 @@ function SideMenu({ user }) {
 
           <div className="text-center mb-3 fst-italic">
             {user && (
-              <h3 className="text-center fw-bold">
-                Hello,
+            <h3 className="text-center fw-bold">
+              Hello,
                 {' '}
-                {user.name}
-                !
-              </h3>
+              {user.name}
+              !
+            </h3>
             )}
             <img
               className="rounded round"

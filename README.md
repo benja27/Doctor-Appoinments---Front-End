@@ -177,7 +177,7 @@ Render or any other platform.
 - Linkedin: [@clinton-younge](https://www.linkedin.com/in/clinton-younge-83386a25a/)
 - Twitter: [@YoungeCjay](https://twitter.com/YoungeCjay)
 
-👤 Sylvester Wamaya
+👤 **Sylvester Wamaya**
 
 - GitHub: [@githubhandle](https://github.com/sylvester-wamaya)
 - Twitter: [@twitterhandle](https://twitter.com/The_Seal_)
@@ -202,7 +202,7 @@ Feel free to check the [issues page](https://github.com/benja27/Doctor-Appoinmen
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, kindly give me a ⭐️
+If you like this project, kindly give us a ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

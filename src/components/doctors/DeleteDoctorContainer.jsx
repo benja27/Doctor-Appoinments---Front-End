@@ -32,9 +32,8 @@ export default function DeleteDoctorsContainer() {
     <div className="d-flex">
       <SideMenu />
       <div className="d-flex bg_doctor2 vh-100 align-items-center bg-light justify-content-center flex-column  w-100 ">
-
-        <div className="doctors-container mb-5 ">
-          <span className="doctor h2 bg-dar round p-3 mb-3" style={{ color: 'gold', backgroundColor: '#0FC00F' }}>Choosse a Doctor to delete:</span>
+        <div className="doctors-container mb-3">
+          <span className="doctor h2 round p-3 mb-3" style={{ color: 'white', backgroundColor: '#0fc00f' }}>Choose a Doctor to delete:</span>
         </div>
 
         <div className="d-flex flex-column gap-4 p-3 col-10 col-md-6 bg-light round rounded">

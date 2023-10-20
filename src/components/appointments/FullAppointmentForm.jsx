@@ -31,8 +31,14 @@ export default function FullBookForm() {
 
     <div className="info w-100 ">
 
-      <div className="text-center">
-        <h1 className="h1">MAKE APPOINTMENT</h1>
+      <div className="text-center mb-5">
+        <h1 className="underline-text">ADD APPOINTMENT</h1>
+
+        <p>
+          “We practice medicine that our historical ancestors could only dream of,
+          and we have access to amazing treatments and cures for our patients on a daily basis.”
+          ― Suneel Dhand, MD
+        </p>
       </div>
 
       <div className="col-12 d-md-flex justify-content-around  justify-content-around">
