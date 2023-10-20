@@ -22,6 +22,12 @@ export default function BookForm() {
     };
     dispatch(addAppointment(newAppointment));
 
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
+    navigate('/');
+  };
+
     setDate('');
     setLocation('');
     navigate('/');
