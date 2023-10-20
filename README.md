@@ -82,7 +82,6 @@ The final number of team members is 4. View the details of team members [here](#
 
 ### Key Features <a name="key-features"></a>
 
-- Only Admin can add or delete Doctors from the website.
 - Users can create accounts and log in securely to access the booking functionalities.
 - Choose from a wide range of available doctors based on the medical issues.
 - Easily book an appointment with a doctor with a desired date and time and manage your bookings efficiently.
@@ -209,7 +208,7 @@ If you like this project, kindly give me a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to acknowledge:
+We would like to acknowledge:
 
 - [Microverse](https://www.microverse.org/) for the opportunity to work on this project
 - [The creative common](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for the design
