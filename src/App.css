@@ -536,3 +536,7 @@ h3 {
     margin: 0;
   }
 }
+
+.underline-text {
+  text-decoration: underline;
+}
