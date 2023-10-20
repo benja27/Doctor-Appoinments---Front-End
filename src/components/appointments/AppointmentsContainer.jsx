@@ -28,7 +28,7 @@ export default function DoctorsContainer() {
       <SideMenu />
       <div className="d-flex flex-column align-items-center justify-content-center w-100">
 
-        <div className="doctors-container bg-dark px-3 py-2 round d-flex mb-4 justify-content-center text-center" style={{ color: 'gold' }}>
+        <div className="doctors-container px-3 py-2 round d-flex mb-4 justify-content-center text-center" style={{ color: 'white', backgroundColor: '#0fc00f' }}>
           <h2 className="doctor h1 text-center">Appointments</h2>
         </div>
 
