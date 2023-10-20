@@ -26,7 +26,6 @@ export default function BookForm() {
       window.location.reload();
     }, 500);
     navigate('/');
-  };
 
     setDate('');
     setLocation('');
